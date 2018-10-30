@@ -4,7 +4,8 @@
 	xmlns:pg="http://schema.quizbowl.technology/xml/pg-dictionary"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns="http://www.w3.org/1999/xhtml"
-	exclude-result-prefixes="xs pg"
+	xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+	exclude-result-prefixes="xs pg math"
 	version="2.0">
 
 	<xsl:function name="pg:langGetPrefix" as="xs:string">
@@ -94,6 +95,28 @@
 		<span class="sp">
 			<xsl:text> </xsl:text>
 		</span>
+	</xsl:template>
+
+	<xsl:template name="radar">
+		<xsl:variable name="d">
+			<xsl:variable name="n" select="count(@*)"/>
+			<xsl:for-each select="@*">
+				<xsl:variable name="th" select="2*math:pi() * position() div $n + (math:pi())"/>
+				<xsl:choose>
+					<xsl:when test="position() = 1">M </xsl:when>
+					<xsl:otherwise>L </xsl:otherwise>
+				</xsl:choose>
+				<xsl:value-of select="round((. + 2) * math:sin($th) * 1e4) div 1e4"/>
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="round((. + 2) * math:cos($th) * 1e4) div 1e4"/>
+				<xsl:text> </xsl:text>
+			</xsl:for-each>
+			<xsl:text>z</xsl:text>
+		</xsl:variable>
+		<svg width="16" viewBox="-5 -5 10 10">
+			<path class="axis"  d="M 0 5 L 5 0 L 0 -5 L -5 0 z"/>
+			<path class="shape" d="{$d}"/>
+		</svg>
 	</xsl:template>
 
 </xsl:stylesheet>

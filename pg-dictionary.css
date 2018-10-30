@@ -173,6 +173,9 @@ a.lang:hover {
 	padding: 0 0.3em;
 	font-size: smaller;
 	color: #3E7690;
+
+	display: inline-flex;
+	align-items: center;
 }
 
 .category {
@@ -209,4 +212,14 @@ dl::after {
 }
 header time {
 	margin-right: 1em;
+}
+
+svg {
+	margin-left: 0.5em;
+}
+svg .shape {
+	fill: #00cf45;
+}
+svg .axis {
+	fill: #e41a28;
 }

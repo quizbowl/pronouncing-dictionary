@@ -187,6 +187,7 @@
 
 	<xsl:template match="review">
 		<div class="review">
+			<span>
 			<xsl:if test="author">
 				<xsl:apply-templates select="author"/>
 				<xsl:text>: </xsl:text>
@@ -197,6 +198,9 @@
 					<xsl:text>, </xsl:text>
 				</xsl:if>
 			</xsl:for-each>
+			</span>
+
+			<xsl:call-template name="radar"/>
 		</div>
 	</xsl:template>
 
