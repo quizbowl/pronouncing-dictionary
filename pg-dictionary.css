@@ -223,3 +223,7 @@ svg .shape {
 svg .axis {
 	fill: #e41a28;
 }
+
+.audio-controls button {
+	width: 2.25em;
+}

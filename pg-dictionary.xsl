@@ -18,6 +18,7 @@
 				<meta charset="utf-8"/>
 				<meta name="viewport" content="width=device-width, initial-scale=1"/>
 				<link type="text/css" rel="stylesheet" href="pg-dictionary.css"/>
+				<script type="text/javascript" src="controls.js"/>
 			</head>
 			<body>
 				<header>
@@ -212,6 +213,12 @@
 			<xsl:text>: </xsl:text>
 			<xsl:apply-templates/>
 		</xsl:if>
+	</xsl:template>
+	<xsl:template match="citation[@type='audio']">
+		<span class="audio-controls">
+			<audio preload="none" src="{@url}"/>
+    		<button onclick="toggleAudio(this)">&#9658;</button>
+    	</span>
 	</xsl:template>
 
 	<xsl:template match="author">
