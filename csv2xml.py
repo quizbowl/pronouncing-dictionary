@@ -21,8 +21,10 @@ cols = [
 	'author','see_also'
 ]
 
-rows = list(csv.DictReader(sys.stdin, dialect=csv.excel))
-for row in rows[:10]:
+rows = csv.DictReader(sys.stdin, dialect=csv.excel)
+for row in rows:
+	if not row['ex']: continue
+
 	entry = etree.SubElement(root, 'entry')
 	for col in cols:
 		if row[col] == '': continue
