@@ -132,27 +132,28 @@
 			<xsl:call-template name="orsame"/>
 		</xsl:if>
 	</xsl:template>
-	<xsl:template match="pron/@lang" xml:space="default">
-		<xsl:element name="a">
-			<xsl:attribute name="class">lang first last</xsl:attribute>
-			<xsl:attribute name="href">
-				<xsl:text>#lang=</xsl:text>
-				<xsl:value-of select="(.)"/>
-			</xsl:attribute>
-			<xsl:attribute name="title">
-				<xsl:value-of select="(.)"/>
-			</xsl:attribute>
-			<xsl:value-of select="pg:langLookupCanonicalName(.)"/>
-		</xsl:element>
+	<xsl:template match="pron/@lang">
+		<xsl:call-template name="lang">
+			<xsl:with-param name="class"> first last</xsl:with-param>
+		</xsl:call-template>
 		<xsl:text>&#xa0;</xsl:text>
 	</xsl:template>
 
 	<xsl:template match="lang">
+		<xsl:call-template name="lang">
+			<xsl:with-param name="class">
+				<xsl:if test="not(preceding-sibling::lang)"> main first</xsl:if>
+				<xsl:if test="not(following-sibling::lang)"> last</xsl:if>
+			</xsl:with-param>
+		</xsl:call-template>
+	</xsl:template>
+
+	<xsl:template name="lang">
+		<xsl:param name="class" />
 		<xsl:element name="a">
 			<xsl:attribute name="class">
 				<xsl:text>lang</xsl:text>
-				<xsl:if test="not(preceding-sibling::lang)"> main first</xsl:if>
-				<xsl:if test="not(following-sibling::lang)"> last</xsl:if>
+				<xsl:value-of select="$class"/>
 			</xsl:attribute>
 			<xsl:attribute name="href">
 				<xsl:text>#lang=</xsl:text>
