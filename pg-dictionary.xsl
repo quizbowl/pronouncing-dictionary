@@ -187,9 +187,7 @@
 	</xsl:template>
 
 	<xsl:template match="citation">
-		<a href="{@url}">
-			<xsl:value-of select="@type"/>
-		</a>
+		<a href="{@url}" class="link"><xsl:value-of select="@type"/> ref</a>
 		<xsl:if test="count(*) > 0">
 			<xsl:text>: </xsl:text>
 			<xsl:apply-templates/>
