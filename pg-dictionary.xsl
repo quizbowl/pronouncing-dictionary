@@ -39,15 +39,6 @@
 						</xsl:for-each>
 						<br />
 					</xsl:for-each-group>
-
-					<xsl:for-each-group select="entry" group-by="key('entryInitial', .)">
-						<xsl:sort select="current-grouping-key()"/>
-						<xsl:value-of select="."/>
-						<xsl:element name="{current-grouping-key()}">
-							<xsl:copy-of select="current-group()"/>
-						</xsl:element>
-					</xsl:for-each-group>
-
 				</article>
 
 				<footer>
@@ -126,7 +117,7 @@
 		<xsl:if test="preceding-sibling::pron and not(@lang = preceding-sibling::pron/@lang)">
 			<xsl:apply-templates select="@lang"/>
 		</xsl:if>
-		<xsl:element name="span">
+		<span>
 			<xsl:choose>
 				<xsl:when test="@notation = 'IPA'">
 					<xsl:attribute name="class">pron IPA</xsl:attribute>
@@ -139,7 +130,7 @@
 					<xsl:apply-templates/>
 				</xsl:otherwise>
 			</xsl:choose>
-		</xsl:element>
+		</span>
 
 		<xsl:if test="not(@lang) or @lang = following-sibling::pron/@lang">
 			<xsl:call-template name="orsame"/>
@@ -163,30 +154,16 @@
 
 	<xsl:template name="lang">
 		<xsl:param name="class" />
-		<xsl:element name="a">
-			<xsl:attribute name="class">
-				<xsl:text>lang</xsl:text>
-				<xsl:value-of select="$class"/>
-			</xsl:attribute>
-			<xsl:attribute name="href">
-				<xsl:text>#lang=</xsl:text>
-				<xsl:value-of select="(.)"/>
-			</xsl:attribute>
-			<xsl:attribute name="title">
-				<xsl:value-of select="(.)"/>
-			</xsl:attribute>
+		<a class="lang {$class}" href="#lang={.}" title="{.}">
 			<xsl:value-of select="pg:langLookupCanonicalName(.)"/>
-		</xsl:element>
+		</a>
 	</xsl:template>
 
 
 	<xsl:template match="usage/*[name() != 'stemmable']">
-		<xsl:element name="span">
-			<xsl:attribute name="class">
-				<xsl:value-of select="name()"/>
-			</xsl:attribute>
+		<span class="{name()}">
 			<xsl:apply-templates/>
-		</xsl:element>
+		</span>
 		<xsl:call-template name="or"/>
 	</xsl:template>
 
@@ -206,10 +183,7 @@
 	</xsl:template>
 
 	<xsl:template match="citation">
-		<a>
-			<xsl:attribute name="href">
-				<xsl:value-of select="@url"/>
-			</xsl:attribute>
+		<a href="{@url}">
 			<xsl:value-of select="@type"/>
 		</a>
 		<xsl:if test="count(*) > 0">
