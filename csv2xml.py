@@ -112,6 +112,11 @@ for row in rows:
 	source_no_filename = re.sub('/.*', '', source_no_prefix).replace('_', ' ')
 	source.set('name', source_no_filename)
 	## <related-entry>
-	split(meta, 'related-entry', row['see_also'])
+	for text in row['see_also'].split('|'):
+		if text:
+			related_entry = etree.SubElement(meta, 'related-entry')
+			related_entry.text = text
+			ref = super(UniqueSlugify, slugify).__call__(text)
+			related_entry.set('ref', ref)
 
 doc.write(sys.stdout, encoding="utf-8", xml_declaration=True)

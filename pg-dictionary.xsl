@@ -105,6 +105,8 @@
 
 			<xsl:if test="meta/related-entry">
 				<div class="related-entry">
+					<span class="h">see also</span>
+					<xsl:text> </xsl:text>
 					<xsl:apply-templates select="meta/related-entry"/>
 				</div>
 			</xsl:if>
@@ -213,9 +215,10 @@
 	</xsl:template>
 
 	<xsl:template match="related-entry">
-		<span class="h">see also</span>
-		<xsl:text> </xsl:text>
-		<xsl:apply-templates/>
+		<a href="#{@ref}" class="link">
+			<xsl:apply-templates/>
+		</a>
+		<xsl:call-template name="or"/>
 	</xsl:template>
 
 	<xsl:template match="quizbowl-source">
