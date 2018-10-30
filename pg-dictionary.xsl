@@ -196,45 +196,10 @@
 		</xsl:if>
 	</xsl:template>
 
-	<xsl:template name="abbr">
-		<xsl:variable name="abbr">
-			<xsl:value-of select="name()"/>
-		</xsl:variable>
-		<!--<xsl:variable name="abbr">
-			<xsl:choose>
-				<xsl:when test="name() = 'accuracy'">acc</xsl:when>
-				<xsl:when test="name() = 'decipherability'">decipher</xsl:when>
-				<xsl:when test="name() = 'familiarity'">famil</xsl:when>
-				<xsl:when test="name() = 'utility'">util</xsl:when>
-			</xsl:choose>
-		</xsl:variable>-->
-		<xsl:value-of select="$abbr"/>
-		<xsl:text> </xsl:text>
-		<xsl:value-of select="."/>
-	</xsl:template>
-
 	<xsl:template match="related-entry">
 		<span class="h">see also</span>
 		<xsl:text> </xsl:text>
 		<xsl:apply-templates/>
 	</xsl:template>
 
-	<xsl:template name="orsame">
-		<xsl:variable name="varName" select="name()"/>
-		<xsl:if test="following-sibling::*[name() = $varName]">
-			<xsl:call-template name="orl"/>
-		</xsl:if>
-	</xsl:template>
-
-	<xsl:template name="or">
-		<xsl:if test="following-sibling::*[name() != 'stemmable']">
-			<xsl:call-template name="orl"/>
-		</xsl:if>
-	</xsl:template>
-
-	<xsl:template name="orl">
-		<span class="or">
-			<xsl:text> | </xsl:text>
-		</span>
-	</xsl:template>
 </xsl:stylesheet>
