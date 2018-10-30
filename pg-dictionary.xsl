@@ -111,11 +111,13 @@
 				</div>
 			</xsl:if>
 
-			<xsl:if test="meta/quizbowl-source">
-				<div class="quizbowl-source">
+			<div class="extlinks">
+				<a href="https://forvo.com/search/{form/orth[1]}">Forvo</a>
+				<xsl:text> | </xsl:text>
+				<xsl:if test="meta/quizbowl-source">
 					<xsl:apply-templates select="meta/quizbowl-source"/>
-				</div>
-			</xsl:if>
+				</xsl:if>
+			</div>
 
 		</section>
 	</xsl:template>
