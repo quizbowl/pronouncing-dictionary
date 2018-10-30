@@ -1,10 +1,13 @@
 #!/usr/bin/env python
+#-*- coding: utf-8 -*-
 import unicodecsv as csv
 import sys
 import codecs
 
 from lxml import etree
 import re
+from slugify import UniqueSlugify
+slugify = UniqueSlugify(translate=None, safe_chars=u"-.'\"‘’“”–", separator="_")
 
 doc = etree.parse('base.xml')
 root = doc.getroot()
@@ -46,6 +49,8 @@ for row in rows:
 	if not row['ex']: continue
 
 	entry = etree.SubElement(root, 'entry')
+	slug = slugify(re.sub('\\|.*', '', row['word']))
+	entry.set('id', slug)
 
 	# <form>
 	form = etree.SubElement(entry, 'form')
