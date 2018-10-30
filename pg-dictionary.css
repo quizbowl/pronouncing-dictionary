@@ -1,5 +1,8 @@
 body {
-	font-family: Whitney;
+	font-family:
+		Whitney, 'Segoe UI', Roboto, 'Noto Sans',
+		Calibri, 'Lucida Sans Unicode', 'Helvetica Neue', 'Helvetica',
+		-apple-system, BlinkMacSystemFont, Arial, sans-serif;
 	font-variant-numeric: lining-nums;
 	-moz-font-feature-settings: 'lnum' 1;
 	font-size: 1.1em;
@@ -152,6 +155,7 @@ a.lang:hover {
 .pron {
 	font-weight: 500;
 	color: #027BCE;
+	user-select: all;
 }
 .IPA {
 	color: inherit;
@@ -179,5 +183,4 @@ a.lang:hover {
 
 .category {
 	font-style: italic;
-	font-weight: 300;
 }
