@@ -80,6 +80,9 @@ h2 small {
 .headword:last-of-type {
 	margin-right: 0.25em;
 }
+a.lang {
+	text-decoration: none;
+}
 a.lang:hover {
 	background: #B8F2E6;
 	cursor: pointer;

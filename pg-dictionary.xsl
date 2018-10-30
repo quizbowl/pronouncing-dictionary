@@ -137,6 +137,10 @@
 	<xsl:template match="pron/@lang" xml:space="default">
 		<xsl:element name="a">
 			<xsl:attribute name="class">lang first last</xsl:attribute>
+			<xsl:attribute name="href">
+				<xsl:text>#lang=</xsl:text>
+				<xsl:value-of select="(.)"/>
+			</xsl:attribute>
 			<xsl:attribute name="title">
 				<xsl:value-of select="(.)"/>
 			</xsl:attribute>
@@ -151,6 +155,10 @@
 				<xsl:text>lang</xsl:text>
 				<xsl:if test="not(preceding-sibling::lang)"> main first</xsl:if>
 				<xsl:if test="not(following-sibling::lang)"> last</xsl:if>
+			</xsl:attribute>
+			<xsl:attribute name="href">
+				<xsl:text>#lang=</xsl:text>
+				<xsl:value-of select="(.)"/>
 			</xsl:attribute>
 			<xsl:attribute name="title">
 				<xsl:value-of select="(.)"/>
