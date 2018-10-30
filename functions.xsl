@@ -90,4 +90,10 @@
 		</span>
 	</xsl:template>
 
+	<xsl:template name="sp">
+		<span class="sp">
+			<xsl:text> </xsl:text>
+		</span>
+	</xsl:template>
+
 </xsl:stylesheet>

@@ -63,16 +63,21 @@
 		<section class="entry" id="{@id}">
 
 			<xsl:if test="form">
-				<a href="#{@id}">
+				<a href="#{@id}" class="mr">
 					<xsl:apply-templates select="form/orth"/>
 				</a>
-				<xsl:apply-templates select="form/pron"/>
+				<xsl:call-template name="sp" />
+				<span class="mr">
+					<xsl:apply-templates select="form/pron"/>
+				</span>
+				<xsl:call-template name="sp" />
 			</xsl:if>
 
 			<xsl:if test="lang">
-				<span class="etym">
+				<span class="etym mr">
 					<xsl:apply-templates select="lang"/>
 				</span>
+				<xsl:call-template name="sp" />
 			</xsl:if>
 
 			<xsl:if test="usage">
