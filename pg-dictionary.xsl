@@ -80,6 +80,10 @@
 				<xsl:call-template name="sp" />
 			</xsl:if>
 
+			<xsl:if test="meta/author">
+				<xsl:apply-templates select="meta/author"/>
+			</xsl:if>
+
 			<xsl:if test="usage">
 				<div class="usage">
 					<xsl:apply-templates select="usage"/>
@@ -188,8 +192,10 @@
 
 	<xsl:template match="review">
 		<div class="review">
-			<xsl:apply-templates select="author"/>
-			<xsl:text>: </xsl:text>
+			<xsl:if test="author">
+				<xsl:apply-templates select="author"/>
+				<xsl:text>: </xsl:text>
+			</xsl:if>
 			<xsl:for-each select="@*">
 				<xsl:call-template name="abbr"/>
 				<xsl:if test="position() != last()">
@@ -210,6 +216,12 @@
 			<xsl:text>: </xsl:text>
 			<xsl:apply-templates/>
 		</xsl:if>
+	</xsl:template>
+
+	<xsl:template match="author">
+		<a class="author" data-author="{.}" href="#author={.}">
+			<xsl:value-of select="."/>
+		</a>
 	</xsl:template>
 
 	<xsl:template match="related-entry">

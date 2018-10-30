@@ -184,3 +184,9 @@ a.lang:hover {
 .category {
 	font-style: italic;
 }
+
+.author {
+	font-size: 0.75em;
+}
+.author[data-author=OL] { color: #939; font-weight: 700; }
+.author[data-author=MW] { color: #393; font-weight: 400; }
