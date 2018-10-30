@@ -47,16 +47,9 @@ article {
 }
 
 h2 {
-	border-top: 1px solid black;
-	font-size: 1.2em;
-	background: rgba(184, 242, 230, 0.466);
-	margin-top: 1.5em;
-	padding: 0.1em 0.5em;
-}
-h2 small {
-	font-weight: 300;
-	font-size: 0.7em;
-	float: right;
+	font-size: 1.25em;
+	margin-top: 0;
+	text-align: center;
 }
 br {
 	line-height: 2em;
@@ -76,7 +69,7 @@ br {
 .entry > * {
 	text-indent: 0;
 }
-.entry:target {
+:target {
 	background: #faf48f;
 }
 

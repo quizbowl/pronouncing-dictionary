@@ -27,12 +27,9 @@
 					<xsl:for-each-group select="entry"
 						group-by="pg:indexSymbol(form/orth[1])">
 						<xsl:sort select="current-grouping-key()"/>
-<!--                        <h2>
+						<h2 id="{current-grouping-key()}">
 							<xsl:value-of select="current-grouping-key()"/>
-							<small>
-								<xsl:value-of select="count(current-group())"/>
-							</small>
-						</h2>-->
+						</h2>
 						
 						<xsl:for-each select="current-group()">
 							<xsl:apply-templates select="."/>
