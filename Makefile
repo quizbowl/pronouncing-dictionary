@@ -17,4 +17,4 @@ download:
 	wget $(SHEET_EXPORT_URL) -O pgs.csv
 
 upload: html
-	scp *.html *.css gwinnett:~/minkowski.space/quizbowl/pronouncing-dictionary/
+	scp *.html pg-dictionary.css gwinnett:~/minkowski.space/quizbowl/pronouncing-dictionary/

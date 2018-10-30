@@ -1,3 +1,5 @@
+@import url('fonts.css');
+
 body {
 	font-family:
 		Whitney, 'Segoe UI', Roboto, 'Noto Sans',
@@ -151,7 +153,7 @@ a.lang:hover {
 }
 .IPA {
 	color: inherit;
-	font-weight: 600;
+	font-weight: 700;
 	font-family: 'Brill';
 	font-feature-settings: 'ss20' 1;
 }
