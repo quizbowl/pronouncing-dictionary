@@ -1,0 +1,53 @@
+default namespace = ""
+
+start = element pg-dictionary { entry* }
+entry = element entry { id?, form+, langElement*, usage?, meta? }
+form = element form { orth+, pron+ }
+orth = element orth { lang?, text }
+pron = element pron { lang?, notation?, text }
+langElement = element lang { langType }
+usage =
+	element usage {
+		element category { text }*,
+		element context { text }*,
+		element definition { text }*,
+		element stemmable { text }?
+	}
+meta =
+	element meta {
+		author &
+		element submission { author, date }* &
+		element review {
+			attribute accuracy { rating }?,
+			attribute decipherability { rating }?,
+			attribute familiarity { rating }?,
+			attribute utility { rating }?,
+			author,
+			date
+		}* &
+		element citation {
+			attribute type { "text" | "audio" },
+			attribute url { urlType },
+			form?
+		}* &
+		element quizbowl-source {
+			attribute url { urlType },
+			element name { text }?,
+			author,
+			form?
+		}* &
+		element related-entry {
+			ref?,
+			attribute rel { "canonical" }?,
+			text
+		}*
+	}
+author = element author { text }*
+date = element date { xsd:date }?
+id = attribute id { xsd:ID }
+ref = attribute ref { xsd:IDREF }
+lang = attribute lang { langType }
+notation = attribute notation { 'IPA' | text }
+rating = '3' | '2' | '1' | '0' | '-1'
+langType = xsd:language
+urlType = xsd:anyURI
