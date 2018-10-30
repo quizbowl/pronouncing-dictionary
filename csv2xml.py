@@ -6,6 +6,8 @@ import codecs
 
 from lxml import etree
 import re
+
+import random
 from slugify import UniqueSlugify
 slugify = UniqueSlugify(translate=None, safe_chars=u"-.'\"‘’“”–", separator="_")
 
@@ -45,8 +47,9 @@ def attr(parent, attr_name, text):
 		parent.set(attr_name, text)
 
 rows = csv.DictReader(sys.stdin, dialect=csv.excel)
+random.seed(15)
 for row in rows:
-	if not row['ex']: continue
+	if not (row['ex'] or random.random() > 0.95): continue
 
 	entry = etree.SubElement(root, 'entry')
 	slug = slugify(re.sub('\\|.*', '', row['word']))
