@@ -97,6 +97,12 @@
 				</div>
 			</xsl:if>
 
+			<xsl:if test="meta/related-entry">
+				<div class="related-entry">
+					<xsl:apply-templates select="meta/related-entry"/>
+				</div>
+			</xsl:if>
+
 		</section>
 	</xsl:template>
 
