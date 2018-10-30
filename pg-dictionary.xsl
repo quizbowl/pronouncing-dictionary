@@ -51,9 +51,7 @@
 				</article>
 
 				<footer>
-					<p>Last updated <time><xsl:value-of
-								select="format-dateTime(current-dateTime(), '[F], [MNn] [D], [Y], [h]:[m] [P]', 'en', (), ())"
-							/></time></p>
+					<p>Last updated <time><xsl:value-of select="pg:format-date(current-dateTime())" /></time></p>
 				</footer>
 			</body>
 		</html>
