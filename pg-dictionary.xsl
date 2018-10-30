@@ -40,7 +40,7 @@
 						<br />
 					</xsl:for-each-group>
 
-					<xsl:for-each-group select="entry" group-by="key('entryKey', .)">
+					<xsl:for-each-group select="entry" group-by="key('entryInitial', .)">
 						<xsl:sort select="current-grouping-key()"/>
 						<xsl:value-of select="."/>
 						<xsl:element name="{current-grouping-key()}">

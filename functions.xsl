@@ -51,7 +51,7 @@
 		as="document-node()"/>
 	<xsl:key name="langKey" match="/registry/language" use="subtag"/>
 
-	<xsl:key name="entryKey" match="/pg-dictionary/entry" use="substring(form/orth[1], 1, 1)"/>
+	<xsl:key name="entryInitial" match="/pg-dictionary/entry" use="substring(form/orth[1], 1, 1)"/>
 
 
 	<xsl:template name="abbr">
