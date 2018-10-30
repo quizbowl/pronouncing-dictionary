@@ -55,12 +55,15 @@ h2 small {
 	font-size: 0.7em;
 	float: right;
 }
+br {
+	line-height: 2em;
+}
 
 .entry {
 	display: block;
 	line-height: 1.35;
-	margin-bottom: 0.4em;
-	margin-left: 0.75em;
+	padding: 0.25em;
+	padding-left: 1em;
 	text-indent: -0.75em;
 
 	-webkit-column-break-inside: avoid;
@@ -70,10 +73,10 @@ h2 small {
 .entry > * {
 	text-indent: 0;
 }
-.entry > .citation {
-	text-indent: -0.75em;
-	margin-left: 0.75em;
+.entry:target {
+	background: #faf48f;
 }
+
 .headword {
 	font-weight: 700;
 }

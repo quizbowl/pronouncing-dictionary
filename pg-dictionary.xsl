@@ -60,7 +60,8 @@
 	<xsl:template match="date | submission | stemmable | quizbowl-source"/>
 
 	<xsl:template match="entry">
-		<section class="entry">
+		<section class="entry" id="{@id}">
+
 			<xsl:if test="form">
 				<xsl:apply-templates select="form"/>
 			</xsl:if>
