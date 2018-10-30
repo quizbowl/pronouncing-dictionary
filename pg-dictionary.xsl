@@ -22,6 +22,16 @@
 			<body>
 				<header>
 					<h1>Quizbowl Pronouncing Dictionary</h1>
+					<dl>
+						<dt>Editor:</dt>
+						<dd>Ophir Lifshitz</dd>
+						<dt>Status:</dt>
+						<dd>Draft. Almost all entries not by <a class="author" data-author="OL" href="#author=OL">OL</a> are unverified and are probably inaccurate.</dd>
+						<dt>Last updated:</dt>
+						<dd><time><xsl:value-of select="pg:format-date(current-dateTime())" /></time> Showing a 5% sample of all entries.</dd>
+						<dt>Coming soon:</dt>
+						<dd>Filter by language, by category, by tournament, by author, by review scores.</dd>
+					</dl>
 				</header>
 				<article>
 					<xsl:for-each-group select="entry"
@@ -38,10 +48,6 @@
 						</div>
 					</xsl:for-each-group>
 				</article>
-
-				<footer>
-					<p>Last updated <time><xsl:value-of select="pg:format-date(current-dateTime())" /></time></p>
-				</footer>
 			</body>
 		</html>
 	</xsl:template>

@@ -12,11 +12,12 @@ body {
 }
 article {
 	padding: 0 1em;
+	margin: 1em 0 2em;
 }
 header {
 	border: 1px solid black;
 	border-width: 3px 0 1px;
-	margin: 1em 0;
+	margin: 1em 0 2em;
 	padding: 1em;
 	background: #B8F2E6;
 }
@@ -185,4 +186,25 @@ a.lang:hover {
 .quizbowl-source {
 	font-size: 0.75em;
 	color: #bbb;
+}
+
+dt, dd {
+	margin: 0;
+}
+dt {
+	width: 7em;
+	float: left;
+	clear: both;
+	font-weight: 500;
+}
+dd {
+	margin-left: 7.5em;
+}
+dl::after {
+	clear: both;
+	content: '';
+	display: table;
+}
+header time {
+	margin-right: 1em;
 }
