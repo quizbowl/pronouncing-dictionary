@@ -46,7 +46,7 @@
 		</html>
 	</xsl:template>
 
-	<xsl:template match="date | submission | stemmable | quizbowl-source"/>
+	<xsl:template match="date | submission | stemmable"/>
 
 	<xsl:template match="entry">
 		<section class="entry" id="{@id}">
@@ -100,6 +100,12 @@
 			<xsl:if test="meta/related-entry">
 				<div class="related-entry">
 					<xsl:apply-templates select="meta/related-entry"/>
+				</div>
+			</xsl:if>
+
+			<xsl:if test="meta/quizbowl-source">
+				<div class="quizbowl-source">
+					<xsl:apply-templates select="meta/quizbowl-source"/>
 				</div>
 			</xsl:if>
 
@@ -204,6 +210,17 @@
 		<span class="h">see also</span>
 		<xsl:text> </xsl:text>
 		<xsl:apply-templates/>
+	</xsl:template>
+
+	<xsl:template match="quizbowl-source">
+		<a href="{@url}" title="{name}" target="_blank">
+			<xsl:text>Locate</xsl:text>
+			<xsl:if test="@name != 'MW'">
+				<xsl:text> in </xsl:text>
+				<xsl:value-of select="@name" />
+			</xsl:if>
+			<xsl:text>&#xa0;»</xsl:text>
+		</a>
 	</xsl:template>
 
 </xsl:stylesheet>

@@ -181,3 +181,8 @@ a.lang:hover {
 }
 .author[data-author=OL] { color: #939; font-weight: 700; }
 .author[data-author=MW] { color: #393; font-weight: 400; }
+
+.quizbowl-source {
+	font-size: 0.75em;
+	color: #bbb;
+}

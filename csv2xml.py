@@ -109,6 +109,8 @@ for row in rows:
 	split(source_form, 'pron', row['pg_in_qb_source'])
 	source_no_prefix = re.sub('[^|]+:', '', row['qb_source'])
 	split(source, 'name', source_no_prefix)
+	source_no_filename = re.sub('/.*', '', source_no_prefix).replace('_', ' ')
+	source.set('name', source_no_filename)
 	## <related-entry>
 	split(meta, 'related-entry', row['see_also'])
 
