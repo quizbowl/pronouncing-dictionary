@@ -31,10 +31,11 @@
 							<xsl:value-of select="current-grouping-key()"/>
 						</h2>
 						
-						<xsl:for-each select="current-group()">
-							<xsl:apply-templates select="."/>
-						</xsl:for-each>
-						<br />
+						<div class="columns">
+							<xsl:for-each select="current-group()">
+								<xsl:apply-templates select="."/>
+							</xsl:for-each>
+						</div>
 					</xsl:for-each-group>
 				</article>
 
