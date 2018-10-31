@@ -49,7 +49,7 @@ def attr(parent, attr_name, text):
 rows = csv.DictReader(sys.stdin, dialect=csv.excel)
 random.seed(15)
 for row in rows:
-	if not (row['ex'] or random.random() > 0.95): continue
+	# if not (row['ex'] or random.random() > 0.95): continue
 
 	entry = etree.SubElement(root, 'entry')
 	slug = slugify(re.sub('\\|.*', '', row['word']))
