@@ -1,0 +1,10 @@
+.PHONY: download upload
+
+SHEET_EXPORT_URL:=\
+	"https://docs.google.com/spreadsheets/d/15gC3ZxAGfF16mQ-gCZ3btkt-jGjpzRBv5rWpIKdST7s/export?format=csv&gid=0"
+
+download:
+	wget $(SHEET_EXPORT_URL) -O pgs.csv
+
+upload: html
+	scp *.html pg-dictionary.css *.js gwinnett:~/minkowski.space/quizbowl/pronouncing-dictionary/
