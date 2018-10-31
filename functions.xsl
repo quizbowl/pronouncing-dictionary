@@ -26,23 +26,6 @@
 		</xsl:choose>
 	</xsl:function>
 
-	<xsl:function name="pg:normalize-unicode" as="xs:string">
-		<xsl:param name="s" as="xs:string"/>
-		<xsl:value-of
-			select="replace(normalize-unicode(upper-case($s), 'NFKD'), '\P{IsBasicLatin}', '')"/>
-	</xsl:function>
-	<xsl:function name="pg:indexSymbol" as="xs:string">
-		<xsl:param name="s" as="xs:string"/>
-		<xsl:variable name="indexSymbol"
-			select="pg:normalize-unicode(substring($s, 1, 1))"/>
-		<xsl:choose>
-			<xsl:when test="contains('ABCDEFGHIJKLMNOPQRSTUVWXYZ', $indexSymbol)">
-				<xsl:value-of select="$indexSymbol"/>
-			</xsl:when>
-			<xsl:otherwise>#</xsl:otherwise>
-		</xsl:choose>
-	</xsl:function>
-
 	<xsl:function name="pg:format-date" as="xs:string">
 		<xsl:param name="s" as="xs:dateTime"/>
 		<xsl:value-of select="format-dateTime($s, '[F], [MNn] [D], [Y], [h]:[m] [P]', 'en', (), ())"/>
@@ -51,8 +34,6 @@
 	<xsl:variable name="langs" select="document('data/language-subtag-registry.xml')"
 		as="document-node()"/>
 	<xsl:key name="langKey" match="/registry/language" use="subtag"/>
-
-	<xsl:key name="entryInitial" match="/pg-dictionary/entry" use="substring(form/orth[1], 1, 1)"/>
 
 
 	<xsl:template name="abbr">

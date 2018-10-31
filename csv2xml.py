@@ -8,6 +8,7 @@ from lxml import etree
 import re
 
 import random
+from unidecode import unidecode
 from slugify import UniqueSlugify
 slugify = UniqueSlugify(translate=None, safe_chars=u"-.'\"‘’“”–", separator="_")
 
@@ -46,14 +47,25 @@ def attr(parent, attr_name, text):
 	if text:
 		parent.set(attr_name, text)
 
+def initial(word):
+	word_upper_alphanum_only = word.upper() #re.sub('\\W', '', word.upper(), flags=re.UNICODE)
+	initial = unidecode(word_upper_alphanum_only)[:1]
+	if re.match('^[A-Z]$', initial):
+		return initial
+	elif re.match('^[0-9]$', initial):
+		return '#'
+	else:
+		return '$'
+
 rows = csv.DictReader(sys.stdin, dialect=csv.excel)
 random.seed(15)
 for row in rows:
 	# if not (row['ex'] or random.random() > 0.95): continue
 
 	entry = etree.SubElement(root, 'entry')
-	slug = slugify(re.sub('\\|.*', '', row['word']))
-	entry.set('id', slug)
+	first_orth = re.sub('\\|.*', '', row['word'])
+	entry.set('id', slugify(first_orth))
+	entry.set('initial', initial(first_orth))
 
 	# <form>
 	form = etree.SubElement(entry, 'form')
