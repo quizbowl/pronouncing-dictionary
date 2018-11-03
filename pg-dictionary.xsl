@@ -21,6 +21,7 @@
 				<script type="text/javascript" src="controls.js"/>
 			</head>
 			<body>
+				<a name="top"/>
 				<header>
 					<h1><a href="./">Quizbowl Pronouncing Dictionary</a></h1>
 					<dl>
@@ -54,13 +55,29 @@
 				<a href="#{current-grouping-key()}">
 					<xsl:value-of select="current-grouping-key()"/>
 				</a>
+				<xsl:call-template name="heading-right"/>
 			</h2>
-			<div class="columns">
-				<xsl:for-each select="current-group()">
-					<xsl:apply-templates select="."/>
-				</xsl:for-each>
+			<xsl:call-template name="columns"/>
 			</div>
 		</xsl:for-each-group>
+	</xsl:template>
+
+	<xsl:template name="heading-right">
+		<xsl:variable name="count" select="count(current-group())"/>
+		<span class="heading-right">
+			<xsl:text> </xsl:text>
+			<xsl:value-of select="$count"/>
+			<xsl:choose><xsl:when test="$count=1"> entry</xsl:when><xsl:otherwise> entries</xsl:otherwise></xsl:choose>
+			<xsl:text> </xsl:text>
+			<a href="#top">Top ↑</a>
+		</span>
+	</xsl:template>
+	<xsl:template name="columns">
+		<div class="columns">
+			<xsl:for-each select="current-group()">
+				<xsl:apply-templates select="."/>
+			</xsl:for-each>
+		</div>
 	</xsl:template>
 
 	<xsl:template match="date | submission | stemmable"/>

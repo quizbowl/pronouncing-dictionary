@@ -54,6 +54,20 @@ h2 {
 	font-weight: 600;
 	margin: 1em 0;
 	text-align: center;
+
+	display: grid;
+	grid-template-columns: [a] 6em auto [b] 6em;
+}
+h2 > :first-child {
+	grid-column-start: 2;
+}
+.heading-right {
+	font-weight: 300;
+	font-size: 0.9rem;
+	margin-left: auto;
+}
+.heading-right a {
+	margin-left: 1em;
 }
 
 .entry {
