@@ -62,51 +62,39 @@
 	<xsl:template match="entry">
 		<section class="entry" id="{@id}">
 
-			<xsl:if test="form">
-				<a href="#{@id}" class="mr">
-					<xsl:apply-templates select="form/orth"/>
-				</a>
-				<xsl:call-template name="sp" />
-				<span class="mr">
-					<xsl:apply-templates select="form/pron"/>
-				</span>
-				<xsl:call-template name="sp" />
-			</xsl:if>
+			<a href="#{@id}" class="mr">
+				<xsl:apply-templates select="form/orth"/>
+			</a>
+			<xsl:call-template name="sp" />
+			<span class="mr">
+				<xsl:apply-templates select="form/pron"/>
+			</span>
+			<xsl:call-template name="sp" />
 
-			<xsl:if test="lang">
-				<span class="etym mr">
-					<xsl:apply-templates select="lang"/>
-				</span>
-				<xsl:call-template name="sp" />
-			</xsl:if>
+			<span class="etym mr">
+				<xsl:apply-templates select="lang"/>
+			</span>
+			<xsl:call-template name="sp" />
 
-			<xsl:if test="meta/author">
-				<xsl:apply-templates select="meta/author"/>
-			</xsl:if>
+			<xsl:apply-templates select="meta/author"/>
 
-			<xsl:if test="usage">
-				<div class="usage">
-					<xsl:apply-templates select="usage"/>
-				</div>
-			</xsl:if>
+			<div class="usage">
+				<xsl:apply-templates select="usage"/>
+			</div>
 
-			<xsl:if test="meta/citation">
-				<div class="citations">
-					<xsl:for-each select="meta/citation">
-						<xsl:sort select="@type"/>
-						<xsl:apply-templates select="."/>
-						<xsl:if test="position() != last()">
-							<xsl:call-template name="orl"/>
-						</xsl:if>
-					</xsl:for-each>
-				</div>
-			</xsl:if>
+			<div class="citations">
+				<xsl:for-each select="meta/citation">
+					<xsl:sort select="@type"/>
+					<xsl:apply-templates select="."/>
+					<xsl:if test="position() != last()">
+						<xsl:call-template name="orl"/>
+					</xsl:if>
+				</xsl:for-each>
+			</div>
 
-			<xsl:if test="meta/review">
-				<div class="reviews">
-					<xsl:apply-templates select="meta/review"/>
-				</div>
-			</xsl:if>
+			<div class="reviews">
+				<xsl:apply-templates select="meta/review"/>
+			</div>
 
 			<xsl:if test="meta/related-entry">
 				<div class="related-entry">
@@ -119,9 +107,7 @@
 			<div class="extlinks">
 				<a href="https://forvo.com/search/{form/orth[1]}">Forvo</a>
 				<xsl:text> | </xsl:text>
-				<xsl:if test="meta/quizbowl-source">
-					<xsl:apply-templates select="meta/quizbowl-source"/>
-				</xsl:if>
+				<xsl:apply-templates select="meta/quizbowl-source"/>
 			</div>
 
 		</section>
@@ -139,7 +125,8 @@
 	</xsl:template>
 
 	<xsl:template match="pron">
-		<xsl:if test="preceding-sibling::pron and not(@lang = preceding-sibling::pron/@lang)">
+		<xsl:variable name="skip" select="not(preceding-sibling::pron) or (@lang = preceding-sibling::pron/@lang)"/>
+		<xsl:if test="not($skip)">
 			<xsl:apply-templates select="@lang"/>
 		</xsl:if>
 		<span>
