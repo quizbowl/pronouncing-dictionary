@@ -11,7 +11,7 @@
 
 	<xsl:output method="xhtml" indent="yes"/>
 
-	<xsl:template match="/pg-dictionary">
+	<xsl:template match="/">
 		<xsl:text disable-output-escaping="yes">&#10;&lt;!DOCTYPE html&gt;&#10;</xsl:text>
 		<html xml:lang="en">
 			<head>
@@ -40,21 +40,27 @@
 					</dl>
 				</header>
 				<article>
-					<xsl:for-each-group select="entry" group-by="@initial">
-						<xsl:sort select="current-grouping-key()"/>
-
-						<h2 id="{current-grouping-key()}">
-							<xsl:value-of select="current-grouping-key()"/>
-						</h2>						
-						<div class="columns">
-							<xsl:for-each select="current-group()">
-								<xsl:apply-templates select="."/>
-							</xsl:for-each>
-						</div>
-					</xsl:for-each-group>
+					<xsl:apply-templates/>
 				</article>
 			</body>
 		</html>
+	</xsl:template>
+
+	<xsl:template match="/pg-dictionary">
+		<xsl:for-each-group select="entry" group-by="@initial">
+			<xsl:sort select="current-grouping-key()"/>
+
+			<h2 id="{current-grouping-key()}">
+				<a href="#{current-grouping-key()}">
+					<xsl:value-of select="current-grouping-key()"/>
+				</a>
+			</h2>
+			<div class="columns">
+				<xsl:for-each select="current-group()">
+					<xsl:apply-templates select="."/>
+				</xsl:for-each>
+			</div>
+		</xsl:for-each-group>
 	</xsl:template>
 
 	<xsl:template match="date | submission | stemmable"/>
