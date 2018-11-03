@@ -11,6 +11,8 @@
 
 	<xsl:output method="xhtml" indent="yes"/>
 
+	<xsl:param name="mode"/>
+
 	<xsl:template match="/">
 		<xsl:text disable-output-escaping="yes">&#10;&lt;!DOCTYPE html&gt;&#10;</xsl:text>
 		<html xml:lang="en">
@@ -47,7 +49,8 @@
 		</html>
 	</xsl:template>
 
-	<xsl:template match="/pg-dictionary">
+<!--
+ 	<xsl:template match="/pg-dictionary">
 		<xsl:for-each-group select="entry" group-by="@initial">
 			<xsl:sort select="current-grouping-key()"/>
 
@@ -59,6 +62,83 @@
 					<xsl:call-template name="heading-right"/>
 				</h2>
 				<xsl:call-template name="columns"/>
+			</div>
+		</xsl:for-each-group>
+	</xsl:template>
+ -->
+	<xsl:template match="/pg-dictionary[$mode='index']">
+		<xsl:for-each-group select="entry" group-by="@initial">
+			<xsl:sort select="current-grouping-key()"/>
+
+			<div id="{current-grouping-key()}">
+			<h2>
+				<a href="#{current-grouping-key()}">
+					<xsl:value-of select="current-grouping-key()"/>
+				</a>
+			</h2>
+			<xsl:call-template name="columns"/>
+			</div>
+		</xsl:for-each-group>
+	</xsl:template>
+	<xsl:template match="/pg-dictionary[$mode='lang']">
+		<xsl:for-each-group select="entry" group-by="lang">
+			<xsl:sort select="current-grouping-key()"/>
+
+			<div id="{current-grouping-key()}">
+			<h2>
+				<a href="#{current-grouping-key()}">
+					<xsl:value-of select="current-grouping-key()"/>
+					<xsl:text>: </xsl:text>
+					<xsl:value-of select="pg:langLookupCanonicalName(current-grouping-key())"/>
+				</a>
+				<xsl:call-template name="heading-right"/>
+			</h2>
+			<xsl:call-template name="columns"/>
+			</div>
+		</xsl:for-each-group>
+	</xsl:template>
+	<xsl:template match="/pg-dictionary[$mode='category']">
+		<xsl:for-each-group select="entry" group-by="usage/(category|context)">
+			<xsl:sort select="current-grouping-key()"/>
+
+			<div id="{current-grouping-key()}">
+			<h2>
+				<a href="#{current-grouping-key()}">
+					<xsl:value-of select="current-grouping-key()"/>
+				</a>
+				<xsl:call-template name="heading-right"/>
+			</h2>
+			<xsl:call-template name="columns"/>
+			</div>
+		</xsl:for-each-group>
+	</xsl:template>
+	<xsl:template match="/pg-dictionary[$mode='author']">
+		<xsl:for-each-group select="entry" group-by="meta/author">
+			<xsl:sort select="current-grouping-key()"/>
+
+			<div id="{current-grouping-key()}">
+			<h2>
+				<a href="#{current-grouping-key()}">
+					<xsl:value-of select="current-grouping-key()"/>
+				</a>
+				<xsl:call-template name="heading-right"/>
+			</h2>
+			<xsl:call-template name="columns"/>
+			</div>
+		</xsl:for-each-group>
+	</xsl:template>
+	<xsl:template match="/pg-dictionary[$mode='tournament']">
+		<xsl:for-each-group select="entry" group-by="meta/quizbowl-source/@name">
+			<xsl:sort select="current-grouping-key()"/>
+
+			<div id="{current-grouping-key()}">
+			<h2>
+				<a href="#{current-grouping-key()}">
+					<xsl:value-of select="current-grouping-key()"/>
+				</a>
+				<xsl:call-template name="heading-right"/>
+			</h2>
+			<xsl:call-template name="columns"/>
 			</div>
 		</xsl:for-each-group>
 	</xsl:template>
