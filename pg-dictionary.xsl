@@ -12,6 +12,13 @@
 	<xsl:output method="xhtml" indent="yes"/>
 
 	<xsl:template match="/">
+		<!-- 
+		<xsl:for-each select="'index', 'lang', 'category', 'author', 'tournament'">
+			<xsl:call-template name="view">
+				<xsl:with-param name="view" tunnel="yes" select="."/>
+			</xsl:call-template>
+		</xsl:for-each>
+		-->
 		<xsl:call-template name="view">
 			<xsl:with-param name="view" tunnel="yes">index</xsl:with-param>
 		</xsl:call-template>
