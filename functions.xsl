@@ -31,8 +31,7 @@
 		<xsl:value-of select="format-dateTime($s, '[F], [MNn] [D], [Y], [h]:[m] [P]', 'en', (), ())"/>
 	</xsl:function>
 
-	<xsl:variable name="langs" select="document('data/language-subtag-registry.xml')"
-		as="document-node()"/>
+	<xsl:variable name="langs" select="document('data/language-subtag-registry.xml')" as="document-node()"/>
 	<xsl:key name="langKey" match="/registry/language" use="subtag"/>
 
 

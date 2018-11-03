@@ -106,10 +106,11 @@ for row in rows:
 		citation_audio = etree.SubElement(meta, 'citation')
 		citation_audio.set('type', 'audio')
 		citation_audio.set('url', row['audio_reference'])
-	if row['reference']:
+	if row['reference'] + row['word_in_reference'] + row['pg_in_reference']:
 		citation = etree.SubElement(meta, 'citation')
 		citation.set('type', 'text')
-		citation.set('url', row['reference'])
+		if row['reference']:
+			citation.set('url', row['reference'])
 		citation_form = etree.SubElement(citation, 'form')
 		split(citation_form, 'orth', row['word_in_reference'])
 		split(citation_form, 'pron', row['pg_in_reference'])

@@ -207,11 +207,13 @@
 	</xsl:template>
 
 	<xsl:template match="citation">
-		<a href="{@url}" class="link"><xsl:value-of select="@type"/> ref</a>
-		<xsl:if test="count(*) > 0">
-			<xsl:text>: </xsl:text>
-			<xsl:apply-templates/>
+		<xsl:if test="@url">
+			<a href="{@url}" class="link"><xsl:value-of select="@type"/> ref</a>
+			<xsl:if test="count(*) > 0">
+				<xsl:text>: </xsl:text>
+			</xsl:if>
 		</xsl:if>
+		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="citation[@type='audio']">
 		<span class="audio-controls">
