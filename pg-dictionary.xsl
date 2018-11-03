@@ -22,16 +22,21 @@
 			</head>
 			<body>
 				<header>
-					<h1>Quizbowl Pronouncing Dictionary</h1>
+					<h1><a href="./">Quizbowl Pronouncing Dictionary</a></h1>
 					<dl>
 						<dt>Editor:</dt>
 						<dd>Ophir Lifshitz</dd>
 						<dt>Status:</dt>
-						<dd>Draft. Almost all entries not by <a class="author" data-author="OL" href="#author=OL">OL</a> are unverified and are probably inaccurate.</dd>
+						<dd>Draft. Almost all entries not by <a class="author" data-author="OL" href="author.html#OL">OL</a> are unverified and are probably inaccurate.</dd>
 						<dt>Last updated:</dt>
 						<dd><time><xsl:value-of select="pg:format-date(current-dateTime())" /></time> Showing a 5% sample of all entries.</dd>
 						<dt>Coming soon:</dt>
-						<dd>Filter by language, by category, by tournament, by author, by review scores.</dd>
+						<dd>Filter
+							<a class="link" href="lang.html">by language</a>,
+							<a class="link" href="category.html">by category</a>,
+							<a class="link" href="author.html">by author</a>,
+							<a class="link" href="tournament.html">by tournament</a>,
+							by review scores.</dd>
 					</dl>
 				</header>
 				<article>
@@ -174,13 +179,18 @@
 
 	<xsl:template name="lang">
 		<xsl:param name="class" />
-		<a class="lang {$class}" href="#lang={.}" title="{.}">
+		<a class="lang {$class}" href="lang.html#{.}" title="{.}">
 			<xsl:value-of select="pg:langLookupCanonicalName(.)"/>
 		</a>
 	</xsl:template>
 
-
-	<xsl:template match="usage/*[name() != 'stemmable']">
+	<xsl:template match="usage/category|usage/context">
+		<a class="{name()}" href="category.html#{.}">
+			<xsl:apply-templates/>
+		</a>
+		<xsl:call-template name="or"/>
+	</xsl:template>
+	<xsl:template match="usage/definition">
 		<span class="{name()}">
 			<xsl:apply-templates/>
 		</span>
@@ -223,7 +233,7 @@
 	</xsl:template>
 
 	<xsl:template match="author">
-		<a class="author" data-author="{.}" href="#author={.}">
+		<a class="author" data-author="{.}" href="author.html#{.}">
 			<xsl:value-of select="."/>
 		</a>
 	</xsl:template>
