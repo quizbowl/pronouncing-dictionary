@@ -87,7 +87,7 @@
 			<div>
 				<h2 id="{current-grouping-key()}">
 					<a href="#{current-grouping-key()}">
-						<xsl:value-of select="current-grouping-key()"/>
+						<xsl:call-template name="header"/>
 					</a>
 					<xsl:call-template name="heading-right"/>
 				</h2>
@@ -96,6 +96,17 @@
 		</xsl:for-each-group>
 	</xsl:template>
 
+	<xsl:template name="header">
+		<xsl:param name="view" tunnel="yes"/>
+
+		<xsl:value-of select="current-grouping-key()"/>
+		<xsl:choose>
+			<xsl:when test="$view='lang'">
+				<xsl:text>: </xsl:text>
+				<xsl:value-of select="pg:langLookupCanonicalName(current-grouping-key())"/>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
 	<xsl:template name="heading-right">
 		<xsl:variable name="count" select="count(current-group())"/>
 		<span class="heading-right">
