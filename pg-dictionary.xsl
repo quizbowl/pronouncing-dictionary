@@ -12,6 +12,38 @@
 	<xsl:output method="xhtml" indent="yes"/>
 
 	<xsl:template match="/">
+		<!-- 
+		<xsl:for-each select="'index', 'lang', 'category', 'author', 'tournament'">
+			<xsl:call-template name="view">
+				<xsl:with-param name="view" tunnel="yes" select="."/>
+			</xsl:call-template>
+		</xsl:for-each>
+		-->
+		<xsl:call-template name="view">
+			<xsl:with-param name="view" tunnel="yes">index</xsl:with-param>
+		</xsl:call-template>
+		<xsl:call-template name="view">
+			<xsl:with-param name="view" tunnel="yes">lang</xsl:with-param>
+		</xsl:call-template>
+		<xsl:call-template name="view">
+			<xsl:with-param name="view" tunnel="yes">category</xsl:with-param>
+		</xsl:call-template>
+		<xsl:call-template name="view">
+			<xsl:with-param name="view" tunnel="yes">author</xsl:with-param>
+		</xsl:call-template>
+		<xsl:call-template name="view">
+			<xsl:with-param name="view" tunnel="yes">tournament</xsl:with-param>
+		</xsl:call-template>
+	</xsl:template>
+	<xsl:template name="view">
+		<xsl:param name="view" tunnel="yes"/>
+
+		<xsl:result-document href="{$view}.html">
+			<xsl:call-template name="skeleton"/>
+		</xsl:result-document>
+	</xsl:template>
+
+	<xsl:template name="skeleton">
 		<xsl:text disable-output-escaping="yes">&#10;&lt;!DOCTYPE html&gt;&#10;</xsl:text>
 		<html xml:lang="en">
 			<head>
@@ -48,13 +80,21 @@
 	</xsl:template>
 
 	<xsl:template match="/pg-dictionary">
-		<xsl:for-each-group select="entry" group-by="@initial">
+		<xsl:param name="view" tunnel="yes"/>
+
+		<xsl:for-each-group select="entry" group-by="
+			if ($view='index')      then @initial                   else
+			if ($view='lang')       then lang                       else
+			if ($view='category')   then usage/(category|context)   else
+			if ($view='author')     then meta/author                else
+			if ($view='tournament') then meta/quizbowl-source/@name else
+			0">
 			<xsl:sort select="current-grouping-key()"/>
 
 			<div>
 				<h2 id="{current-grouping-key()}">
 					<a href="#{current-grouping-key()}">
-						<xsl:value-of select="current-grouping-key()"/>
+						<xsl:call-template name="header"/>
 					</a>
 					<xsl:call-template name="heading-right"/>
 				</h2>
@@ -63,6 +103,17 @@
 		</xsl:for-each-group>
 	</xsl:template>
 
+	<xsl:template name="header">
+		<xsl:param name="view" tunnel="yes"/>
+
+		<xsl:value-of select="current-grouping-key()"/>
+		<xsl:choose>
+			<xsl:when test="$view='lang'">
+				<xsl:text>: </xsl:text>
+				<xsl:value-of select="pg:langLookupCanonicalName(current-grouping-key())"/>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
 	<xsl:template name="heading-right">
 		<xsl:variable name="count" select="count(current-group())"/>
 		<span class="heading-right">
