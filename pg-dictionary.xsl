@@ -51,13 +51,14 @@
 		<xsl:for-each-group select="entry" group-by="@initial">
 			<xsl:sort select="current-grouping-key()"/>
 
-			<h2 id="{current-grouping-key()}">
-				<a href="#{current-grouping-key()}">
-					<xsl:value-of select="current-grouping-key()"/>
-				</a>
-				<xsl:call-template name="heading-right"/>
-			</h2>
-			<xsl:call-template name="columns"/>
+			<div>
+				<h2 id="{current-grouping-key()}">
+					<a href="#{current-grouping-key()}">
+						<xsl:value-of select="current-grouping-key()"/>
+					</a>
+					<xsl:call-template name="heading-right"/>
+				</h2>
+				<xsl:call-template name="columns"/>
 			</div>
 		</xsl:for-each-group>
 	</xsl:template>
