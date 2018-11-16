@@ -53,9 +53,15 @@ footer {
 	}
 }
 
+h1 {
+	font-size: 1.5em;
+	font-weight: 600;
+}
 h2 {
 	font-size: 1.25em;
 	font-weight: 600;
+}
+.dictionary section h2 {
 	margin: 0.5em 0 0;
 	padding: 0.75em;
 	text-align: center;
@@ -68,7 +74,7 @@ h2 {
 	display: grid;
 	grid-template-columns: [a] 6em auto [b] 6em;
 }
-h2 > :first-child {
+.dictionary section h2 > :first-child {
 	grid-column-start: 2;
 }
 .heading-right {
@@ -105,7 +111,8 @@ h2 > :first-child {
 	font-size: 0;
 }
 
-a:not(.link) {
+.dictionary a:not(.link),
+header > :not(nav) a:not(.link) {
 	text-decoration: none;
 	color: inherit;
 }
@@ -173,6 +180,8 @@ a.lang:hover {
 .pron {
 	font-weight: 500;
 	color: #027BCE;
+}
+.dictionary .pron {
 	user-select: all;
 }
 .IPA {
@@ -209,8 +218,8 @@ a.lang:hover {
 .author {
 	font-size: 0.75em;
 }
-.author[data-author=OL] { color: #939; font-weight: 700; }
-.author[data-author=MW] { color: #393; font-weight: 400; }
+.author[data-author=OL] { color: #939 !important; font-weight: 700; }
+.author[data-author=MW] { color: #393 !important; font-weight: 400; }
 
 .extlinks {
 	font-size: 0.75em;

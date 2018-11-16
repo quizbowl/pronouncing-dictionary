@@ -56,37 +56,40 @@ stylesheet \
             dd
               time
                 value-of pg:format-date(current-dateTime())
-            dt <<Coming soon:>>
-            dd
-              text <<Filter >>
-              a lang.html       link <<by language>>
+          
+          nav
+            p
+              text <<Sort entries >>
+              a index.html      <<by term>>
               text <<, >>
-              a category.html   link <<by category>>
+              a lang.html       <<by language>>
               text <<, >>
-              a author.html     link <<by author>>
+              a category.html   <<by category>>
               text <<, >>
-              a tournament.html link <<by tournament>>
+              a author.html     <<by author>>
+              text <<, >>
+              a tournament.html <<by tournament>>
               text <<, by review scores.>>
 
-        article
-          apply-templates
+        apply-templates
 
   template /pg-dictionary
     tempParam view yes
-    for-each-group entry -group-by=<{
-        if ($view='index')      then @initial                   else
-        if ($view='lang')       then lang                       else
-        if ($view='category')   then usage/(category|context)   else
-        if ($view='author')     then meta/author                else
-        if ($view='tournament') then meta/quizbowl-source/@name else
-        0}>
-      sort current-grouping-key()
-      div
-        h2 -id={current-grouping-key()}
-          a #{current-grouping-key()}
-            call-template header
-          call-template heading-right
-        call-template columns
+    article -class=dictionary
+      for-each-group entry -group-by=<{
+          if ($view='index')      then @initial                   else
+          if ($view='lang')       then lang                       else
+          if ($view='category')   then usage/(category|context)   else
+          if ($view='author')     then meta/author                else
+          if ($view='tournament') then meta/quizbowl-source/@name else
+          0}>
+        sort current-grouping-key()
+        section
+          h2 -id={current-grouping-key()}
+            a #{current-grouping-key()}
+              call-template header
+            call-template heading-right
+          call-template columns
 
   templateN header
     tempParam view yes
@@ -115,7 +118,7 @@ stylesheet \
   template <(<<date | submission | stemmable>>)>
 
   template entry
-    section -class=entry -id={@id}
+    div -class=entry -id={@id}
       a #{@id} mr
         apply-templates form/orth
       call-template sp
