@@ -11,6 +11,10 @@ body {
 
 	margin: 0 auto;
 	max-width: 90rem;
+
+	text-decoration-skip-ink: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 article {
 	padding: 0 1em;
@@ -173,9 +177,9 @@ a.lang:hover {
 }
 .IPA {
 	color: inherit;
-	font-weight: 700;
-	font-family: 'Brill';
-	font-feature-settings: 'ss20' 1;
+	font-weight: 600;
+	font-family: 'Minion 3', 'Brill', 'Gentium', 'Segoe UI', 'Lucida Grande', 'Lucida Sans Unicode', 'Noto Sans', 'Noto Serif', 'Arial Unicode MS', 'Arial', 'Calibri', 'Cambria', sans-serif;
+	font-feature-settings: 'ss20' 1, 'ss06' 1;
 }
 .or {
 	color: #888;
