@@ -1,8 +1,10 @@
 all: html
 
 html: index.html lang.html category.html author.html tournament.html
-index.html: pg-dictionary.xml pg-dictionary.xsl functions.xsl
+index.html: pg-dictionary.xml pg-dictionary.xsl
 	saxon -o:$@ $< $(word 2,$^) -TP:profile.html
+
+pg-dictionary.xsl: functions.xsl
 
 xml: pg-dictionary.xml
 pg-dictionary.xml: pgs.csv csv2xml.py base.xml
