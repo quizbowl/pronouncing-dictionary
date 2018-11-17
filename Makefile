@@ -1,3 +1,5 @@
+.PRECIOUS: %.xml %.xsl
+
 HTMLS_SORTS:=lang.html category.html author.html tournament.html
 HTMLS:=\
 	index.html $(HTMLS_SORTS)

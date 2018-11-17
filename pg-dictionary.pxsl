@@ -35,6 +35,7 @@ stylesheet \
       head
         meta -charset=utf-8
         meta -name=viewport -content=width=device-width,initial-scale=1
+        meta -name=google -content=notranslate
         link -type=text/css -rel=stylesheet -href=pg-dictionary.css
         script -type=text/javascript -src=controls.js
 
