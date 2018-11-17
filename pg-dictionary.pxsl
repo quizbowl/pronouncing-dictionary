@@ -18,6 +18,12 @@ stylesheet \
       with view yes
         ,viewName
 
+  ,lia viewName =
+    li
+      a <(,viewName
+        <<.html>>)>
+        ,BODY
+
   template /
     ,view index
     ,view lang
@@ -65,16 +71,11 @@ stylesheet \
               dt <<View entries by>>
               dd
                 ul
-                  li
-                    a index.html      <<alphabetical>>
-                  li
-                    a lang.html       <<language>>
-                  li
-                    a category.html   <<category>>
-                  li
-                    a author.html     <<author>>
-                  li
-                    a tournament.html <<tournament>>
+                  ,lia index       <<alphabetical>>
+                  ,lia lang        <<language>>
+                  ,lia category    <<category>>
+                  ,lia author      <<author>>
+                  ,lia tournament  <<tournament>>
                   li <<review score>>
 
         apply-templates
