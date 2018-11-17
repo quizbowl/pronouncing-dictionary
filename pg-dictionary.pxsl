@@ -162,14 +162,9 @@ stylesheet \
         apply-templates meta/review
 
       if meta/related-entry
-        div related-entry
-          span h <<see also>>
-          text << >>
-          apply-templates meta/related-entry
+        apply-templates meta/related-entry
 
-      div extlinks
-        a https://forvo.com/search/{form/orth[1]} <<Forvo>>
-        text << | >>
+      if meta/quizbowl-source
         apply-templates meta/quizbowl-source
 
   template entry/form/orth
@@ -255,14 +250,20 @@ stylesheet \
       value-of .
 
   template related-entry
-    a #{@ref} link
-      apply-templates
-    call-template or
+    div related-entry
+      span h <<see also>>
+      text << >>
+      a #{@ref} link
+        apply-templates
+      call-template or
 
   template quizbowl-source
-    a {@url} -title={name} -target=_blank
-      text <<Locate>>
-      if @name!='MW'
-        text << in >>
-        value-of @name
-      text <<&#xA0;&#x00BB;>>
+    div extlinks
+      a https://forvo.com/search/{form/orth[1]} <<Forvo>>
+      text << | >>
+      a {@url} -title={name} -target=_blank
+        text <<Locate>>
+        if @name!='MW'
+          text << in >>
+          value-of @name
+        text <<&#xA0;&#x00BB;>>
