@@ -46,31 +46,36 @@ stylesheet \
           h1
             a ./ <<Quizbowl Pronouncing Dictionary>>
           dl
-            dt <<Editor:>>
+            dt <<Editor>>
             dd <<Ophir Lifshitz>>
-            dt <<Status:>>
+
+            dt <<Status>>
             dd
               <<Draft. Almost all entries not by >>
               a author.html#OL author -data-author=OL <<OL>>
               << are unverified and are probably inaccurate.>>
-            dt <<Last updated:>>
+
+            dt <<Last updated>>
             dd
               time
                 value-of pg:format-date(current-dateTime())
-          
+
           nav
-            p
-              text <<Sort entries >>
-              a index.html      <<by term>>
-              text <<, >>
-              a lang.html       <<by language>>
-              text <<, >>
-              a category.html   <<by category>>
-              text <<, >>
-              a author.html     <<by author>>
-              text <<, >>
-              a tournament.html <<by tournament>>
-              text <<, by review scores.>>
+            dl
+              dt <<View entries by>>
+              dd
+                ul
+                  li
+                    a index.html      <<alphabetical>>
+                  li
+                    a lang.html       <<language>>
+                  li
+                    a category.html   <<category>>
+                  li
+                    a author.html     <<author>>
+                  li
+                    a tournament.html <<tournament>>
+                  li <<review score>>
 
         apply-templates
 
