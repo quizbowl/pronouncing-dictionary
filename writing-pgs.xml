@@ -1,0 +1,385 @@
+<article xmlns="http://www.w3.org/1999/xhtml">
+
+<h1 foo="bar">How to write syllables for pronunciation guides</h1>
+
+<p>This document contains guidelines for writing syllables for pronunciation guides
+so that they are consistently easy to read (decipherable).<br />
+Formatting, styling, and punctuation for pronunciation guides are covered elsewhere, such as in the
+<a href="http://minkowski.space/quizbowl/manuals/style/qb-specific.html#pronunciation-guides">quizbowl manual of style</a>.</p>
+
+<p>In this document, <b class="pron">semibold blue text</b> is used for the contents of pronunciation guides.<br />
+IPA symbols like <b class="pron IPA">/æ/</b> are used here only to unambiguously refer to English phonemes.</p>
+
+<h2>Remember</h2>
+
+<ol>
+<li><p>Pronunciation guides serve all players and moderators (both novice and experienced).<br />
+They must be correct and easy to read, and not ambiguous or unnatural.</p></li>
+
+<li><p>Pronunciation guides especially help moderators who are
+non-native English speakers, dyslexic, or are just tired.<br />
+Moderators may also have a different accent than you.
+When you write pronunciation guides, keep that in mind.
+</p></li>
+<!-- https://www.dyslexia-reading-well.com/44-phonemes-in-english.html http://teflpedia.com/IPA_phoneme_/%CA%8C/ -->
+
+<li>
+<p>Pronunciation guides must be immediately understandable without any training.<br />
+They are written with the expectation that moderators will only use their intuition of standard English spelling rules to pronounce them.</p>
+
+<p>Moderators are never going to read pronunciation instructions before a tournament (or remember them later in-game, despite doing so).<br />
+It is useless to define direct global correspondences (such as Weiner’s
+<b class="pron">ai</b> = <b class="pron IPA">/aɪ/</b>,
+<b class="pron">ey</b> = <b class="pron IPA">/eɪ/</b>,
+<b class="pron">ow</b> = <b class="pron IPA">/aʊ/</b>,
+<b class="pron">aa</b> = <b class="pron IPA">/æ/</b>,
+<b class="pron">uu</b> = <b class="pron IPA">/ʊ/</b>).</p>
+
+<p>Read more about <a href="https://en.wikipedia.org/wiki/Pronunciation_respelling_for_English">pronunciation respelling</a> on Wikipedia.</p>
+</li>
+<!-- similar spirit to Wikipedia’s, though less systematic -->
+</ol>
+
+<h2>Guidelines</h2>
+
+<ol>
+<li>
+<p>Use the established English pronunciation or spelling if it exists.</p>
+
+<blockquote>
+<p>✔︎ Copenhagen, not ✘ København (“<b class="pron">kuh-bin-HOWN</b>”)<br />
+✔︎ Sophrosyne (“<b class="pron">suh-FROZZ-uh-nee</b>”), not ✘ Sophrosyne (“<b class="pron">soh-froh-SOO-nay</b>”)</p>
+</blockquote>
+
+<p>This is more readily recognizable to English speakers (who may have only seen the word in writing).</p>
+</li>
+
+<li>
+	<p>Use spaces to separate words and hyphens to separate syllables.
+Try to use the same number of spaces as in the original word or phrase.</p>
+
+<blockquote>
+<p>✔︎ John Foo-Bar (“<b class="pron">john foo-bar</b>”)<br />
+✘ John Foo-Bar (“<b class="pron">john-foo-bar</b>”),
+John Foo-Bar (“<b class="pron">john foo bar</b>”)</p>
+</blockquote>
+
+<p>Do not put quotes around single syllables.</p>
+
+<blockquote>
+<p>✔︎ Dorian (“<b class="pron">DOR-ee-in</b>”), not ✘ Dorian (<b class="pron">“DOOR”-ee-“in”</b>)</p>
+</blockquote>
+</li>
+
+<li>
+<p>Avoid using actual English words as syllables when a more straightforward, systematic option is available.</p>
+
+<blockquote>
+<p>✔︎ <b class="pron">kee</b>, not ✘ <b class="pron">key</b><br />
+✔︎ <b class="pron">nee</b>, not ✘ <b class="pron">knee</b><br />
+✔︎ <b class="pron">noo</b>, not ✘ <b class="pron">knew</b></p>
+</blockquote>
+</li>
+
+<li>
+<p>Avoid silent letters or consonant combinations.</p>
+
+<blockquote>
+<p>✘
+<b class="pron">kn</b>, <b class="pron">gn</b>,
+<b class="pron">mb</b>, <b class="pron">mn</b>,
+<b class="pron">wh</b>*, <b class="pron">wr</b>*,
+<b class="pron">rh</b>, <b class="pron">ph</b>,
+<b class="pron">pt</b>-, <b class="pron">ps</b>-,
+<b class="pron">pn</b>-, -<b class="pron">bt</b>,
+-<b class="pron">lf</b>, -<b class="pron">lk</b>,
+<b class="pron">sch</b></p>
+</blockquote>
+
+<p>Avoid confusing, non-English consonant clusters.</p>
+
+<blockquote>
+<p>✘ <b class="pron">bh</b>, <b class="pron">dh</b><br />
+✘ <b class="pron">gh</b>
+(unless in an extremely common word, like <b class="pron">high</b>;
+avoid <b class="pron">though</b> or <b class="pron">cough</b>;
+prefer <b class="pron">g</b> for <b class="pron IPA">/ɡ/</b>
+before high front vowels if unambiguous)</p>
+</blockquote>
+
+<p>Use an apostrophe to break up non-English consonant clusters.</p>
+
+<blockquote>
+<p>✔︎ Knuth (“<b class="pron">k’NOOTH</b>”)<br />
+✔︎ Xia (“<b class="pron">sh’YAH</b>”)<br />
+✔︎ Reich (“<b class="pron">RYE’sh</b>”)</p>
+</blockquote>
+</li>
+
+<li>
+<p>It is sometimes okay to use a limited number of comprehensible, common, un-English-like digraphs.</p>
+
+<p>For example, if there is no possible unambiguous representation otherwise:</p>
+<blockquote>
+<p>✔︎ <b class="pron IPA">/aʊ/</b> = <b class="pron">ao</b>
+(but prefer <b class="pron">ow</b>)
+— as in Bauhaus, Laozi, Māori<br />
+</p>
+</blockquote>
+
+<p>or to represent native English phonemes that are uncommon or marginal (restricted to loanwords):</p>
+
+<blockquote>
+<p>✔︎ <b class="pron IPA">/ʒ/</b> = <b class="pron">zh</b>
+(but prefer <b class="pron">j</b>)
+— as in Brezhnev, Jean, Silesia, solfège<br />
+✔︎ <b class="pron IPA">/x/</b><!-- /χ/ --> = <b class="pron">kh</b>
+(but prefer <b class="pron">k</b> or <b class="pron">h</b>)
+— as in Bach, loch, sheikh, Ahmed</p>
+</blockquote>
+</li>
+
+<li>
+<p>Avoid unchecked vowels (i.e. a vowel not followed by a syllable-ending consonant).</p>
+
+<blockquote>
+<p>✘ <b class="pron">te</b>, <b class="pron">ti</b>, <b class="pron">tu</b><br />
+✔︎ <b class="pron">teh</b>, <b class="pron">tih</b>, <b class="pron">tuh</b>
+to represent a checked (short/lax) vowel<br />
+✔︎ <b class="pron">tay</b>, <b class="pron">tee</b>, <b class="pron">too</b>
+to represent a free (long/tense) vowel</p>
+</blockquote>
+
+<p>Avoid un-English-like or ambiguous vowel digraphs.</p>
+
+<blockquote>
+<p>✘ <b class="pron">aa</b>, <b class="pron">uu</b>,
+<b class="pron">ey</b>, <b class="pron">eu</b>,
+<b class="pron">oe</b>, <b class="pron">ie</b>,
+<b class="pron">ea</b>, <b class="pron">ae</b><br />
+✔︎ <b class="pron">a</b>+consonant,
+<b class="pron">oo</b>/<b class="pron">u</b>+consonant,
+<b class="pron">ay</b>/<b class="pron">eye</b>/<b class="pron">ee</b>,
+<b class="pron">er</b>/<b class="pron">ur</b>/<b class="pron">uh</b>/<b class="pron">yoo</b>/<b class="pron">ew</b>/<b class="pron">oo</b>,
+<b class="pron">er</b>/<b class="pron">ur</b>/<b class="pron">uh</b>/<b class="pron">oh</b>/<b class="pron">oo</b>,
+<b class="pron">ee</b>/<b class="pron">eye</b>,
+<b class="pron">ee</b>/<b class="pron">ay</b>/<b class="pron">eh</b>,
+<b class="pron">ay</b></p>
+</blockquote>
+</li>
+
+<li>
+<p>Do not use non-English symbols or diacritics in pronunciation guides.</p>
+
+<blockquote>
+<p>✘
+<b class="pron">ü</b>, <b class="pron">ž</b>,
+<b class="pron">ə</b>, <b class="pron">ē</b>,
+<b class="pron"><u>th</u></b>,
+<b class="pron">stress<b style="font-family: serif;">′</b>ful</b></p>
+</blockquote>
+</li>
+
+<li>
+<p>Use <b class="pron">s</b> for the plural suffix
+and <b class="pron">’s</b> for the possessive suffix,
+unless the assimilation or dissimilation needs to be made explicit.</p>
+
+<blockquote>
+<p>✔︎ Uitlanders (“<b class="pron">OUT-land-ers</b>”), not
+✘ Uitlanders (“<b class="pron">OUT-land-erz</b>”)<br />
+✔︎ ayllus (“<b class="pron">EYE-ooz</b>”)</p>
+</blockquote>
+
+<blockquote>
+<p>✔︎ Neumann’s (“<b class="pron">NOY-mahn’s</b>”), not
+✘ Neumann’s (“<b class="pron">NOY-mahn’z</b>”)<br />
+✔︎ Geertz’s (“<b class="pron">GURTS-iz</b>”)</p>
+</blockquote>
+
+<p>Use single capital letters for spelled-out acronyms
+(but use <b class="pron">eye</b> in place of <b class="pron">I</b> if it would be confusing).
+Use <b class="pron">’s</b> for the plural suffix of capital letters.</p>
+
+<blockquote>
+<p>✔︎ APIs (“<b class="pron">A-P-I’s</b>”), not
+✘ APIs (“<b class="pron">A-P-Is</b>”),
+APIs (“<b class="pron">ay-pee-eyes</b>”)</p>
+</blockquote>
+
+<p>Write out numbers.</p>
+
+<blockquote>
+<p>✔︎ IC50 (“<b class="pron">eye-C-fifty</b>”)<br />
+✔︎ FoxP2 (“<b class="pron">fox-P-two</b>”)</p>
+</blockquote>
+</li>
+
+<li>
+<p>Do not use “<b class="pron">rhymes with</b>” or similar directives.</p>
+
+<blockquote>
+<p>✔︎ Gauss, not ✘ Gauss​ (“<b class="pron">rhymes with house</b>”)</p>
+</blockquote>
+
+<p>Only resort to directives in the extremely rare case that
+the guide would be unusably inaccurate or ambiguous otherwise.</p>
+
+<blockquote>
+<p>✘ -deul (“<b class="pron">dool</b>”), ✘ -deul (“<b class="pron">dull</b>”), ✘ -deul (“<b class="pron">duel</b>”)<br />
+✔︎ -deul (“<b class="pron">rhymes with pull</b>”)</p>
+</blockquote>
+</li>
+
+<li>
+<p>Use “<b class="pron">or</b>” to delimit equally acceptable pronunciations. Use very sparingly.</p>
+
+<blockquote>
+<p>✔︎ Huygens (“<b class="pron">HIGH-guns or HOY-guns</b>”)</p>
+</blockquote>
+</li>
+</ol>
+
+<h2>List of syllables to avoid</h2>
+
+<p>Most of these syllables are actual English words with
+confusing, counterintuitive, or unsystematic pronunciations.</p>
+
+<div class="overflow">
+<table>
+<thead>
+<tr>
+<th rowspan="2" style="width: 4.5em;">Syllable to avoid</th>
+<th colspan="2">Use instead</th>
+<th rowspan="2" style="width: 5.5em;">Reason</th>
+</tr>
+<tr>
+<th style="width: 8.75em;">Main pronunciation</th>
+<th style="width: 9.5em;">Other pronunciations</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>door</td><td><b class="pron">dor</b></td><td><b class="pron">doo</b>+<b class="pron">r</b></td><td>superfluous</td></tr>
+<tr><td>you</td><td><b class="pron">yoo</b></td><td><b class="pron">yo</b></td><td>superfluous</td></tr>
+<tr><td>key</td><td><b class="pron">kee</b></td><td><b class="pron">kay</b></td><td>superfluous</td></tr>
+<tr><td>hey</td><td><b class="pron">hay</b>, <b class="pron">hey</b>*</td></tr>
+<tr><td>knee</td><td><b class="pron">nee</b></td><td></td><td>superfluous</td></tr>
+<tr><td>knew</td><td><b class="pron">noo</b>, <b class="pron">new</b>*</td><td></td><td>superfluous</td></tr>
+<tr><td>none</td><td><b class="pron">nun</b></td><td><b class="pron">known</b>, <b class="pron">nohn</b></td></tr>
+<tr><td>lie</td><td><b class="pron">lye</b></td><td><b class="pron">lee</b></td></tr>
+<tr><td>lose</td><td><b class="pron">looz</b></td><td><b class="pron">lohz</b></td></tr>
+<tr><td>buy</td><td><b class="pron">bye</b>, <b class="pron">by</b></td><td></td><td>superfluous</td></tr>
+<tr><td>build</td><td><b class="pron">bild</b></td><td></td><td>superfluous</td></tr>
+<tr><td>built</td><td><b class="pron">bilt</b></td><td></td><td>superfluous</td></tr>
+<tr><td>me</td><td><b class="pron">mee</b></td></tr>
+<tr><td>be</td><td><b class="pron">bee</b></td></tr>
+<tr><td>he</td><td><b class="pron">hee</b></td></tr>
+<tr><td>we</td><td><b class="pron">wee</b></td></tr>
+<tr><td>she</td><td><b class="pron">shee</b></td></tr>
+<tr><td>do</td><td><b class="pron">doo</b></td><td><b class="pron">doh</b></td><td>heteronym</td></tr>
+<tr><td>doe</td><td><b class="pron">doh</b></td><td><b class="pron">doo</b></td></tr>
+<tr><td>does</td><td><b class="pron">duzz</b></td><td><b class="pron">doze</b>, <b class="pron">dohz</b></td><td>heteronym</td></tr>
+<tr><td>to</td><td><b class="pron">too</b></td><td><b class="pron">toh</b></td></tr>
+<tr><td>two</td><td><b class="pron">too</b></td><td></td><td>superfluous</td></tr>
+<tr><td>break</td><td><b class="pron">brake</b></td><td></td><td>superfluous</td></tr>
+<tr><td>great</td><td><b class="pron">grate</b></td><td></td><td>superfluous</td></tr>
+<tr><td>steak</td><td><b class="pron">stake</b></td><td></td><td>superfluous</td></tr>
+<tr><td>read</td><td><b class="pron">reed</b></td><td><b class="pron">red</b></td><td>heteronym</td></tr>
+<tr><td>lead</td><td><b class="pron">leed</b></td><td><b class="pron">led</b></td><td>heteronym</td></tr>
+<tr><td>bead</td><td><b class="pron">beed</b></td><td><b class="pron">bed</b></td><td>superfluous</td></tr>
+<tr><td>dead</td><td><b class="pron">ded</b></td><td><b class="pron">deed</b></td><td>superfluous</td></tr>
+<tr><td>head</td><td><b class="pron">hed</b></td><td><b class="pron">heed</b></td><td>superfluous</td></tr>
+<tr><td>bear</td><td><b class="pron">bare</b>, <b class="pron">bair</b></td><td><b class="pron">beer</b></td></tr>
+<tr><td>pear</td><td><b class="pron">pare</b>, <b class="pron">pair</b></td><td><b class="pron">peer</b></td></tr>
+<tr><td>tear</td><td><b class="pron">tare</b>, <b class="pron">tair</b></td><td><b class="pron">teer</b></td><td>heteronym</td></tr>
+<tr><td>wear</td><td><b class="pron">ware</b>, <b class="pron">wair</b></td><td><b class="pron">weer</b></td></tr>
+<tr><td>four</td><td><b class="pron">for</b></td><td><b class="pron">foor</b></td></tr>
+<tr><td>gone</td><td><b class="pron">gon</b></td><td><b class="pron">gohn</b></td></tr>
+<tr><td>love</td><td><b class="pron">luv</b></td><td><b class="pron">lohv</b>, <b class="pron">loave</b></td></tr>
+<tr><td>live</td><td><b class="pron">liv</b></td><td><b class="pron">lyve</b></td><td>heteronym</td></tr>
+<tr><td>move</td><td><b class="pron">moov</b></td><td><b class="pron">mohv</b></td></tr>
+<tr><td>one</td><td><b class="pron">wun</b>, <b class="pron">won</b></td><td><b class="pron">own</b>, <b class="pron">ohn</b></td></tr>
+<tr><td>sure</td><td><b class="pron">shur</b></td><td><b class="pron">sur</b></td></tr>
+<tr><td>some</td><td><b class="pron">sum</b></td><td><b class="pron">sohm</b></td></tr>
+<tr><td>come</td><td><b class="pron">kum</b></td><td><b class="pron">kohm</b></td></tr>
+<tr><td>done</td><td><b class="pron">dun</b></td><td><b class="pron">dohn</b></td></tr>
+<tr><td>dove</td><td><b class="pron">dohv</b></td><td><b class="pron">duv</b></td><td>heteronym</td></tr>
+<tr><td>shove</td><td><b class="pron">shuv</b></td><td><b class="pron">shohv</b>, <b class="pron">showv</b></td></tr>
+<tr><td>glove</td><td><b class="pron">gluv</b></td><td><b class="pron">glohv</b>, <b class="pron">glowv</b></td></tr>
+<tr><td>close</td><td><b class="pron">kloce</b></td><td><b class="pron">kloze</b></td><td>heteronym</td></tr>
+<tr><td>been</td><td><b class="pron">bin</b></td><td><b class="pron">bean</b>, <b class="pron">bee</b>+<b class="pron">n</b></td></tr>
+<tr><td>hi</td><td><b class="pron">high</b>, <b class="pron">hye</b></td><td><b class="pron">hee</b>, <b class="pron">hih</b></td></tr>
+<tr><td>pi</td><td><b class="pron">pie</b>, <b class="pron">pye</b></td><td><b class="pron">pee</b>, <b class="pron">pih</b></td></tr>
+<tr><td>son</td><td><b class="pron">sun</b></td><td><b class="pron">sawn</b></td></tr>
+<tr><td>shoe</td><td><b class="pron">shoo</b></td><td><b class="pron">show</b>, <b class="pron">shoh</b>, <b class="pron">sho</b></td></tr>
+<tr><td>who</td><td><b class="pron">hoo</b></td></tr>
+<tr><td>whose</td><td><b class="pron">hooz</b></td></tr>
+<tr><td>sue</td><td><b class="pron">soo</b></td></tr>
+<tr><td>sew</td><td><b class="pron">so</b></td><td><b class="pron">soo</b></td></tr>
+<tr><td>die</td><td><b class="pron">dye</b></td><td><b class="pron">dee</b></td></tr>
+<tr><td>blue</td><td><b class="pron">bloo</b></td></tr>
+<tr><td>blew</td><td><b class="pron">bloo</b></td></tr>
+<tr><td>sow</td><td><b class="pron">so</b></td><td><b class="pron">sao</b></td><td>heteronym</td></tr>
+<tr><td>bow</td><td><b class="pron">bo</b></td><td><b class="pron">bao</b></td><td>heteronym</td></tr>
+<tr><td>mow</td><td><b class="pron">mo</b>, <b class="pron">mow</b>*</td><td><b class="pron">mao</b></td><td>heteronym</td></tr>
+<tr><td>tier</td><td><b class="pron">teer</b></td><td><b class="pron">tire</b></td><td>heteronym</td></tr>
+<tr><td>use</td><td><b class="pron">yooz</b></td><td><b class="pron">yoose</b></td><td>heteronym</td></tr>
+<tr><td>wound</td><td><b class="pron">woond</b></td><td><b class="pron">waond</b></td><td>heteronym</td></tr>
+<tr><td>wind</td><td><b class="pron">win</b>+<b class="pron">d</b>,  <b class="pron">winnd</b></td><td><b class="pron">wined</b>, <b class="pron">wyned</b></td><td>heteronym</td></tr>
+<tr><td>bass</td><td><b class="pron">base</b></td><td><b class="pron">bass</b>, <b class="pron">bas</b>+consonant</td><td>heteronym</td></tr>
+<tr><td>were</td><td><b class="pron">wur</b></td><td><b class="pron">weer</b>, <b class="pron">wair</b>, <b class="pron">where</b></td></tr>
+<tr><td>here</td><td><b class="pron">heer</b></td><td><b class="pron">hair</b></td></tr>
+<tr><td>blood</td><td><b class="pron">blud</b></td><td><b class="pron">bloo</b>+<b class="pron">d</b>, <b class="pron">blued</b></td></tr>
+<tr><td>flood</td><td><b class="pron">flud</b></td><td><b class="pron">floo</b>+<b class="pron">d</b>, <b class="pron">flued</b></td></tr>
+<tr><td>was</td><td><b class="pron">wuzz</b></td></tr>
+<tr><td>rough</td><td><b class="pron">ruff</b></td></tr>
+<tr><td>cough</td><td><b class="pron">koff</b></td></tr>
+<tr><td>though</td><td><b class="pron">tho</b>, <b class="pron">though</b>*</td></tr>
+<tr><td>through</td><td><b class="pron">throo</b></td></tr>
+<tr><td>trough</td><td><b class="pron">troff</b></td></tr>
+<tr><td>tough</td><td><b class="pron">tuff</b></td></tr>
+<tr><td>bough</td><td><b class="pron">bao</b></td><td><b class="pron">bo</b></td></tr>
+<tr><td>dough</td><td><b class="pron">doh</b></td><td></td><td>superfluous</td></tr>
+<tr><td>weigh</td><td><b class="pron">way</b></td><td></td><td>superfluous</td></tr>
+<tr><td>weight</td><td><b class="pron">wait</b></td><td></td><td>superfluous</td></tr>
+<tr><td>eight</td><td><b class="pron">ate</b>, <b class="pron">ait</b></td><td></td><td>superfluous</td></tr>
+<tr><td>aught</td><td><b class="pron">ott</b></td><td></td><td>superfluous</td></tr>
+<tr><td>ought</td><td><b class="pron">ott</b></td><td></td><td>superfluous</td></tr>
+<tr><td>bought</td><td><b class="pron">bot</b></td><td></td><td>superfluous</td></tr>
+<tr><td>caught</td><td><b class="pron">cot</b></td><td></td><td>superfluous</td></tr>
+<tr><td>naught</td><td><b class="pron">not</b></td><td></td><td>superfluous</td></tr>
+<tr><td>nought</td><td><b class="pron">not</b></td><td></td><td>superfluous</td></tr>
+<tr><td>sought</td><td><b class="pron">sot</b></td><td></td><td>superfluous</td></tr>
+<tr><td>taught</td><td><b class="pron">tot</b></td><td></td><td>superfluous</td></tr>
+<tr><td>laugh</td><td><b class="pron">laff</b></td></tr>
+<tr><td>pre</td><td><b class="pron">pree</b></td></tr>
+<tr><td>chi</td><td><b class="pron">chee</b></td><td><b class="pron">chai</b>, <b class="pron">kye</b>, <b class="pron">kai</b></td></tr>
+<tr><td>phi</td><td><b class="pron">fy</b>, <b class="pron">fye</b></td><td><b class="pron">fee</b></td></tr>
+<tr><td>pri</td><td><b class="pron">pry</b></td><td><b class="pron">pree</b></td></tr>
+<tr><td>psi</td><td><b class="pron">sigh</b></td></tr>
+<tr><td>shi</td><td><b class="pron">shee</b></td></tr>
+<tr><td>ski</td><td><b class="pron">skee</b></td></tr>
+<tr><td>tri</td><td><b class="pron">try</b></td><td><b class="pron">tree</b></td></tr>
+<tr><td>broad</td><td><b class="pron">brod</b></td><td><b class="pron">brode</b></td></tr>
+<tr><td>bread</td><td><b class="pron">bred</b></td><td><b class="pron">breed</b></td></tr>
+<tr><td>said</td><td><b class="pron">sed</b></td><td><b class="pron">side</b>, <b class="pron">sade</b>, <b class="pron">sah</b>+<b class="pron">eed</b></td></tr>
+<tr><td>says</td><td><b class="pron">sez</b></td><td><b class="pron">sayz</b></td></tr>
+<tr><td>aunt</td><td><b class="pron">ant</b></td><td><b class="pron">ont</b></td></tr>
+<tr><td>limb</td><td><b class="pron">lim</b></td></tr>
+<tr><td>bomb</td><td><b class="pron">bom</b></td></tr>
+<tr><td>balm</td><td><b class="pron">bom</b></td></tr>
+<tr><td>comb</td><td><b class="pron">kohm</b></td></tr>
+<tr><td>plaid</td><td><b class="pron">plad</b></td><td><b class="pron">played</b></td></tr>
+<tr><td>debt</td><td><b class="pron">det</b></td></tr>
+<tr><td>tread</td><td><b class="pron">tred</b></td><td><b class="pron">treed</b></td></tr>
+<tr><td>dread</td><td><b class="pron">dred</b></td><td><b class="pron">dreed</b></td></tr>
+<tr><td>deaf</td><td><b class="pron">deff</b></td></tr>
+<tr><td>sean</td><td><b class="pron">shawn</b></td><td><b class="pron">seen</b></td></tr>
+<tr><td>scene</td><td><b class="pron">seen</b></td><td></td><td>superfluous</td></tr>
+<tr><td>gore</td><td><b class="pron">gor</b></td><td></td><td>superfluous</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>* Sometimes okay.</p>
+</article>

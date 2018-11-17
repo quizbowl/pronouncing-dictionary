@@ -271,3 +271,23 @@ svg .axis {
 .audio-controls button {
 	width: 2.25em;
 }
+
+.overflow {
+	max-width: 100%;
+	overflow-x: auto;
+}
+table {
+	border-spacing: 0.75em 2px;
+	border: 1px solid black;
+	border-width: 2px 0;
+}
+tbody tr:first-child td {
+	padding-top: 0.5em;
+}
+th {
+	padding: 0.25em;
+	font-weight: 600;
+	/*vertical-align: bottom;*/
+
+	border-bottom: 1px solid black;
+}
