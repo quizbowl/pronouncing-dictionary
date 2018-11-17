@@ -68,6 +68,14 @@ stylesheet \
 
           nav
             dl
+              dt <<Navigation>>
+              dd
+                ul
+                  ,lia about       <<About this dictionary>>
+                  ,lia entry       <<How to read an entry>>
+                  ,lia writing-pgs <<How to write good PGs>>
+                  ,lia references  <<References>>
+
               dt <<View entries by>>
               dd
                 ul
