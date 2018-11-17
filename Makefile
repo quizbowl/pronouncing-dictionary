@@ -13,6 +13,10 @@ $(HTMLS_SORTS): index.html
 index.html: pg-dictionary.xml pg-dictionary.xsl
 	saxon -o:$@ $< $(word 2,$^) -TP:profile.html
 
+%.html: %.xml page.xsl
+	saxon -o:$@ $< $(word 2,$^)
+
+page.xsl: pg-dictionary.xsl
 pg-dictionary.xsl: functions.xsl
 
 xml: pg-dictionary.xml
