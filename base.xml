@@ -2,5 +2,5 @@
 <?xml-model href="pg-dictionary.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-stylesheet type="text/xsl" href="pg-dictionary.xsl"?>
 <?xml-stylesheet type="text/css" href="pg-dictionary.css"?>
-<pg-dictionary xmlns:pg="http://schema.quizbowl.technology/xml/pg-dictionary">
+<pg-dictionary xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
 </pg-dictionary>

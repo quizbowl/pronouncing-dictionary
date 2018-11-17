@@ -6,6 +6,7 @@ stylesheet \
   -xmlns:xs=http://www.w3.org/2001/XMLSchema \
   -xmlns:pg=http://schema.quizbowl.technology/xml/pg-dictionary \
   -xmlns=http://www.w3.org/1999/xhtml \
+  -xpath-default-namespace=http://schema.quizbowl.technology/xml/pg-dictionary \
   -exclude-result-prefixes=<{xs pg}> \
   -version=2.0
 
