@@ -1,0 +1,249 @@
+<<<?xml version="1.0" encoding="UTF-8" ?>>>
+
+stylesheet \
+  -xmlns:xml=http://www.w3.org/XML/1998/namespace \
+  -xmlns:xsl=http://www.w3.org/1999/XSL/Transform \
+  -xmlns:xs=http://www.w3.org/2001/XMLSchema \
+  -xmlns:pg=http://schema.quizbowl.technology/xml/pg-dictionary \
+  -xmlns=http://www.w3.org/1999/xhtml \
+  -exclude-result-prefixes=<{xs pg}> \
+  -version=2.0
+
+  import functions.xsl
+  output -method=xhtml -indent=yes
+
+  ,view viewName =
+    call-template view
+      with view yes
+        ,viewName
+
+  template /
+    ,view index
+    ,view lang
+    ,view category
+    ,view author
+    ,view tournament
+
+  templateN view
+    tempParam view yes
+    result-document {$view}.html
+      call-template skeleton
+
+  templateN skeleton
+    text yes <<&lt;!DOCTYPE html&gt;&#10;>>
+    html -xml:lang=en
+      head
+        meta -charset=utf-8
+        meta -name=viewport -content=width=device-width,initial-scale=1
+        link -type=text/css -rel=stylesheet -href=pg-dictionary.css
+        script -type=text/javascript -src=controls.js
+
+      body
+        a -name=top
+        header
+          h1
+            a ./ <<Quizbowl Pronouncing Dictionary>>
+          dl
+            dt <<Editor:>>
+            dd <<Ophir Lifshitz>>
+            dt <<Status:>>
+            dd
+              <<Draft. Almost all entries not by >>
+              a author.html#OL author -data-author=OL <<OL>>
+              << are unverified and are probably inaccurate.>>
+            dt <<Last updated:>>
+            dd
+              time
+                value-of pg:format-date(current-dateTime())
+            dt <<Coming soon:>>
+            dd
+              text <<Filter >>
+              a lang.html       link <<by language>>
+              text <<, >>
+              a category.html   link <<by category>>
+              text <<, >>
+              a author.html     link <<by author>>
+              text <<, >>
+              a tournament.html link <<by tournament>>
+              text <<, by review scores.>>
+
+        article
+          apply-templates
+
+  template /pg-dictionary
+    tempParam view yes
+    for-each-group entry -group-by=<{
+        if ($view='index')      then @initial                   else
+        if ($view='lang')       then lang                       else
+        if ($view='category')   then usage/(category|context)   else
+        if ($view='author')     then meta/author                else
+        if ($view='tournament') then meta/quizbowl-source/@name else
+        0}>
+      sort current-grouping-key()
+      div
+        h2 -id={current-grouping-key()}
+          a #{current-grouping-key()}
+            call-template header
+          call-template heading-right
+        call-template columns
+
+  templateN header
+    tempParam view yes
+    value-of current-grouping-key()
+    choose
+      when $view='lang'
+        text <<: >>
+        value-of pg:langLookupCanonicalName(current-grouping-key())
+
+  templateN heading-right
+    variable count count(current-group())
+    span heading-right
+      text << >>
+      value-of $count
+      choose
+        when $count=1 << entry>>
+        otherwise << entries>>
+      text << >>
+      a #top <<Top &#x2191;>>
+
+  templateN columns
+    div columns
+      for-each current-group()
+        apply-templates .
+
+  template <(<<date | submission | stemmable>>)>
+
+  template entry
+    section -class=entry -id={@id}
+      a #{@id} mr
+        apply-templates form/orth
+      call-template sp
+
+      span mr
+        apply-templates form/pron
+      call-template sp
+
+      span <(<<etym mr>>)>
+        apply-templates lang
+      call-template sp
+
+      apply-templates meta/author
+
+      div usage
+        apply-templates usage
+
+      div citations
+        for-each meta/citation
+          sort @type
+          apply-templates .
+          if position()!=last()
+            call-template orl
+
+      div reviews
+        apply-templates meta/review
+
+      if meta/related-entry
+        div related-entry
+          span h <<see also>>
+          text << >>
+          apply-templates meta/related-entry
+
+      div extlinks
+        a https://forvo.com/search/{form/orth[1]} <<Forvo>>
+        text << | >>
+        apply-templates meta/quizbowl-source
+
+  template entry/form/orth
+    b -class=headword
+      apply-templates
+    call-template orsame
+
+  template orth
+    apply-templates
+    call-template orsame
+
+  template pron
+    variable skip <(<<not(preceding-sibling::pron) or (@lang = preceding-sibling::pron/@lang)>>)>
+    if not($skip)
+      apply-templates @lang
+    span
+      choose
+        when @notation='IPA'
+          attribute class <<pron IPA>>
+          # text <<[>>
+          apply-templates
+          # text <<]>>
+        otherwise
+          attribute class <<pron>>
+          apply-templates
+    if <(<<not(@lang) or @lang = following-sibling::pron/@lang>>)>
+      call-template orsame
+
+  template pron/@lang
+    call-template lang
+      with class << first last>>
+    text <<&#xA0;>>
+
+  template lang
+    call-template lang
+      with class
+        if not(preceding-sibling::lang) << main first>>
+        if not(following-sibling::lang) << last>>
+
+  templateN lang
+    param class
+    a lang.html#{.} <(<<lang {$class}>>)> -title={.}
+      value-of pg:langLookupCanonicalName(.)
+
+  template usage/category|usage/context
+    a category.html#{.} {name()}
+      apply-templates
+    call-template or
+
+  template usage/definition
+    span {name()}
+      apply-templates
+    call-template or
+
+  template review
+    div review
+      span
+        if author
+          apply-templates author
+          text <<: >>
+        for-each @*
+          call-template abbr
+          if position()!=last()
+            text <<, >>
+      call-template radar
+
+  template citation
+    if @url
+      a {@url} link
+        value-of @type
+        << ref>>
+      if <(<<count(*) > 0>>)>
+        text <<: >>
+    apply-templates
+
+  template citation[@type='audio']
+    span audio-controls
+      audio -preload=none -src={@url}
+      button -onclick=toggleAudio(this) <<&#x25BA;>>
+
+  template author
+    a author.html#{.} author -data-author={.}
+      value-of .
+
+  template related-entry
+    a #{@ref} link
+      apply-templates
+    call-template or
+
+  template quizbowl-source
+    a {@url} -title={name} -target=_blank
+      text <<Locate>>
+      if @name!='MW'
+        text << in >>
+        value-of @name
+      text <<&#xA0;&#x00BB;>>

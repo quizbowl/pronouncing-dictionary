@@ -1,0 +1,78 @@
+<<<?xml version="1.0" encoding="UTF-8"?>>>
+
+stylesheet \
+  -xmlns:xml=http://www.w3.org/XML/1998/namespace \
+  -xmlns:xsl=http://www.w3.org/1999/XSL/Transform \
+  -xmlns:xs=http://www.w3.org/2001/XMLSchema \
+  -xmlns:pg=http://schema.quizbowl.technology/xml/pg-dictionary \
+  -xmlns=http://www.w3.org/1999/xhtml \
+  -xmlns:math=http://www.w3.org/2005/xpath-functions/math \
+  -exclude-result-prefixes=<{xs pg math}> \
+  -version=2.0
+
+  function pg:langGetPrefix xs:string
+    funcParam langP xs:string
+    value-of tokenize($langP,'-')[1]
+
+  function pg:langLookupCanonicalName xs:string
+    funcParam langP xs:string
+    variable langPrefix pg:langGetPrefix($langP)
+    variable langName $langs/key('langKey',$langPrefix)/description[1]
+    choose
+      when $langName
+        value-of $langName
+      otherwise
+        value-of <(<<concat('? (', $langP, ')')>>)>
+
+  function pg:format-date xs:string
+    funcParam s xs:dateTime
+    value-of <(<<format-dateTime($s, '[F], [MNn] [D], [Y], [h]:[m] [P]', 'en', (), ())>>)>
+
+  variable langs document('data/language-subtag-registry.xml') -as=document-node()
+  key langKey /registry/language subtag
+
+  templateN abbr
+    variable abbr
+      value-of name()
+      # choose
+      #   when name()='accuracy' <<acc>>
+      #   when name()='decipherability' <<decipher>>
+      #   when name()='familiarity' <<famil>>
+      #   when name()='utility' <<util>>
+    value-of $abbr
+    text << >>
+    value-of .
+
+  templateN orsame
+    variable varName name()
+    if following-sibling::*[name()=$varName]
+      call-template orl
+
+  templateN or
+    if following-sibling::*[name()!='stemmable']
+      call-template orl
+
+  templateN orl
+    span or
+      text << | >>
+
+  templateN sp
+    span sp
+      text << >>
+
+  templateN radar
+    variable d
+      variable n count(@*)
+      for-each @*
+        variable th <(<<2*math:pi() * position() div $n + (math:pi())>>)>
+        choose
+          when position()=1 <<M >>
+          otherwise <<L >>
+        value-of <(<<round((. + 2) * math:sin($th) * 1e4) div 1e4>>)>
+        text << >>
+        value-of <(<<round((. + 2) * math:cos($th) * 1e4) div 1e4>>)>
+        text << >>
+      text <<z>>
+    svg -width=16 -viewBox=<{-5 -5 10 10}>
+      path -class=axis -d=<{M 0 5 L 5 0 L 0 -5 L -5 0 z}>
+      path -class=shape -d={$d}

@@ -8,4 +8,10 @@ xml: pg-dictionary.xml
 pg-dictionary.xml: pgs.csv csv2xml.py base.xml
 	< $< python $(word 2,$^) | xmllint --format - > $@
 
+%.xml: %.pxml
+	pxslcc -h "$<" > "$@"
+
+%.xsl: %.pxsl transformers/xslt2.edf
+	pxslcc -hx --add=$(word 2,$^) "$<" > "$@"
+
 -include load.mk

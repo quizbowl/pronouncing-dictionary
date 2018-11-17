@@ -1,0 +1,15 @@
+for-each-group         = xsl:for-each-group select
+analyze-string         = xsl:analyze-string select regex
+matching-substring     = xsl:matching-substring
+non-matching-substring = xsl:non-matching-substring
+result-document        = xsl:result-document href
+
+templateN = xsl:template name
+function = xsl:function name as
+with = xsl:with-param name tunnel
+tempParam = xsl:param name tunnel
+funcParam = xsl:param name as
+
+a = a href class
+span = span class
+div = div class

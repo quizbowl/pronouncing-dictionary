@@ -2,4 +2,5 @@
 oxygen/
 data/*.json
 *.xml
+*.xsl
 *.html
