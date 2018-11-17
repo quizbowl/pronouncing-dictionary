@@ -1,6 +1,13 @@
+HTMLS_SORTS:=lang.html category.html author.html tournament.html
+HTMLS:=\
+	index.html $(HTMLS_SORTS)
+
+
 all: html
 
-html: index.html lang.html category.html author.html tournament.html
+html: $(HTMLS)
+
+$(HTMLS_SORTS): index.html
 index.html: pg-dictionary.xml pg-dictionary.xsl
 	saxon -o:$@ $< $(word 2,$^) -TP:profile.html
 
