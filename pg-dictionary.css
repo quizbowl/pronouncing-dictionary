@@ -20,14 +20,14 @@ article {
 	padding: 0 1em;
 	margin: 1em 0 2em;
 }
-header {
+header.masthead {
 	border: 1px solid black;
 	border-width: 3px 0 1px;
 	margin: 1em 0 2em;
 	padding: 1em;
 	background: #B8F2E6;
 }
-header h1 {
+header.masthead h1 {
 	font-size: 1.8em;
 	font-weight: 300;
 	margin: 0.5em 0;
@@ -62,12 +62,12 @@ h2 {
 	font-weight: 600;
 }
 
-header nav dd ul {
+ul.inline {
 	display: inline;
 	list-style: none;
 	padding: 0;
 }
-header nav dd ul li {
+ul.inline li {
 	display: inline;
 	margin-right: 0.4em;
 }
@@ -103,7 +103,8 @@ header nav dd ul li {
 	padding: 0.25em;
 	padding-left: 1em;
 	text-indent: -0.75em;
-
+}
+.keep {
 	-webkit-column-break-inside: avoid;
 	page-break-inside: avoid;
 	break-inside: avoid-column;
@@ -237,25 +238,24 @@ a.lang:hover {
 	color: #bbb;
 }
 
-dt, dd {
+dt {
+	font-weight: 500;
+}
+dl.compact dt, dl.compact dd {
 	margin: 0;
 }
-dt {
+dl.compact dt {
 	width: 7em;
 	float: left;
 	clear: both;
-	font-weight: 500;
 }
-dd {
+dl.compact dd {
 	margin-left: 7.5em;
 }
-dl::after {
+dl.compact::after {
 	clear: both;
 	content: '';
 	display: table;
-}
-header time {
-	margin-right: 1em;
 }
 
 svg {

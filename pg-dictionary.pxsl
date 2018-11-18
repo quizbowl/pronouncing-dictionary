@@ -48,10 +48,10 @@ stylesheet \
 
       body
         a -name=top
-        header
+        header -class=masthead
           h1
             a ./ <<Quizbowl Pronouncing Dictionary>>
-          dl
+          dl compact
             dt <<Editor>>
             dd <<Ophir Lifshitz>>
 
@@ -67,10 +67,10 @@ stylesheet \
                 value-of pg:format-date(current-dateTime())
 
           nav
-            dl
+            dl compact
               dt <<Navigation>>
               dd
-                ul
+                ul inline
                   ,lia about       <<About this dictionary>>
                   ,lia entry       <<How to read an entry>>
                   ,lia writing-pgs <<How to write good PGs>>
@@ -78,7 +78,7 @@ stylesheet \
 
               dt <<View entries by>>
               dd
-                ul
+                ul inline
                   ,lia index       <<alphabetical>>
                   ,lia lang        <<language>>
                   ,lia category    <<category>>
@@ -133,7 +133,7 @@ stylesheet \
   template <(<<date | submission | stemmable>>)>
 
   template entry
-    div -class=entry -id={@id}
+    div <(<<entry keep>>)> -id={@id}
       a #{@id} mr
         apply-templates form/orth
       call-template sp

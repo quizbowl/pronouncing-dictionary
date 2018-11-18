@@ -13,3 +13,5 @@ funcParam = xsl:param name as
 a = a href class
 span = span class
 div = div class
+ul = ul class
+dl = dl class
