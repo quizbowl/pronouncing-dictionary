@@ -1,0 +1,246 @@
+<article class="dictionary" xmlns:pg="http://schema.quizbowl.technology/xml/pg-dictionary" xmlns="http://www.w3.org/1999/xhtml">
+
+<h1 class="foo">How to read an entry</h1>
+
+<h2>Sample entry</h2>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <entry id="Aachen_1" initial="A">
+    <form>
+      <orth>Aachen</orth>
+      <pron>OCK-in</pron>
+    </form>
+    <lang>en</lang>
+    <lang>de</lang>
+    <usage>
+      <category>Geography</category>
+      <context>Germany</context>
+      <definition>city in western Germany</definition>
+      <stemmable>no</stemmable>
+    </usage>
+    <meta>
+      <author>MW</author>
+      <review utility="3" familiarity="2" accuracy="3" decipherability="3">
+        <author>OL</author>
+        <date>2018−10−16</date>
+      </review>
+      <citation type="audio" url="https://www.collinsdictionary.com/sounds/e/en_/en_us/en_us_aachen.mp3"/>
+      <citation type="text" url="https://www.collinsdictionary.com/dictionary/english/aachen">
+        <form>
+          <pron lang="en-US" notation="IPA">ˈɑkən</pron>
+          <pron lang="en-GB" notation="IPA">ˈɑːkən</pron>
+          <pron lang="de" notation="IPA">ˈɑxən</pron>
+        </form>
+      </citation>
+      <quizbowl-source url="http://aseemsdb.me/results?query=AH-khen&amp;dir=HS%2F2017_NASAT" name="2017 NASAT">
+        <form>
+          <orth>Aachen</orth>
+          <pron>AH-khen</pron>
+        </form>
+        <name>2017_NASAT/Round_02.pdf</name>
+      </quizbowl-source>
+      <related-entry ref="Aix-la-Chapelle">Aix-la-Chapelle</related-entry>
+    </meta>
+  </entry>
+</example>
+
+<div class="columns columns-section">
+
+<div class="keep">
+<h3>Headword</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <form>
+    <orth>Aachen</orth>
+  </form>
+</example>
+
+<p>Alternate spellings included.<br/>
+• <l>afikoman</l>: afikoman | afikomen</p>
+</div>
+
+<div class="keep">
+<h3>Pronunciation guide</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <pron>OCK-in</pron>
+</example>
+
+<p>Alternatives, duplicates, and prescriptive quizbowl pronunciations are separate entries for now.</p>
+<p>Pronunciations are listed in order of frequency.<br />TODO: equally frequent variants are marked with <code>=</code>.</p>
+</div>
+
+<div class="keep">
+<h3>Inflections and derivations (TODO)</h3>
+<!-- <example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  TODO
+</div> -->
+
+<p>Whether the word allows stemming/suffixes<br/>
+• <l>quipu</l> → quipus, <l>Wien</l> → Wien’s, <l>prophesy</l> → prophesies</p>
+<p>Partial names, dropped articles<br/>
+• <l>Alban Berg</l> → Berg, <l>La Marseillaise</l> → Marseillaise</p>
+<p>Force capitalization at beginning of sentence<br/>
+• <l>von Laue</l> → Von Laue</p>
+</div>
+</div>
+
+<div class="columns columns-section">
+<div class="keep">
+<h3>Author</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <author>MW</author>
+</example>
+
+<p>TODO: submitted by, submission date, edited by.</p>
+</div>
+
+<div class="keep">
+<h3>Related entries</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <related-entry ref="Aix-la-Chapelle">Aix-la-Chapelle</related-entry>
+</example>
+
+<p>Various cross references, including synonyms, hypernyms, hyponyms, cohyponyms (coordinate terms), etc.</p>
+</div>
+
+<div class="keep">
+<h3>Citation</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <citation type="audio" url="https://www.collinsdictionary.com/sounds/e/en_/en_us/en_us_aachen.mp3"/>
+  <citation type="text" url="https://www.collinsdictionary.com/dictionary/english/aachen">
+    <form>
+      <pron lang="en-US" notation="IPA">ˈɑkən</pron>
+      <pron lang="en-GB" notation="IPA">ˈɑːkən</pron>
+      <pron lang="de" notation="IPA">ˈɑxən</pron>
+    </form>
+  </citation>
+</example>
+
+<p>Links to audio and textual references for the word’s pronunciation.</p>
+<p>IPA pronunciations come from from textual references. Pronunciations that are not in American English appear with a language tag.</p>
+</div>
+
+<div class="keep">
+<h3>Quizbowl source</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <quizbowl-source url="http://aseemsdb.me/results?query=AH-khen&amp;dir=HS%2F2017_NASAT" name="2017 NASAT">
+    <form>
+      <orth>Aachen</orth>
+      <pron>AH-khen</pron>
+    </form>
+    <name>2017_NASAT/Round_02.pdf</name>
+  </quizbowl-source>
+</example>
+
+<p>The quizbowl set (or other quizbowl source) that the entry came from.</p>
+<p>Links to Forvo and Aseem’s DB to facilitate lookup.</p>
+<p>TODO: Include direct link to packet. Show word and pronunciation guide as given in the quizbowl source.</p>
+</div>
+
+</div>
+
+<div class="columns columns-section">
+
+<div class="keep">
+<h3>Languages</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <lang>en</lang><lang>de</lang>
+</example>
+
+<dl class="compact">
+  <dt>Language</dt>
+  <dd>
+    <p>Primary language of the word. <lang>English</lang> is for words that
+    <ul style="list-style-type: none; padding-left: 1.5em; text-indent: -0.5em;">
+      <li>are obviously native English words</li>
+      <li>have entered into common English usage (refer to major dictionaries or corpora)</li>
+      <li>have an Anglicized pronunciation</li>
+      <li>have an English derivation (not inflection)</li>
+    </ul></p>
+  </dd>
+  <dd><p>• <l>sudoku</l>, <l>origami</l> = English<br />• <l>Mitsuko</l>, <l>handakuten</l> = Japanese</p></dd>
+  <dt>Original languages</dt>
+  <dd><p>Ultimate languages of origin.</p>
+  <p>Special values: <lang>mul</lang> for multiple languages (doubly eponymous need to be separated eventually); <lang>zxx</lang> for gibberish or made-up words; <lang>qfi</lang> for fictional names; <lang>qco</lang> for coined terms; <lang>qab</lang> for abbreviations or acronyms; <lang>qli</lang> for linguistic transcriptions; <lang>qis</lang> for international scientific vocabulary</p></dd>
+  <dd><p>• <l>Abbasid</l>, <l>Achilles</l>, <l>Amharic</l> are native English words, but they are originally Arabic/Greek/Amharic respectively</p></dd>
+</dl>
+</div>
+
+<div class="keep">
+<h3>Usage</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <usage>
+    <category>Geography</category>
+    <context>Germany</context>
+    <definition>city in western Germany</definition>
+    <stemmable>no</stemmable>
+  </usage>
+</example>
+
+<dl class="compact">
+  <dt>Category</dt>
+  <dd><p>major or minor quizbowl category where the word is likely to be found; can be used for disambiguation</p>
+  <p><cat>Common</cat> is for words common to several categories (<l>fin de siècle</l>)</p></dd>
+  <dd><p>• major: <cat>Literature</cat>, <cat>History</cat>, <cat>Science</cat><br/>• minor: <cat>Computer Science</cat>, <cat>Physics</cat></p></dd>
+  <dt>Context</dt>
+  <dd><p>to disambiguate identical words</p></dd>
+  <dd><p>• <cat>Bible</cat>, <cat>Roman</cat>, <cat>Buddhism</cat></p></dd>
+  <dt>Definition</dt>
+  <dd><p>concise gloss of the word</p></dd>
+</dl>
+</div>
+
+<div class="keep">
+<h3>Review</h3>
+<example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
+  <review utility="3" familiarity="2" accuracy="3" decipherability="3">
+    <author>OL</author>
+    <date>2018−10−16</date>
+  </review>
+</example>
+
+<p>Ratings are given by the reviewer. TODO: add review date.</p>
+<p>TODO: Undefined values are currently listed as 0.<br />Radar chart will be redesigned as a sparkline/bar chart.</p>
+<dl class="compact">
+  <dt>Utility</dt>
+  <dd><p>Priority/helpfulness; how useful is PG to the average moderator</p></dd>
+
+  <dt>(Un)familiarity</dt>
+  <dd><p>Ubiquity/obscurity; how likely an average moderator will know the word</p></dd>
+  <dd>
+    <dl class="compact x tabular-nums">
+      <dt>3</dt><dd>Ubiquitous</dd>
+      <dt>2</dt><dd>Ubiquitous but confusable (<l>causal</l>, <l>climatic</l>, <l>statute</l>) or counterintuitive (<l>quay</l>, <l>sieve</l>, <l>trough</l>)</dd>
+      <dt>1</dt><dd>Uncommon</dd>
+      <dt>0</dt><dd>Obscure</dd>
+      <dt>−1</dt><dd>Extremely obscure</dd>
+    </dl>
+  </dd>
+
+  <dt>Accuracy</dt>
+  <dd><p>Confidence in accuracy/correctness</p></dd>
+  <dd>
+    <dl class="compact x tabular-nums">
+      <dt>3</dt><dd>Confident</dd>
+      <dt>2</dt><dd>Mostly confident</dd>
+      <dt>1</dt><dd>Not confident</dd>
+      <dt>0</dt><dd>No idea</dd>
+      <dt>−1</dt><dd>Confident that the PG is probably wrong</dd>
+    </dl>
+  </dd>
+
+  <dt>Decipherability</dt>
+  <dd><p>Decipherability/clarity/legibility of PG</p></dd>
+  <dd>
+    <dl class="compact x tabular-nums">
+      <dt>3</dt><dd>Clear</dd>
+      <dt>2</dt><dd>Serviceable (as good as it can get given the constraints; or has to resort to directives like “rhymes with”)</dd>
+      <dt>1</dt><dd>Has minor issues</dd>
+      <dt>0</dt><dd>Has major issues</dd>
+      <dt>−1</dt><dd>Needs to be rewritten</dd>
+    </dl>
+  </dd>
+</dl>
+</div>
+
+</div>
+
+</article>

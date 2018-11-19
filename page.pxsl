@@ -4,6 +4,7 @@ stylesheet \
   -xmlns:xml=http://www.w3.org/XML/1998/namespace \
   -xmlns:xsl=http://www.w3.org/1999/XSL/Transform \
   -xmlns=http://www.w3.org/1999/xhtml \
+  -xpath-default-namespace=http://www.w3.org/1999/xhtml \
   -version=2.0
 
   import pg-dictionary.xsl
@@ -13,6 +14,21 @@ stylesheet \
   template /
     call-template skeleton
 
-  template *[namespace-uri()=$htmlns]|*[namespace-uri()=$htmlns]/@*
+  template *[namespace-uri()=$htmlns]|*[namespace-uri()=$htmlns]/@* -priority=-1
     copy
       apply-templates @*|node()
+
+  ,viewLink tag viewName =
+    template <(,tag)>
+      call-template viewLink
+        with view
+          ,viewName
+
+  ,viewLink l    index
+  ,viewLink cat  category
+  ,viewLink lang lang
+
+  templateN viewLink
+    param view
+    a {$view}.html#{.} link
+      apply-templates

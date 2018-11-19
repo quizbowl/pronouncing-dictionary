@@ -167,7 +167,7 @@ stylesheet \
       if meta/quizbowl-source
         apply-templates meta/quizbowl-source
 
-  template entry/form/orth
+  template (entry|div)/form/orth
     b -class=headword
       apply-templates
     call-template orsame
@@ -267,3 +267,7 @@ stylesheet \
           text << in >>
           value-of @name
         text <<&#xA0;&#x00BB;>>
+
+  template example
+    blockquote -class=example
+      apply-templates

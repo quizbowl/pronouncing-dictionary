@@ -24,7 +24,7 @@ header.masthead {
 	border: 1px solid black;
 	border-width: 3px 0 1px;
 	margin: 1em 0 2em;
-	padding: 1em;
+	padding: 0.5em 1em;
 	background: #B8F2E6;
 }
 header.masthead h1 {
@@ -41,6 +41,12 @@ footer {
 
 .columns {
 	column-gap: 2rem;
+}
+.columns-section {
+	margin: 2em 0;
+}
+.columns-section > .keep:first-child h3 {
+	margin-top: 0;
 }
 @media screen and (min-width: 54rem) {
 	.columns {
@@ -59,6 +65,10 @@ h1 {
 }
 h2 {
 	font-size: 1.25em;
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.1em;
 	font-weight: 600;
 }
 
@@ -257,6 +267,19 @@ dl.compact::after {
 	content: '';
 	display: table;
 }
+dl.compact.x dt {
+	width: 1.125em;
+}
+dl.compact.x dd {
+	margin-left: 2.5em;
+}
+.tabular-nums {
+	font-variant-numeric: tabular-nums;
+	-moz-font-feature-settings: 'tnum' 1;
+}
+dl.compact.x.tabular-nums dt {
+	text-align: right;
+}
 
 svg {
 	margin-left: 0.5em;
@@ -290,4 +313,13 @@ th {
 	/*vertical-align: bottom;*/
 
 	border-bottom: 1px solid black;
+}
+
+.example {
+	padding: 0.5em 0.65em;
+	/*margin: 1em;*/
+	margin: 0;
+	background: #f1f1f1;
+	border-radius: 0.25em;
+	width: fit-content;
 }
