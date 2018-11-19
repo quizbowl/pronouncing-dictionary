@@ -1,0 +1,71 @@
+article -xmlns=http://www.w3.org/1999/xhtml
+
+  h1 <<References>>
+
+  h2 <<Print>>
+
+  # h3 <<Major dictionaries>>
+
+  #,ref abbr href =
+  ,ref abbr =
+    ,imgSrc = <<assets/images/>> ,abbr
+      <<.png>>
+    div keep
+      dt
+        # a <(,href)>
+          ,abbr
+      dd
+        ,BODY
+        p
+          a <(,imgSrc)>
+            img -width=320 -src=<(,imgSrc)>
+
+  h3 <<English pronouncing dictionaries>>
+  p <<Often limited to English words; hard to find names>>
+  div <(<<columns columns-section>>)>
+    dl <(<<compact m>>)>
+      ,ref CEPD #http://lib1.org/_ads/D2ED6BABD077056C99CA77360DA835A7
+        p bib <<Jones, Daniel. <cite>Cambridge English Pronouncing Dictionary</cite>. Edited by Peter Roach, Jane Setter, and John Esling. 18th ed. Cambridge: Cambridge University Press, 2011. ISBN 978-0-521-15253-2.>>
+        p <<&#x2022; Formerly titled <cite>Everyman's English Pronouncing Dictionary</cite> and <cite>English Pronouncing Dictionary</cite> (EPD).>>
+      ,ref RDP #http://lib1.org/_ads/2E9D0FBCA61BF8568C1DF8B7890EF7CF
+        p bib <<Upton, Clive, and William A. Kretzschmar. <cite>The Routledge Dictionary of Pronunciation for Current English</cite>. 2nd ed. Abingdon, Oxon: Routledge, 2017. ISBN 978-1-138-12566-7.>>
+        p <<&#x2022; Formerly titled <cite>The Oxford Dictionary of Pronunciation for Current English</cite> (ODP).>>
+      ,ref LPD
+        p bib <<Wells, J. C. <cite>Longman Pronunciation Dictionary</cite>. 3rd ed. Harlow, England: Pearson Education, 2008. ISBN 978-1-4058-8118-0.>>
+      ,ref CPD
+        p bib <<Windsor Lewis, Jack. <cite>A Concise Pronouncing Dictionary of British and American English</cite>. London: Oxford University Press, 1972. ISBN 978-0-19-431123-6.>>
+      ,ref PDPN
+        p bib <<Bollard, John K. <cite>Pronouncing Dictionary of Proper Names</cite>. 2nd ed. Detroit: Omnigraphics, 1998. ISBN 978-0-7808-0098-2.>>
+
+  h2 <<Web>>
+  ul
+    li <<Wikipedia, Wiktionary - often systematic>>
+    li
+      a http://seas3.elte.hu/epd/epd.pl <<EPD>>
+    li
+      a http://cubedictionary.org/ <<CUBE>>
+    li
+      a http://forvo.com/ <<Forvo>>
+    li
+      a https://inogolo.com/ <<Inogolo>>
+    li
+      a http://youglish.com/ <<Youglish>>
+
+  h2 <<Forum threads about pronunciation>>
+  ul
+    li
+      <<20 Oct 2015: >>
+      a http://www.hsquizbowl.org/forums/viewtopic.php?f=117&t=17988 <<Pronunciation Guides>>
+    li
+      <<01 Jun 2015: >>
+      a http://www.hsquizbowl.org/forums/viewtopic.php?f=117&t=17394 <<Discussion of pronunciation guides>>
+    li
+      <<13 Mar 2010: >>
+      a http://www.hsquizbowl.org/forums/viewtopic.php?f=21&t=9637&p=179631 <<Universal Pronunciation Guide>>
+    li
+      <<26 Feb 2017: >>
+      a http://www.hsquizbowl.org/forums/viewtopic.php?f=9&t=19682&p=327315 <<Pronunciation Guides in College>>
+    li
+      <<04 Mar 2007: >>
+      a http://www.hsquizbowl.org/forums/viewtopic.php?f=21&t=3699 <<Nitpick zone: Pronunciation guides>>
+

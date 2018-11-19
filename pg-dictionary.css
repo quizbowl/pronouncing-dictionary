@@ -45,7 +45,9 @@ footer {
 .columns-section {
 	margin: 2em 0;
 }
-.columns-section > .keep:first-child h3 {
+.columns-section .keep:first-of-type h3,
+.columns-section > dl,
+.columns-section .keep:first-of-type dd > p:first-child {
 	margin-top: 0;
 }
 @media screen and (min-width: 54rem) {
@@ -267,12 +269,11 @@ dl.compact::after {
 	content: '';
 	display: table;
 }
-dl.compact.x dt {
-	width: 1.125em;
-}
-dl.compact.x dd {
-	margin-left: 2.5em;
-}
+dl.compact.x dt { width: 1.125em; }
+dl.compact.x dd { margin-left: 2.5em; }
+dl.compact.m dt { width: 3.5em; }
+dl.compact.m dd { margin-left: 4em; }
+
 .tabular-nums {
 	font-variant-numeric: tabular-nums;
 	-moz-font-feature-settings: 'tnum' 1;
@@ -322,4 +323,8 @@ th {
 	background: #f1f1f1;
 	border-radius: 0.25em;
 	width: fit-content;
+}
+.bib {
+	margin-left: 1em;
+	text-indent: -1em;
 }

@@ -9,8 +9,9 @@ pg-dictionary.csv:
 	wget $(SHEET_EXPORT_URL) -O $@
 
 upload: html
-	rsync $(HTMLS) \
+	rsync -R $(HTMLS) \
 		pg-dictionary.css *.js \
 		pg-dictionary.xml pg-dictionary.xsl functions.xsl \
 		pg-dictionary.csv \
+		assets/images/* \
 		gwinnett:~/minkowski.space/quizbowl/pronouncing-dictionary/

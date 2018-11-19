@@ -24,8 +24,8 @@ xml: pg-dictionary.xml
 pg-dictionary.xml: pg-dictionary.csv csv2xml.py base.xml
 	< $< python $(word 2,$^) | xmllint --format - > $@
 
-%.xml: %.pxml
-	pxslcc -h "$<" > "$@"
+%.xml: %.pxml transformers/xslt2.edf
+	pxslcc -h --add=$(word 2,$^) "$<" > "$@"
 
 %.xsl: %.pxsl transformers/xslt2.edf
 	pxslcc -hx --add=$(word 2,$^) "$<" > "$@"

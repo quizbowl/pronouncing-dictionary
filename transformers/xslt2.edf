@@ -15,3 +15,4 @@ span = span class
 div = div class
 ul = ul class
 dl = dl class
+p = p class
