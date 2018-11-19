@@ -21,7 +21,7 @@ page.xsl: pg-dictionary.xsl
 pg-dictionary.xsl: functions.xsl
 
 xml: pg-dictionary.xml
-pg-dictionary.xml: pgs.csv csv2xml.py base.xml
+pg-dictionary.xml: pg-dictionary.csv csv2xml.py base.xml
 	< $< python $(word 2,$^) | xmllint --format - > $@
 
 %.xml: %.pxml
