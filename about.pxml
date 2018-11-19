@@ -1,0 +1,30 @@
+article -xmlns=http://www.w3.org/1999/xhtml
+
+  h1 <<About this dictionary>>
+  p
+    <<The purpose of this site is to be a reference for question writers and players to browse or look up standard pronunciation guides. Centralization eliminates redundant, time-consuming research. The same data will enable applications to automatically insert pronunciation guides into questions.>>
+
+  h2 <<Data>>
+  p
+    <<This dictionary currently has 9,216 entries. Most entries were extracted from about a dozen recent quizbowl sets (and after sets from Fall 2018 become clear, the count will be over 10,000). Another 3,566 come from a database compiled by Matt Weiner.>>
+    << Download the data as <a href="pg-dictionary.csv">CSV</a> or <a href="pg-dictionary.xml">XML</a>.>>
+
+  h2 <<License>>
+  p
+    <<The database is released under the <a href="https://opendatacommons.org/licenses/odbl/summary/">Open Database License (ODbL)</a>. This is a &#x201c;share-alike&#x201d; license, meaning that if you distribute a work that builds upon this data, you must make it available under the same license in order to maintain the same freedoms for others.>>
+  p
+    <<The website is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License (GPL)</a>.>>
+
+  h2 <<How to contribute>>
+  p
+    <<Project development takes place on the <a href="https://github.com/quizbowl/pronouncing-dictionary/">GitHub repository</a>. >>
+    <<The database is currently in Google Sheets, but eventually it will be moved to GitHub. To help crowdsource, ask me for access.>>
+  p
+    <<Current goals:>>
+  ol
+    li <<Add metadata to existing entries>>
+    li <<Formalize review procedures>>
+    li <<Build and improve applications (such as this website and the PG inserter add-on for Google Docs)>>
+    li <<Extract more PGs from recent sets>>
+    li <<Begin review>>
+    li <<Early release (after sufficient review, as I don&#x2019;t want people to see mostly unreviewed PGs before it&#x2019;s ready)>>
