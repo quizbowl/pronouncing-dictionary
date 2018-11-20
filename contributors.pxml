@@ -1,0 +1,25 @@
+article -class=dictionary -xmlns=http://www.w3.org/1999/xhtml
+
+  h1 <<Contributors>>
+
+  div -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+    entry
+      form 
+        orth <<Ophir Lifshitz>>
+        pron <<oh-FEER LIF-shits>>
+      lang <<en>>
+      lang <<he>>
+      meta
+        author <<OL>>
+    entry
+      form 
+        orth <<Aseem Keyal>>
+        pron <<uh-SEEM kay-YAL>>
+      lang <<en>>
+      lang <<hi>>
+      usage 
+        category <<Mythology>>
+        category <<Trash>>
+        definition <<player for Berkeley>>
+      meta
+        author <<AK>>

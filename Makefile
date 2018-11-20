@@ -3,7 +3,7 @@
 HTMLS_SORTS:=lang.html category.html author.html tournament.html
 HTMLS:=\
 	index.html $(HTMLS_SORTS) \
-	about.html entry.html writing-pgs.html references.html
+	about.html entry.html writing-pgs.html references.html contributors.html
 
 
 all: html
