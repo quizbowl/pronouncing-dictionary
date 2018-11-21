@@ -1,4 +1,5 @@
 .PRECIOUS: %.xml %.xsl
+.PHONY: valid
 
 HTMLS_SORTS:=lang.html lang-tree.html category.html category-tree.html author.html tournament.html
 HTMLS:=\
@@ -36,5 +37,11 @@ pg-dictionary.xml: pg-dictionary.csv csv2xml.py base.xml
 
 %.xsl: %.pxsl transformers/xslt2.edf
 	pxslcc -hx --add=$(word 2,$^) "$<" > "$@"
+
+valid: pg-dictionary.rng pg-dictionary.xml
+	xmllint --noout --relaxng $^
+pg-dictionary.rng: pg-dictionary.rnc
+	trang $< $@
+
 
 -include load.mk

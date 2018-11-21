@@ -1,8 +1,9 @@
-default namespace = ""
+default namespace = "http://schema.quizbowl.technology/xml/pg-dictionary"
 
 start = element pg-dictionary { entry* }
-entry = element entry { id?, exemplar?, form+, langElement*, usage?, meta? }
+entry = element entry { id?, initial?, exemplar?, form+, langElement*, usage?, meta? }
 form = element form { orth+, pron+ }
+formOpt = element form { orth*, pron* }
 orth = element orth { lang?, text }
 pron = element pron { lang?, notation?, text }
 langElement = element lang { attribute type { "original" }?, langType }
@@ -28,26 +29,28 @@ meta =
 		}* &
 		element citation {
 			attribute type { "text" | "audio" },
-			attribute url { urlType },
-			form?
+			attribute url { urlType }?,
+			formOpt*
 		}* &
 		element quizbowl-source {
 			attribute url { urlType },
-			element name { text }?,
-			author,
-			form?
+			attribute name { text }?,
+			author?,
+			form,
+			element name { text }*
 		}* &
 		element related-entries { relatedEntry* }*
 	}
 author = element author { text }*
 date = element date { xsd:date }?
-id = attribute id { xsd:ID }
-ref = attribute ref { xsd:IDREF }
+id = attribute id { xsd:ID | text }
+ref = attribute ref { xsd:IDREF | text }
+initial = attribute initial { text }
 lang = attribute lang { langType }
 notation = attribute notation { 'IPA' | text }
 rating = '3' | '2' | '1' | '0' | '-1'
 relatedEntry = element related-entry { ref?, rel?, text }
-rel = attribute rel { 'canonical' | 'confusable' | 'xref' | 'href' | 'incoming' }
+rel = attribute rel { 'canonical' | 'confusable' | 'xref' | 'href' | 'incoming' | 'synonym' | 'hyponym' | 'cohyponym' }
 langType = xsd:language
 urlType = xsd:anyURI
 exemplar = attribute exemplar { text }
