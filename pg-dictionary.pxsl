@@ -90,7 +90,8 @@ stylesheet \
 
   template /pg-dictionary
     tempParam view yes
-    article -class=dictionary
+
+    variable groups
       for-each-group entry -group-by=<{
           if ($view='index')      then @initial                   else
           if ($view='lang')       then lang                       else
@@ -99,23 +100,29 @@ stylesheet \
           if ($view='tournament') then meta/quizbowl-source/@name else
           0}>
         sort current-grouping-key()
+        pg:group -key={current-grouping-key()}
+          attribute displayKey
+            value-of current-grouping-key()
+            choose
+              when $view='lang'
+                text <<: >>
+                value-of pg:langLookupCanonicalName(current-grouping-key())
+          copy-of current-group()
+
+    article -class=dictionary
+      for-each $groups/group
         section
-          h2 -id={current-grouping-key()}
-            a #{current-grouping-key()}
+          h2 -id={@key}
+            a #{@key}
               call-template header
             call-template heading-right
           call-template columns
 
   templateN header
-    tempParam view yes
-    value-of current-grouping-key()
-    choose
-      when $view='lang'
-        text <<: >>
-        value-of pg:langLookupCanonicalName(current-grouping-key())
+    value-of @displayKey
 
   templateN heading-right
-    variable count count(current-group())
+    variable count count(entry)
     span heading-right
       text << >>
       value-of $count
@@ -127,8 +134,7 @@ stylesheet \
 
   templateN columns
     div columns
-      for-each current-group()
-        apply-templates .
+      apply-templates
 
   template <(<<date | submission | stemmable>>)>
 
