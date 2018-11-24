@@ -112,6 +112,9 @@ stylesheet \
           #   sort -lang=fr -stable=yes
 
     article -class=dictionary
+      call-template legend
+        with-param groups $groups
+
       for-each $groups/group
         section
           h2 -id={@key}
@@ -119,6 +122,27 @@ stylesheet \
               call-template header
             call-template heading-right
           call-template columns
+
+  templateN legend
+    tempParam view yes
+    param groups
+    header
+      p <<Jump to>>
+      dd
+        dl <(<<compact x>>)> -style=clear:both;
+          for-each-group $groups/group -group-by=<{
+            if ($view='tournament') then tokenize(@key,' ')[1] else
+            if ($view='index')      then ''                    else
+            if ($view='author')     then ''                    else
+            upper-case(substring(@key,1,1))}>
+            dt
+              value-of current-grouping-key()
+            dd
+              ul inline
+                for-each current-group()
+                  li
+                    a #{@key} -title={@displayKey}
+                      value-of @key
 
   templateN header
     value-of @displayKey
