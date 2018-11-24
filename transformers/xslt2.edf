@@ -3,6 +3,7 @@ analyze-string         = xsl:analyze-string select regex
 matching-substring     = xsl:matching-substring
 non-matching-substring = xsl:non-matching-substring
 result-document        = xsl:result-document href
+perform-sort           = xsl:perform-sort select
 
 templateN = xsl:template name
 function = xsl:function name as

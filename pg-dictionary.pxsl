@@ -108,6 +108,8 @@ stylesheet \
                 text <<: >>
                 value-of pg:langLookupCanonicalName(current-grouping-key())
           copy-of current-group()
+          # perform-sort current-group()
+          #   sort -lang=fr -stable=yes
 
     article -class=dictionary
       for-each $groups/group
