@@ -13,25 +13,15 @@ stylesheet \
   import functions.xsl
   output -method=xhtml -indent=yes
 
-  ,view viewName =
-    call-template view
-      with view yes
-        ,viewName
-
-  ,lia viewName =
-    li
-      a <(,viewName
-        <<.html>>)>
-        ,BODY
+  variable sitemap document('sitemap.xml') -as=document-node()
 
   template /
-    ,view index
-    ,view lang
-    ,view category
-    ,view author
-    ,view tournament
+    variable context .
+    for-each $sitemap/sitemap/section[@id='views']/page
+      apply-templates $context restore-context
+        with-param view @id -tunnel=yes
 
-  templateN view
+  template / -mode=restore-context
     tempParam view yes
     result-document {$view}.html
       call-template skeleton
@@ -67,26 +57,25 @@ stylesheet \
                 value-of pg:format-date(current-dateTime())
 
           nav
-            dl compact
-              dt <<Navigation>>
-              dd
-                ul inline
-                  ,lia about       <<About this dictionary>>
-                  ,lia entry       <<How to read an entry>>
-                  ,lia writing-pgs <<How to write good PGs>>
-                  ,lia references  <<References>>
-
-              dt <<View entries by>>
-              dd
-                ul inline
-                  ,lia index       <<alphabetical>>
-                  ,lia lang        <<language>>
-                  ,lia category    <<category>>
-                  ,lia author      <<author>>
-                  ,lia tournament  <<tournament>>
-                  li <<review score>>
+            apply-templates $sitemap/sitemap
 
         apply-templates
+
+  template sitemap
+    dl compact
+      apply-templates section
+
+  template sitemap/section
+    dt
+      apply-templates name
+    dd
+      ul inline
+        apply-templates page
+
+  template sitemap/section/page
+    li
+      a {@id}.html
+        apply-templates name
 
   template /pg-dictionary
     tempParam view yes

@@ -18,7 +18,7 @@ index.html: pg-dictionary.xml pg-dictionary.xsl
 	saxon -o:$@ $< $(word 2,$^)
 
 page.xsl: pg-dictionary.xsl
-pg-dictionary.xsl: functions.xsl
+pg-dictionary.xsl: functions.xsl sitemap.xml
 
 xml: pg-dictionary.xml
 pg-dictionary.xml: pg-dictionary.csv csv2xml.py base.xml

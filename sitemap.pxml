@@ -1,0 +1,23 @@
+
+,page id =
+  page -id=<(,id)>
+    name
+      ,BODY
+
+sitemap -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+  section -id=pages
+    name <<Navigation>>
+    ,page about         <<About this dictionary>>
+    ,page entry         <<How to read an entry>>
+    ,page writing-pgs   <<How to write good PGs>>
+    ,page references    <<References>>
+
+  section -id=views
+    name <<View entries by>>
+    ,page index       <<alphabetical>>
+    ,page lang        <<language>>
+    ,page category    <<category>>
+    ,page author      <<author>>
+    ,page tournament  <<tournament>>
+    # ,page review      <<review score>>
+
