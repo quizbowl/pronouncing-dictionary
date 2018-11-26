@@ -220,6 +220,11 @@ a.lang:hover {
 .or {
 	color: #888;
 }
+.sym {
+	color: #888;
+	font-weight: 400;
+	font-family: var(--base-font-family);
+}
 
 .h {
 	font-style: italic;
@@ -310,21 +315,49 @@ svg .axis {
 }
 table {
 	border-spacing: 0.75em 2px;
-	border: 1px solid black;
-	border-width: 2px 0;
 }
-tbody tr:first-child td {
-	padding-top: 0.5em;
+th, td {
+	padding: 1px 2px;
+	vertical-align: top;
 }
 th {
-	padding: 0.25em;
 	font-weight: 600;
-	/*vertical-align: bottom;*/
-
+}
+thead th {
+	padding: 0.2em;
+	vertical-align: middle;
 	border-bottom: 1px solid black;
 }
+tbody th {
+	padding-right: 0.5em;
+	vertical-align: top;
+	text-align: left;
+}
+tbody th,
+tbody th ~ th,
+tbody th ~ td {
+	padding-top: 0.625em;
+}
+tbody th[rowspan],
+tbody th[rowspan] ~ th,
+tbody th[rowspan] ~ td {
+	padding-top: 1em;
+}
 
-.example {
+tr.example {
+	font-size: 0.8em;
+}
+tr.example mark {
+	color: inherit;
+	background: none;
+	text-decoration: underline;
+	text-decoration-color: #888;
+}
+tr.example .pron {
+	font-weight: 400;
+}
+
+blockquote.example {
 	padding: 0.5em 0.65em;
 	/*margin: 1em;*/
 	margin: 0;
@@ -335,4 +368,12 @@ th {
 .bib {
 	margin-left: 1em;
 	text-indent: -1em;
+}
+
+sup.fn-ref {
+	vertical-align: baseline;
+	font-size: 100%;
+	line-height: inherit;
+	font-variant-position: super;
+	font-feature-settings: 'sups'; /* until wider support */
 }

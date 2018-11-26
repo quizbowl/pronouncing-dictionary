@@ -1,0 +1,197 @@
+<article xmlns="http://www.w3.org/1999/xhtml">
+
+<h1>Guidelines for specific languages</h1>
+
+<h2>Legend</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Meaning</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="sym">C</span></td><td>any consonant</td>
+  </tr>
+    <tr>
+      <td><span class="sym">V</span></td><td>any vowel</td>
+  </tr>
+    <tr>
+      <td><span class="sym">N</span></td><td>any nasal</td>
+      <td><span class="pron IPA">m</span> <span class="pron IPA">n</span> <span class="pron IPA">ŋ</span></td>
+    </tr>
+    <tr>
+      <td><span class="sym">L</span></td><td>any liquid</td>
+      <td><span class="pron IPA">l</span> <span class="pron IPA">r</span> <span class="pron IPA">ɹ</span> <span class="pron IPA">ʁ</span></td>
+    </tr>
+    <tr>
+      <td><span class="sym">G</span></td><td>any glide</td>
+      <td><span class="pron IPA">j</span> <span class="pron IPA">w</span> <span class="pron IPA">ɥ</span></td>
+    </tr>
+    <tr>
+      <td><span class="sym">#</span></td><td>word boundary</td>
+  </tr>
+    <tr>
+      <td><span class="sym">$</span>, <span class="pron IPA">.</span></td><td>syllable boundary</td>
+  </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p>Coming soon: Chinese, Dutch, German, Hebrew, Japanese, Korean</p>
+
+<guidelines>
+  <lang>fr</lang>
+  <section>
+    <name>Diphthongs</name>
+    <guideline>
+      <phons type="original">œj<sym>$</sym></phons>
+      <orths>euil, œil</orths>
+      <phons type="target">ʌ.iː, ʌɪ<note ref="1"/>, ɔɪ</phons>
+      <prons>UH-ee, oy<note>Anglicized</note></prons>
+      <prons type="wrong">wee-eh, yol, uy, oo-y</prons>
+      <example>
+        <phons type="original">pwa.z<mark>œj</mark></phons>
+        <orths>Pois<mark>euille</mark></orths>
+        <phons type="target">pwɑˈz<mark>ʌ.iː</mark></phons>
+        <prons>pwah-Z<mark>UH-ee</mark></prons>
+      </example>
+      <example>
+        <phons type="original">tʁɔ̃p.l<mark>œj</mark></phons>
+        <orths>trompe l’<mark>œil</mark></orths>
+        <phons type="target">ˌtrɑmpˈl<mark>ɔɪ</mark></phons>
+        <prons>tromp l<mark>oy</mark></prons>
+      </example>
+    </guideline>
+    <guideline>
+      <phons type="original">uj<sym>$</sym></phons>
+      <orths>ouil, ouy</orths>
+      <phons type="target">uː.iː</phons>
+      <prons>OO-ee</prons>
+      <prons type="wrong">wee, weel, oo-EEL-uh</prons>
+      <example>
+        <phons type="original">a.n<mark>uj</mark></phons>
+        <orths>An<mark>ouilh</mark></orths>
+        <phons type="target">ɑːˈn<mark>uː.iː</mark></phons>
+        <prons>ah-N<mark>OO-ee</mark></prons>
+      </example>
+    </guideline>
+    <guideline>
+      <phons type="original"><sym>CL</sym>wa</phons>
+      <orths><sym>CL</sym>oi</orths>
+      <phons type="target"><sym>C</sym>wɑː<note ref="3"/></phons>
+      <prons><sym>C</sym>wah</prons>
+      <prons type="wrong"><sym>CL</sym>wah</prons>
+      <example>
+        <phons type="original"><mark>tʁwa</mark></phons>
+        <orths><mark>Troy</mark>es</orths>
+        <phons type="target"><mark>twɑː</mark></phons>
+        <prons><mark>twah</mark></prons>
+      </example>
+      <example>
+        <phons type="original"><mark>blwa</mark></phons>
+        <orths><mark>Bloi</mark>s</orths>
+        <phons type="target"><mark>bwɑː</mark></phons>
+        <prons><mark>bwah</mark></prons>
+      </example>
+    </guideline>
+  </section>
+  <section>
+    <name>Nasal vowels</name>
+    <guideline>
+      <phons type="original">ɛ̃</phons>
+      <orths>i<sym>N</sym>, ei<sym>N</sym>, ai<sym>N</sym>, y<sym>N</sym></orths>
+      <phons type="target">æ<sym>N</sym></phons>
+      <prons>a<sym>N</sym>, a<sym>NN</sym></prons>
+      <prons type="wrong">ahn, awn, on, ohn, own, en</prons>
+      <example>
+        <phons type="original">pu.s<mark>ɛ̃</mark></phons>
+        <orths>Pouss<mark>in</mark></orths>
+        <phons type="target">puːˈs<mark>æn</mark></phons>
+        <prons>poo-S<mark>ANN</mark></prons>
+      </example>
+    </guideline>
+    <guideline>
+      <phons type="original">ɑ̃</phons>
+      <orths>e<sym>N</sym>, a<sym>N</sym></orths>
+      <phons type="target">ɑː<sym>N</sym></phons>
+      <prons>aw<sym>N</sym>, ah<sym>N</sym></prons>
+      <prons type="wrong">awng, ong, ahng, ah</prons>
+      <example>
+        <phons type="original">aʁ.bɑ̃</phons>
+        <orths>Arb<mark>an</mark></orths>
+        <phons type="target">ɑrˈb<mark>ɑːn</mark></phons>
+        <prons>ar-B<mark>AWN</mark></prons>
+      </example>
+    </guideline>
+    <guideline>
+      <phons type="original">ɔ̃</phons>
+      <orths>o<sym>N</sym></orths>
+      <phons type="target">ɑː<sym>N</sym>, ɔː<sym>N</sym><note ref="2"/></phons>
+      <prons>aw<sym>N</sym>, o<sym>N</sym></prons>
+      <prons type="wrong">”</prons>
+      <example>
+        <phons type="original">pwa.s<mark>ɔ̃</mark></phons>
+        <orths>Poiss<mark>on</mark></orths>
+        <phons type="target">pwɑˈs<mark>ɑːn</mark></phons>
+        <prons>pwah-S<mark>AWN</mark></prons>
+      </example>
+    </guideline>
+    <guideline>
+      <phons type="original">œ̃</phons>
+      <orths>u<sym>N</sym></orths>
+      <phons type="target">ʌ<sym>N</sym></phons>
+      <prons>u<sym>N</sym></prons>
+      <example>
+        <phons type="original">vɛʁ.d<mark>œ̃</mark></phons>
+        <orths>Verd<mark>un</mark></orths>
+        <phons type="target">vɛərˈd<mark>ʌn</mark></phons>
+        <prons>vair-D<mark>UN</mark></prons>
+      </example>
+    </guideline>
+  </section>
+  <section>
+    <name>Oral vowels</name>
+    <guideline>
+      <phons type="original">œ, ø</phons>
+      <orths>œ, œu, eu</orths>
+      <phons type="target">ʌ, ʊ</phons>
+      <prons>uh</prons>
+    </guideline>
+    <guideline>
+      <phons type="original">y</phons>
+      <orths>u, eu</orths>
+      <phons type="target">uː, juː</phons>
+      <prons>oo, yoo, ew, ue</prons>
+    </guideline>
+    <guideline>
+      <phons type="original">ɔ</phons>
+      <orths>o, au</orths>
+      <phons type="target">ɔ, ʌ</phons>
+      <prons>o, uh</prons>
+    </guideline>
+  </section>
+  <section>
+    <name>Consonants</name>
+    <guideline>
+      <phons type="original"><sym>C</sym>ʁ<sym>$</sym></phons>
+      <orths><sym>C</sym>re</orths>
+      <phons type="target"><sym>C</sym>, <sym>C</sym>rə</phons>
+      <prons><sym>C</sym>, <sym>C</sym>ruh</prons>
+    </guideline>
+  </section>
+  <!-- Baudelaire boh-duh-LAIR -->
+  <!-- Bouguereau boog-ROH -->
+</guidelines>
+
+<p>French is syllable-timed, not stress-timed. In US English, approximate by stressing the final syllable of a word.</p>
+
+<p>
+¹ Only for English speakers with Canadian raising.<br />
+² Only for English speakers without cot–caught merger.<br />
+³ CEPD: “This example also shows the simplification of the initial consonant cluster <span class="pron IPA">/krw/</span>, which occurs in French but not in English.”</p>
+
+</article>

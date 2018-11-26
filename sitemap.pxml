@@ -16,6 +16,7 @@ sitemap -id=root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
   section -id=articles
     name <<Articles>>
     ,page writing-pgs   <<How to write good PGs>>
+    ,page lang-specific <<Guidelines for specific languages>>
 
   section -id=views
     name <<View entries by>>

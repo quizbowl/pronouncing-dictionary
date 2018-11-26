@@ -1,0 +1,125 @@
+<<<?xml version="1.0" encoding="UTF-8" ?>>>
+
+stylesheet \
+  -xmlns:xml=http://www.w3.org/XML/1998/namespace \
+  -xmlns:xsl=http://www.w3.org/1999/XSL/Transform \
+  -xmlns:pg=http://schema.quizbowl.technology/xml/pg-dictionary \
+  -xmlns=http://www.w3.org/1999/xhtml \
+  -xpath-default-namespace=http://www.w3.org/1999/xhtml \
+  -version=2.0
+
+  import page.xsl
+
+  template guidelines
+    variable langName pg:langLookupCanonicalName(lang)
+    h2
+      value-of $langName
+
+    div -class=overflow
+      table
+        thead
+          tr
+            td
+            th -colspan=2
+              value-of $langName
+            th -colspan=2 <<(US) English approximation>>
+            td
+          tr
+            td
+            th -style=min-width:5em; <<Phonemes>>
+            th -style=min-width:7em; <<Orthography>>
+            th -style=min-width:7em; <<Phonemes>>
+            th -style=min-width:11em; <<Main&#xa0;pronunciations>>
+            th -style=min-width:9em; <<&#x2718;&#xa0;Avoid>>
+
+        tbody
+          apply-templates section/guideline
+
+  template guideline
+    tr
+      if not(preceding-sibling::guideline)
+        th -class=group -rowspan={count(..//guideline)+count(..//example)}
+          apply-templates ../name
+
+      th
+        apply-templates phons[@type='original']
+      td
+        apply-templates orths
+      td
+        apply-templates phons[@type='target']
+      td
+        apply-templates prons[not(@type)]
+      td
+        apply-templates prons[@type='wrong']
+
+    apply-templates example
+
+  template guideline/example
+    variable temp -as=node()*
+      tr -class=example
+        td
+          apply-templates phons[@type='original']
+        td
+          apply-templates orths
+        td
+          apply-templates phons[@type='target']
+        td
+          apply-templates prons
+
+    apply-templates $temp
+
+  template guideline//(phons|prons[not(@type)])
+    variable temp
+      apply-templates . -mode=phase1
+    variable temp2 -as=node()*
+      apply-templates $temp -mode=phase2
+    apply-templates $temp2
+
+  template text() -mode=phase1
+    analyze-string . <(<<, >>)>
+      matching-substring
+        sep
+          value-of .
+      non-matching-substring
+        value-of .
+
+  template phons -mode=phase2
+    for-each-group node() -group-adjacent=boolean(self::sep|self::note)
+      choose
+        when current-grouping-key()
+          apply-templates current-group()
+        otherwise
+          pg:pron -notation=IPA
+            apply-templates current-group()
+
+  template prons -mode=phase2
+    for-each-group node() -group-adjacent=boolean(self::sep|self::note)
+      choose
+        when current-grouping-key()
+          apply-templates current-group()
+        otherwise
+          pg:pron
+            apply-templates current-group()
+
+  template orths|prons[@type='wrong']|name
+    apply-templates
+
+  template sep
+    apply-templates
+
+  template guideline//(@*|node()) -priority=-2 -mode=phase1
+    copy
+      apply-templates @*|node() -mode=#current
+
+  template sym
+    span sym
+      apply-templates
+
+  template note[@ref]
+    sup -class=fn-ref
+      value-of @ref
+
+  template note
+    text << (>>
+    apply-templates
+    text <<)>>

@@ -3,7 +3,7 @@
 HTMLS_SORTS:=lang.html category.html author.html tournament.html
 HTMLS:=\
 	index.html $(HTMLS_SORTS) \
-	about.html entry.html writing-pgs.html references.html contributors.html
+	about.html entry.html writing-pgs.html lang-specific.html references.html contributors.html
 
 
 all: html
@@ -14,9 +14,13 @@ $(HTMLS_SORTS): index.html
 index.html: pg-dictionary.xml pg-dictionary.xsl
 	saxon -o:$@ $< $(word 2,$^) -TP:profile.html
 
+lang-specific.html: lang-specific.xml lang-specific.xsl
+	saxon -o:$@ $< $(word 2,$^)
+
 %.html: %.xml page.xsl
 	saxon -o:$@ $< $(word 2,$^)
 
+lang-specific.xsl: page.xsl
 page.xsl: pg-dictionary.xsl
 pg-dictionary.xsl: functions.xsl sitemap.xml
 
