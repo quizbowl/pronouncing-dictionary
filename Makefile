@@ -6,6 +6,8 @@ HTMLS:=\
 	index.html $(HTMLS_SORTS) \
 	about.html entry.html writing-pgs.html lang-specific.html references.html contributors.html
 
+XMLLINT:=| XMLLINT_INDENT='	' xmllint --format -
+
 
 all: html
 
@@ -30,13 +32,13 @@ pg-dictionary.xsl: functions.xsl sitemap.xml
 
 xml: pg-dictionary.xml
 pg-dictionary.xml: pg-dictionary.csv csv2xml.py base.xml
-	< $< python $(word 2,$^) | xmllint --format - > $@
+	< $< python $(word 2,$^) $(XMLLINT) > $@
 
 %.xml: %.pxml transformers/xslt2.edf
-	pxslcc -h --add=$(word 2,$^) "$<" > "$@"
+	pxslcc -h --add=$(word 2,$^) "$<" $(XMLLINT) > "$@"
 
 %.xsl: %.pxsl transformers/xslt2.edf
-	pxslcc -hx --add=$(word 2,$^) "$<" > "$@"
+	pxslcc -hx --add=$(word 2,$^) "$<" $(XMLLINT) > "$@"
 
 valid: pg-dictionary.rng pg-dictionary.xml
 	xmllint --noout --relaxng $^
