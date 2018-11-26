@@ -4,9 +4,8 @@ SHEET_EXPORT_URL:=\
 	"https://docs.google.com/spreadsheets/d/15gC3ZxAGfF16mQ-gCZ3btkt-jGjpzRBv5rWpIKdST7s/export?format=csv&gid=0"
 
 
-download: pg-dictionary.csv
-pg-dictionary.csv:
-	wget $(SHEET_EXPORT_URL) -O $@
+download:
+	wget $(SHEET_EXPORT_URL) -O pg-dictionary.csv
 
 upload: html
 	rsync -R $(HTMLS) \
