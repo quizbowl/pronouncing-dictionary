@@ -128,8 +128,14 @@ for row in rows:
 	for text in row['see_also'].split('|'):
 		if text:
 			related_entry = etree.SubElement(meta, 'related-entry')
+			
+			if text.startswith('http'):
+				ref = text
+				# TODO: temporary generated link text
+				text = text.split('/')[-1]
+			else:
+				ref = super(UniqueSlugify, slugify).__call__(text)
 			related_entry.text = text
-			ref = super(UniqueSlugify, slugify).__call__(text)
 			related_entry.set('ref', ref)
 
 doc.write(sys.stdout, encoding="utf-8", xml_declaration=True)
