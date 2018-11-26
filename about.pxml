@@ -7,7 +7,7 @@ article -xmlns=http://www.w3.org/1999/xhtml
   h2 <<Data>>
   p
     <<This dictionary currently has 9,216 entries. Most entries were extracted from about a dozen recent quizbowl sets (and after sets from Fall 2018 become clear, the count will be over 10,000). Another 3,566 come from a database compiled by Matt Weiner.>>
-    << Download the data as <a href="pg-dictionary.csv">CSV</a> or <a href="pg-dictionary.xml">XML</a>.>>
+    << Download the data as <a href="pg-dictionary.csv" download="download">CSV</a> or <a href="pg-dictionary.xml" download="download">XML</a>.>>
 
   h2 <<License>>
   p
