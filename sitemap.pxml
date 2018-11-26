@@ -4,13 +4,18 @@
     name
       ,BODY
 
-sitemap -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+sitemap -id=root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+  name <<Quizbowl Pronunciation Dictionary>>
   section -id=pages
     name <<Navigation>>
     ,page about         <<About this dictionary>>
     ,page entry         <<How to read an entry>>
-    ,page writing-pgs   <<How to write good PGs>>
     ,page references    <<References>>
+    ,page contributors  <<Contributors>>
+
+  section -id=articles
+    name <<Articles>>
+    ,page writing-pgs   <<How to write good PGs>>
 
   section -id=views
     name <<View entries by>>

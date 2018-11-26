@@ -20,6 +20,7 @@ stylesheet \
     for-each $sitemap/sitemap/section[@id='views']/page
       apply-templates $context restore-context
         with-param view @id -tunnel=yes
+        with-param page . -tunnel=yes
 
   template / -mode=restore-context
     tempParam view yes
@@ -35,6 +36,8 @@ stylesheet \
         meta -name=google -content=notranslate
         link -type=text/css -rel=stylesheet -href=pg-dictionary.css
         script -type=text/javascript -src=controls.js
+        title
+          call-template fullTitle
 
       body
         a -name=top
@@ -76,6 +79,10 @@ stylesheet \
     li
       a {@id}.html
         apply-templates name
+
+  templateN fullTitle
+    tempParam page yes
+    value-of $page/ancestor-or-self::*[not(@id=('pages'))]/name -separator=<(<< &#x203a; >>)>
 
   template /pg-dictionary
     tempParam view yes

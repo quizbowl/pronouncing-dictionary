@@ -10,9 +10,13 @@ stylesheet \
   import pg-dictionary.xsl
 
   variable htmlns 'http://www.w3.org/1999/xhtml'
+  variable pageId tokenize(tokenize(base-uri(),'/')[last()],'\.')[1]
 
-  template /
+  template / -xpath-default-namespace=http://schema.quizbowl.technology/xml/pg-dictionary
+    variable page $sitemap//page[@id=$pageId]
     call-template skeleton
+      with-param view $page/@id -tunnel=yes
+      with-param page $page -tunnel=yes
 
   template *[namespace-uri()=$htmlns]|*[namespace-uri()=$htmlns]/@* -priority=-1
     copy
