@@ -7,6 +7,7 @@ stylesheet \
   -xmlns:pg=http://schema.quizbowl.technology/xml/pg-dictionary \
   -xmlns=http://www.w3.org/1999/xhtml \
   -xmlns:math=http://www.w3.org/2005/xpath-functions/math \
+  -xmlns:xlink=http://www.w3.org/1999/xlink \
   -exclude-result-prefixes=<{xs pg math}> \
   -version=2.0
 
@@ -75,5 +76,33 @@ stylesheet \
         text << >>
       text <<z>>
     svg -width=16 -height=16 -viewBox=<{-5 -5 10 10}>
-      path -class=axis -d=<{M 0 5 L 5 0 L 0 -5 L -5 0 z}>
-      path -class=shape -d={$d}
+      path -class=c0 -d=<{M 0 5 L 5 0 L 0 -5 L -5 0 z}>
+      path -class=c3 -d={$d}
+
+  templateN bar
+    variable n count(@*)
+
+    svg -width=160 -viewBox=<(<<-1.5 -1.25 16 {$n+2.5}>>)>
+      use #axis -class=toggle -y=-0.625
+      g axis
+        line -x1=1 -x2=1 -y1=0 -y2={$n}
+
+      g shape
+        for-each @*
+          variable y position()-0.5
+          circle -cx={.} -cy={$y} -r=0.25 -class=c{.}
+          txt -x=4.5 -y={$y}
+            value-of name()
+
+  templateN svgDefs
+    tempParam page yes
+
+    if <(<<$page/../@id='views' or $page/@id='entry'>>)>
+      svg -style=display:none;
+        defs
+          g axis -id=axis
+            txt -x=-1 -class=c-1 <<&#x2212;>>
+            txt -x=0  -class=cm  <<0>>
+            txt -x=1  -class=cm  <<1>>
+            txt -x=2  -class=cm  <<2>>
+            txt -x=3  -class=c3  <<+>>

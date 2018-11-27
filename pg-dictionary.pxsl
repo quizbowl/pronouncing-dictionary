@@ -29,7 +29,8 @@ stylesheet \
 
   templateN skeleton
     text yes <<&lt;!DOCTYPE html&gt;&#10;>>
-    html -xml:lang=en
+    html -xml:lang=en \
+      -xmlns:xlink=http://www.w3.org/1999/xlink
       head
         meta -charset=utf-8
         meta -name=viewport -content=width=device-width,initial-scale=1
@@ -61,6 +62,8 @@ stylesheet \
 
           nav
             apply-templates $sitemap/sitemap
+
+        call-template svgDefs
 
         apply-templates
 
@@ -251,11 +254,8 @@ stylesheet \
         span
           apply-templates author
           text <<: >>
-        for-each @*
-          call-template abbr
-          if position()!=last()
-            text <<, >>
       call-template radar
+      call-template bar
 
   template citation
     if @url

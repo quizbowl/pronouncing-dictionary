@@ -17,3 +17,7 @@ div = div class
 ul = ul class
 dl = dl class
 p = p class
+
+txt = text
+g = g class
+use = use xlink:href

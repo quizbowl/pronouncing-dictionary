@@ -302,12 +302,28 @@ img {
 svg {
 	flex-shrink: 0;
 }
-svg .shape {
-	fill: #00cf45;
+.c-1, .c0 { fill: #e41a28; }
+.c2,  .c3 { fill: #00cf45; }
+.c1       { fill: #666; }
+.cm       { fill: #ccc; }
+svg .axis line {
+	stroke: #e4e4e4;
+	vector-effect: non-scaling-stroke;
 }
-svg .axis {
-	fill: #e41a28;
+svg text {
+	font-size: 1.5px;
 }
+svg .axis text {
+	text-anchor: middle;
+	alignment-baseline: middle;
+	font-variant-numeric: oldstyle-nums;
+}
+svg .shape text {
+	fill: currentColor;
+	alignment-baseline: middle;
+}
+.review .toggle { visibility: hidden; }
+.review:hover .toggle { visibility: visible; }
 
 .audio-controls button {
 	width: 2.25em;
