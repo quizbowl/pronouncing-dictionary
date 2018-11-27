@@ -124,21 +124,19 @@ stylesheet \
     param groups
     header
       p <<Jump to>>
-      dd
-        dl <(<<compact x>>)> -style=clear:both;
-          for-each-group $groups/group -group-by=<{
-            if ($view='tournament') then tokenize(@key,' ')[1] else
-            if ($view='index')      then ''                    else
-            if ($view='author')     then ''                    else
-            upper-case(substring(@key,1,1))}>
-            dt
-              value-of current-grouping-key()
-            dd
-              ul inline
-                for-each current-group()
-                  li
-                    a #{@key} -title={@displayKey}
-                      value-of @key
+      dl <(<<compact x>>)>
+        for-each-group $groups/group -group-by=<{
+          if ($view='tournament')      then tokenize(@key,' ')[1] else
+          if (count($groups/group)<30) then ''                    else
+          upper-case(substring(@key,1,1))}>
+          dt
+            value-of current-grouping-key()
+          dd
+            ul inline
+              for-each current-group()
+                li
+                  a #{@key} -title={@displayKey}
+                    value-of @key
 
   templateN header
     value-of @displayKey
