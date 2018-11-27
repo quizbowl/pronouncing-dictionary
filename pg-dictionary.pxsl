@@ -247,8 +247,8 @@ stylesheet \
 
   template review
     div review
-      span
-        if author
+      if author
+        span
           apply-templates author
           text <<: >>
         for-each @*
