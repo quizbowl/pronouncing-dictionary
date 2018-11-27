@@ -62,8 +62,9 @@ stylesheet \
 
   templateN radar
     variable d
-      variable n count(@*)
-      for-each @*
+      variable atts (@utility,0)[1],(@familiarity,0)[1],(@accuracy,0)[1],(@decipherability,0)[1]
+      variable n count($atts)
+      for-each $atts
         variable th <(<<2*math:pi() * position() div $n + (math:pi())>>)>
         choose
           when position()=1 <<M >>
@@ -73,6 +74,6 @@ stylesheet \
         value-of <(<<round((. + 2) * math:cos($th) * 1e4) div 1e4>>)>
         text << >>
       text <<z>>
-    svg -width=16 -viewBox=<{-5 -5 10 10}>
+    svg -width=16 -height=16 -viewBox=<{-5 -5 10 10}>
       path -class=axis -d=<{M 0 5 L 5 0 L 0 -5 L -5 0 z}>
       path -class=shape -d={$d}

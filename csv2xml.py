@@ -95,10 +95,10 @@ for row in rows:
 	## <review>
 	if row['utility'] + row['familiarity'] + row['accuracy'] + row['decipherability'] + row['reviewed_by'] + row['review_date']:
 		review = etree.SubElement(meta, 'review')
-		attr(review, 'utility', row['utility'] or '0')
-		attr(review, 'familiarity', row['familiarity'] or '0')
-		attr(review, 'accuracy', row['accuracy'] or '0')
-		attr(review, 'decipherability', row['decipherability'] or '0')
+		attr(review, 'utility', row['utility'])
+		attr(review, 'familiarity', row['familiarity'])
+		attr(review, 'accuracy', row['accuracy'])
+		attr(review, 'decipherability', row['decipherability'])
 		split(review, 'author', row['reviewed_by'])
 		split(review, 'date', row['review_date'])
 	## <citation>
