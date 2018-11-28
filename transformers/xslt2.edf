@@ -19,5 +19,6 @@ dl = dl class
 p = p class
 
 txt = text
+svg = svg class
 g = g class
 use = use xlink:href

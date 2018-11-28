@@ -237,7 +237,6 @@ a.lang:hover {
 
 .review {
 	color: #3E7690;
-	font-size: smaller;
 	font-variant: small-caps;
 }
 .review-flex {
@@ -316,9 +315,8 @@ svg .axis line {
 	stroke: #e4e4e4;
 	vector-effect: non-scaling-stroke;
 }
-svg text {
-	font-size: 1.5px;
-}
+svg.radar .axis text { font-size: 7.5px; alignment-baseline: central; }
+svg.bar text { font-size: 1.5px; }
 svg .axis text {
 	text-anchor: middle;
 	alignment-baseline: middle;
@@ -326,7 +324,6 @@ svg .axis text {
 }
 svg .shape text,
 svg .shape text tspan {
-	fill: currentColor;
 	alignment-baseline: middle;
 }
 .review .toggle { visibility: hidden; }
