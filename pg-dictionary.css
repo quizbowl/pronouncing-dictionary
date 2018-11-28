@@ -310,21 +310,28 @@ svg {
 .c-1, .c0 { fill: #e41a28; }
 .c2,  .c3 { fill: #00cf45; }
 .c1       { fill: #666; }
-.cm       { fill: #ccc; }
-svg .axis line {
+.axis line {
 	stroke: #e4e4e4;
 	vector-effect: non-scaling-stroke;
 }
-svg.radar .axis text { font-size: 7.5px; alignment-baseline: central; }
-svg.bar text { font-size: 1.5px; }
-svg .axis text {
-	text-anchor: middle;
-	alignment-baseline: middle;
-	font-variant-numeric: oldstyle-nums;
+.axis, .label {
+	fill: #ccc;
 }
-svg .shape text,
-svg .shape text tspan {
-	alignment-baseline: middle;
+text, tspan {
+	text-anchor: middle;
+	dominant-baseline: middle;
+}
+.bar .label text {
+	text-anchor: start;
+}
+.radar {
+	font-size: 7.5px;
+}
+.bar {
+	font-size: 1.5px;
+}
+.axis {
+	font-variant-numeric: oldstyle-nums;
 }
 .review .toggle { visibility: hidden; }
 .review:hover .toggle { visibility: visible; }
