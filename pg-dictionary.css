@@ -8,7 +8,7 @@ body {
 	font-family: var(--base-font-family);
 	font-variant-numeric: lining-nums;
 	-moz-font-feature-settings: 'lnum' 1;
-	font-size: 1.1em;
+	font-size: 18px;
 
 	margin: 0 auto;
 	max-width: 90rem;
@@ -16,11 +16,13 @@ body {
 	text-decoration-skip-ink: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
+	scroll-padding-top: 3.5em;
 }
 article {
 	padding: 0 1em;
 	margin: 1em 0 2em;
-	overflow-x: hidden;
+	/* Enabling this prevents position: sticky; headings */
+	/*overflow-x: hidden;*/
 }
 header.masthead {
 	border: 1px solid black;
@@ -127,7 +129,7 @@ ul.inline li {
 	text-indent: 0;
 }
 :target {
-	background: #faf48f;
+	background: #faf48f !important;
 }
 
 .mr {
@@ -231,16 +233,11 @@ a.lang:hover {
 }
 
 .review {
-	display: inline-block;
-	border-radius: 3px;
-	border: 1px solid #3E7690;
-	padding: 0.1em 0.3em;
-
 	color: #3E7690;
 	font-size: smaller;
 	font-variant: small-caps;
 
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 }
 .review > * + * {
@@ -380,7 +377,6 @@ tr.example .pron {
 
 blockquote.example {
 	padding: 0.5em 0.65em;
-	/*margin: 1em;*/
 	margin: 0;
 	background: #f1f1f1;
 	border-radius: 0.25em;

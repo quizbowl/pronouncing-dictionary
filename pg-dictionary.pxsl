@@ -196,7 +196,7 @@ stylesheet \
       if meta/quizbowl-source
         apply-templates meta/quizbowl-source
 
-  template (entry|div)/form/orth
+  template (entry|example)/form/orth
     b -class=headword
       apply-templates
     call-template orsame
