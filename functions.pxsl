@@ -9,7 +9,9 @@ stylesheet \
   -xmlns:math=http://www.w3.org/2005/xpath-functions/math \
   -xmlns:xlink=http://www.w3.org/1999/xlink \
   -exclude-result-prefixes=<{xs pg math}> \
-  -version=2.0
+  -version=3.0
+  
+  output -suppress-indentation=text
 
   function pg:langGetPrefix xs:string
     funcParam langP xs:string
@@ -92,7 +94,7 @@ stylesheet \
           variable y position()-0.5
           circle -cx={.} -cy={$y} -r=0.25 -class=c{.}
           txt -x=4.5 -y={$y}
-            value-of name()
+            apply-templates .
 
   templateN svgDefs
     tempParam page yes
@@ -106,3 +108,17 @@ stylesheet \
             txt -x=1  -class=cm  <<1>>
             txt -x=2  -class=cm  <<2>>
             txt -x=3  -class=c3  <<+>>
+
+  ,att f s =
+    ,n =
+      ,f
+      ,s
+    template <(<<@>> ,n)>
+      ,f
+      tspan -class=toggle
+        ,s
+
+  ,att util ity
+  ,att fam iliarity
+  ,att acc uracy
+  ,att dec ipherability

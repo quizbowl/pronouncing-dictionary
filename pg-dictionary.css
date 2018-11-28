@@ -318,7 +318,8 @@ svg .axis text {
 	alignment-baseline: middle;
 	font-variant-numeric: oldstyle-nums;
 }
-svg .shape text {
+svg .shape text,
+svg .shape text tspan {
 	fill: currentColor;
 	alignment-baseline: middle;
 }
