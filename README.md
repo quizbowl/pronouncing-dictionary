@@ -1,7 +1,7 @@
 # Quizbowl Pronouncing Dictionary
 
 This is the repository for the [Quizbowl Pronouncing
-Dictionary](http://minkowski.space/quizbowl/pronouncing-dictionary/)
+Dictionary](https://minkowski.space/quizbowl/pronouncing-dictionary/)
 database and website.
 
 ## License
