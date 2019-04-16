@@ -49,10 +49,10 @@
     <name>Diphthongs</name>
     <guideline>
       <phons type="original">œj<sym>$</sym></phons>
-      <orths>euil, œil</orths>
+      <orths>euil, œil, ueil</orths>
       <phons type="target">ʌ.iː, ʌɪ<note ref="1"/>, ɔɪ</phons>
       <prons>UH-ee, oy<note>Anglicized</note></prons>
-      <prons type="wrong">wee-eh, yol, uy, oo-y</prons>
+      <prons type="wrong">wee-eh, yol, uy, oo-y, uh-ih</prons>
       <example>
         <phons type="original">pwa.z<mark>œj</mark></phons>
         <orths>Pois<mark>euille</mark></orths>
@@ -78,10 +78,16 @@
         <phons type="target">ɑːˈn<mark>uː.iː</mark></phons>
         <prons>ah-N<mark>OO-ee</mark></prons>
       </example>
+      <example>
+        <phons type="original">n<mark>uj</mark></phons>
+        <orths>N<mark>oüy</mark></orths>
+        <phons type="target">ˈn<mark>uː.iː</mark></phons>
+        <prons>N<mark>OO-ee</mark></prons>
+      </example>
     </guideline>
     <guideline>
       <phons type="original"><sym>CL</sym>wa</phons>
-      <orths><sym>CL</sym>oi</orths>
+      <orths><sym>CL</sym>oi, <sym>CL</sym>oy</orths>
       <phons type="target"><sym>C</sym>wɑː<note ref="3"/></phons>
       <prons><sym>C</sym>wah</prons>
       <prons type="wrong"><sym>CL</sym>wah</prons>
@@ -119,9 +125,9 @@
       <orths>e<sym>N</sym>, a<sym>N</sym></orths>
       <phons type="target">ɑː<sym>N</sym></phons>
       <prons>aw<sym>N</sym>, ah<sym>N</sym></prons>
-      <prons type="wrong">awng, ong, ahng, ah</prons>
+      <prons type="wrong">awng, ong, ahng, ah, aw</prons>
       <example>
-        <phons type="original">aʁ.bɑ̃</phons>
+        <phons type="original">aʁ.b<mark>ɑ̃</mark></phons>
         <orths>Arb<mark>an</mark></orths>
         <phons type="target">ɑrˈb<mark>ɑːn</mark></phons>
         <prons>ar-B<mark>AWN</mark></prons>
@@ -159,7 +165,7 @@
       <phons type="original">œ, ø</phons>
       <orths>œ, œu, eu</orths>
       <phons type="target">ʌ, ʊ</phons>
-      <prons>uh</prons>
+      <prons>uh, ur<note>sometimes</note></prons>
     </guideline>
     <guideline>
       <phons type="original">y</phons>
@@ -171,7 +177,8 @@
       <phons type="original">ɔ</phons>
       <orths>o, au</orths>
       <phons type="target">ɔ, ʌ</phons>
-      <prons>o, uh</prons>
+      <prons>o<sym>C</sym>, uh</prons>
+      <prons type="wrong">oh</prons>
     </guideline>
   </section>
   <section>
@@ -185,9 +192,12 @@
   </section>
   <!-- Baudelaire boh-duh-LAIR -->
   <!-- Bouguereau boog-ROH -->
+  <!-- e muet -->
 </guidelines>
 
-<p>French is syllable-timed, not stress-timed. In US English, approximate by stressing the final syllable of a word.</p>
+<p>Although French is syllable-timed, not stress-timed,
+  each French word bears a very slight stress on the last syllable.
+  In US English, approximate by stressing the final syllable of a word.</p>
 
 <p>
 ¹ Only for English speakers with Canadian raising.<br />
