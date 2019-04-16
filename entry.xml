@@ -115,7 +115,7 @@
 </example>
 
 <p>Links to audio and textual references for the word’s pronunciation.</p>
-<p>IPA pronunciations come from from textual references. Pronunciations that are not in American English appear with a language tag.</p>
+<p>IPA pronunciations come from textual references. Pronunciations that are not in American English appear with a language tag.</p>
 </div>
 
 <div class="keep">
@@ -148,13 +148,13 @@
 <dl class="compact">
   <dt>Language</dt>
   <dd>
-    <p>Primary language of the word. <lang>English</lang> is for words that
+    <p>Primary language of the word. <lang>English</lang> is for words that</p>
     <ul style="list-style-type: none; padding-left: 1.5em; text-indent: -0.5em;">
       <li>are obviously native English words</li>
       <li>have entered into common English usage (refer to major dictionaries or corpora)</li>
       <li>have an Anglicized pronunciation</li>
       <li>have an English derivation (not inflection)</li>
-    </ul></p>
+    </ul>
   </dd>
   <dd><p>• <l>sudoku</l>, <l>origami</l> = English<br />• <l>Mitsuko</l>, <l>handakuten</l> = Japanese</p></dd>
   <dt>Original languages</dt>
