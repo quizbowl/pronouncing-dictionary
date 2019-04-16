@@ -106,14 +106,24 @@ avoid <b class="pron">though</b> or <b class="pron">cough</b>;
 prefer <b class="pron">g</b> for <b class="pron IPA">/ɡ/</b>
 before high front vowels if unambiguous)</p>
 </blockquote>
+</li>
 
-<p>Use an apostrophe to break up non-English consonant clusters.</p>
+<li>
+<p>Use an apostrophe to break up non-English consonant clusters within the same syllable,
+especially if there is no good alternative.</p>
 
 <blockquote>
-<p>✔︎ Knuth (“<b class="pron">k’NOOTH</b>”)<br />
-✔︎ Xia (“<b class="pron">sh’YAH</b>”)<br />
-✔︎ Reich (“<b class="pron">RYE’sh</b>”)</p>
+<p>for <b class="pron IPA">/kn/</b>: ✔︎ Knuth (“<b class="pron">k’NOOTH</b>”)<br />
+for <b class="pron IPA">/ʃj/</b>: ✔︎ Xia (“<b class="pron">sh’YAH</b>”), not ✘ Xia (“<b class="pron">shyah</b>”)
+— because <b class="pron">shy</b> suggests a beginning rhyme with “shy,” such as <b class="pron">shy-ah</b> <b class="pron IPA">/ʃaɪ.ɑː/</b> instead of <b class="pron IPA">/ʃjɑː/</b><br />
+for <b class="pron IPA">/jʃ/</b>: ✔︎ Reich (“<b class="pron">RYE’sh</b>”), not ✘ Reich (“<b class="pron">ryesh</b>”)
+— because <b class="pron">esh</b> suggests a rhyme with “mesh,” such as <b class="pron">ry-esh</b> <b class="pron IPA">/ɹaɪ.ɛʃ/</b> instead of <b class="pron IPA">/ɹaɪʃ/</b></p>
 </blockquote>
+
+<p>While the apostrophe indicates that the consonants should run together (<b class="pron IPA">/ˈknuːθ/</b>),
+it may be approximated by inserting an epenthetic schwa (<b class="pron IPA">/kəˈnuːθ/</b>).</p>
+
+<p>Use sparingly, as this convention may be unfamiliar.</p>
 </li>
 
 <li>
@@ -165,6 +175,14 @@ to represent a free (long/tense) vowel</p>
 <b class="pron">ee</b>/<b class="pron">eye</b>,
 <b class="pron">ee</b>/<b class="pron">ay</b>/<b class="pron">eh</b>,
 <b class="pron">ay</b></p>
+</blockquote>
+
+<p>Repeating ambisyllabic consonants (like geminated sonorants) is often redundant, but is sometimes useful:</p>
+
+<blockquote>
+<p>✔︎ saltarello (“<b class="pron">sall-tah-RELL-oh</b>”), not ✘ saltarello (“<b class="pron">sahl-tah-REL-lo</b>”)<br />
+✔︎ Amphitryon (“<b class="pron">am-FIT-tree-on</b>”)
+— to represent both the checked vowel and the affricated onset</p>
 </blockquote>
 </li>
 
@@ -271,6 +289,7 @@ confusing, counterintuitive, or unsystematic pronunciations.</p>
 <tr><td>buy</td><td><b class="pron">bye</b>, <b class="pron">by</b></td><td></td><td>superfluous</td></tr>
 <tr><td>build</td><td><b class="pron">bild</b></td><td></td><td>superfluous</td></tr>
 <tr><td>built</td><td><b class="pron">bilt</b></td><td></td><td>superfluous</td></tr>
+<!-- <tr><td>suit</td><td><b class="pron">soot</b></td><td></td><td>superfluous</td></tr> -->
 <tr><td>me</td><td><b class="pron">mee</b></td></tr>
 <tr><td>be</td><td><b class="pron">bee</b></td></tr>
 <tr><td>he</td><td><b class="pron">hee</b></td></tr>
@@ -377,6 +396,9 @@ confusing, counterintuitive, or unsystematic pronunciations.</p>
 <tr><td>sean</td><td><b class="pron">shawn</b></td><td><b class="pron">seen</b></td></tr>
 <tr><td>scene</td><td><b class="pron">seen</b></td><td></td><td>superfluous</td></tr>
 <tr><td>gore</td><td><b class="pron">gor</b></td><td></td><td>superfluous</td></tr>
+<tr><td>cell</td><td><b class="pron">sell</b></td><td></td><td>superfluous</td></tr>
+<tr><td>dont</td><td><b class="pron">daunt</b></td><td><b class="pron">dohnt</b>, <b class="pron">don’t</b></td></tr>
+<tr><td>are</td><td><b class="pron">ar</b>, <b class="pron">arr</b></td><td><b class="pron">air</b></td></tr>
 </tbody>
 </table>
 </div>
