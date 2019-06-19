@@ -28,7 +28,7 @@ cols = [
 	'author','see_also'
 ]
 
-lang_prefix_re = '^(?:([^:]+):)?(.*)$'
+lang_prefix_re = '^(?:([a-z][^:]+):)?(.*)$'
 def extract_lang_prefix(str):
 	return re.match(lang_prefix_re, str).groups()
 
