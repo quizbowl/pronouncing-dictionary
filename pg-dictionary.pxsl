@@ -301,7 +301,12 @@ stylesheet \
 
   template related-entry
     div related-entry
-      span h <<see also>>
+      span h
+        choose
+          when @rel='canonical'
+            <<canonical name>>
+          otherwise
+            <<see also>>
       text << >>
       variable prefix -select=<{if (contains(@ref, '//')) then '' else '#'}>
       a {$prefix}{@ref} link

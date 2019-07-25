@@ -143,6 +143,9 @@ for row in rows:
 				# TODO: temporary generated link text
 				text = urllib.unquote(text.split('/')[-1])
 			else:
+				if text.startswith('='):
+					attr(related_entry, 'rel', 'canonical')
+					text = text[1:]
 				ref = super(UniqueSlugify, slugify).__call__(text)
 			related_entry.text = text
 			related_entry.set('ref', ref)
