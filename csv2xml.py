@@ -8,6 +8,7 @@ from lxml import etree
 import re
 
 import random
+import urllib
 from unidecode import unidecode
 from slugify import UniqueSlugify
 slugify = UniqueSlugify(translate=None, safe_chars=u"-.'\"‘’“”–", separator="_")
@@ -140,7 +141,7 @@ for row in rows:
 			if text.startswith('http'):
 				ref = text
 				# TODO: temporary generated link text
-				text = text.split('/')[-1]
+				text = urllib.unquote(text.split('/')[-1])
 			else:
 				ref = super(UniqueSlugify, slugify).__call__(text)
 			related_entry.text = text
