@@ -303,7 +303,8 @@ stylesheet \
     div related-entry
       span h <<see also>>
       text << >>
-      a #{@ref} link
+      variable prefix -select=<{if (contains(@ref, '//')) then '' else '#'}>
+      a {$prefix}{@ref} link
         apply-templates
       call-template or
 
