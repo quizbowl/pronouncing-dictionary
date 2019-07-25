@@ -261,6 +261,10 @@ stylesheet \
           text <<: >>
       call-template radar
       call-template bar
+      if notes
+        span
+          text <<Note: >>
+          apply-templates notes
 
   template citation
     if @url

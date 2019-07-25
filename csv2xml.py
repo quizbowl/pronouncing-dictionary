@@ -96,12 +96,13 @@ for row in rows:
 		split(submission, 'author', row['submitted_by'])
 		split(submission, 'date', row['submit_date'])
 	## <review>
-	if row['utility'] + row['familiarity'] + row['accuracy'] + row['decipherability'] + row['reviewed_by'] + row['review_date']:
+	if row['utility'] + row['familiarity'] + row['accuracy'] + row['decipherability'] + row['reviewed_by'] + row['review_date'] + row['review_notes']:
 		review = etree.SubElement(meta, 'review')
 		attr(review, 'utility', row['utility'])
 		attr(review, 'familiarity', row['familiarity'])
 		attr(review, 'accuracy', row['accuracy'])
 		attr(review, 'decipherability', row['decipherability'])
+		split(review, 'notes', row['review_notes'])
 		split(review, 'author', row['reviewed_by'])
 		split(review, 'date', row['review_date'])
 	## <citation>
