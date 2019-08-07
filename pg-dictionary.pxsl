@@ -255,14 +255,16 @@ stylesheet \
 
   template review
     div review
-      if author
-        span
-          apply-templates author
-          text <<: >>
-      call-template radar
-      call-template bar
+      div review-flex
+        if author
+          span
+            apply-templates author
+            text <<: >>
+        call-template radar
+        call-template bar
       if notes
         span
+          # TODO fix style
           text <<Note: >>
           apply-templates notes
 

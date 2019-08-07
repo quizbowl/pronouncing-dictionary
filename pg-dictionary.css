@@ -239,11 +239,12 @@ a.lang:hover {
 	color: #3E7690;
 	font-size: smaller;
 	font-variant: small-caps;
-
+}
+.review-flex {
 	display: flex;
 	align-items: center;
 }
-.review > * + * {
+.review-flex > * + * {
 	margin-left: 0.5em;
 }
 
