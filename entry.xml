@@ -162,7 +162,20 @@
   • <l>Mitsuko</l>, <l>handakuten</l> = Japanese</p></dd>
   <dt>Original languages</dt>
   <dd><p>Ultimate languages of origin.</p>
-  <p>Special values: <lang>mul</lang> for multiple languages (doubly eponymous need to be separated eventually); <lang>zxx</lang> for gibberish or made-up words; <lang>qfi</lang> for fictional names; <lang>qco</lang> for coined terms; <lang>qab</lang> for abbreviations or acronyms; <lang>qli</lang> for linguistic transcriptions; <lang>qis</lang> for international scientific vocabulary</p></dd>
+  <p>Special values:</p>
+    <dl class="compact x tabular-lang">
+      <dt><lang>und</lang></dt><dd>origin cannot be determined</dd>
+      <dt><lang>qna</lang></dt><dd>missing (needs more research)</dd>
+      <dt><lang>mul</lang></dt><dd>multiple languages (need to separate eventually)</dd>
+      <dt><lang>zxx</lang></dt><dd>gibberish, systematic, or nonce words</dd>
+      <dt><lang>qab</lang></dt><dd>abbreviations or acronyms</dd>
+      <dt><lang>qco</lang></dt><dd>coined terms</dd>
+      <dt><lang>qfi</lang></dt><dd>fictional names</dd>
+      <dt><lang>qli</lang></dt><dd>linguistic transcriptions</dd>
+      <dt><lang>qmi</lang></dt><dd>intentional mistakes</dd>
+      <dt><lang>qis</lang></dt><dd>international scientific vocabulary</dd>
+    </dl>
+  </dd>
   <dd><p>• <l>Abbasid</l>, <l>Achilles</l>, <l>Amharic</l> are native English words, but they are originally Arabic/Greek/Amharic respectively</p></dd>
 </dl>
 </div>

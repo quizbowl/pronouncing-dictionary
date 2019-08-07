@@ -290,6 +290,11 @@ dl.compact.m dd { margin-left: 4em; }
 dl.compact.x.tabular-nums dt {
 	text-align: right;
 }
+dl.compact.x.tabular-lang dt {
+	font-variant: all-small-caps;
+	/*font-family: Consolas, monospace;*/
+	/*font-size: 0.9;*/
+}
 
 img {
 	border: 0;

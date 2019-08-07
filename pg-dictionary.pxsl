@@ -11,7 +11,7 @@ stylesheet \
   -version=2.0
 
   import functions.xsl
-  output -method=xhtml -indent=yes
+  output -method=xhtml -indent=yes -omit-xml-declaration=yes
 
   variable sitemap document('sitemap.xml') -as=document-node()
 
