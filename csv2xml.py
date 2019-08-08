@@ -67,6 +67,9 @@ for row in rows:
 	entry.set('id', slugify(first_orth))
 	entry.set('initial', initial(first_orth))
 
+	if row['exemplar']:
+		entry.set('exemplar', row['exemplar'])
+
 	# <form>
 	form = etree.SubElement(entry, 'form')
 	split(form, 'orth', row['word'])

@@ -1,7 +1,7 @@
 default namespace = ""
 
 start = element pg-dictionary { entry* }
-entry = element entry { id?, form+, langElement*, usage?, meta? }
+entry = element entry { id?, exemplar?, form+, langElement*, usage?, meta? }
 form = element form { orth+, pron+ }
 orth = element orth { lang?, text }
 pron = element pron { lang?, notation?, text }
@@ -51,3 +51,4 @@ notation = attribute notation { 'IPA' | text }
 rating = '3' | '2' | '1' | '0' | '-1'
 langType = xsd:language
 urlType = xsd:anyURI
+exemplar = attribute exemplar { text }

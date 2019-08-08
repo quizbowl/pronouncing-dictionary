@@ -162,7 +162,12 @@ stylesheet \
   template <(<<date | submission | stemmable>>)>
 
   template entry
-    div <(<<entry keep>>)> -id={@id}
+    div -id={@id}
+      attribute class
+        text <<entry keep>>
+        if @exemplar
+          text << exemplar>>
+
       a #{@id} mr
         apply-templates form/orth
       call-template sp

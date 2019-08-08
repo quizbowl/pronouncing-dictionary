@@ -131,6 +131,9 @@ ul.inline li {
 :target {
 	background: #faf48f !important;
 }
+.exemplar {
+	background: #d2f8fd;
+}
 
 .mr {
 	margin-right: 0.4em;
