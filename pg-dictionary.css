@@ -386,6 +386,10 @@ blockquote.example {
 	margin-left: 1em;
 	text-indent: -1em;
 }
+.bib cite, .bib + p cite {
+	font-style: italic;
+	font-weight: 500;
+}
 
 sup.fn-ref {
 	vertical-align: baseline;
