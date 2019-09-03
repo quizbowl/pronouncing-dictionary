@@ -106,7 +106,7 @@ stylesheet \
           g label
             title
               value-of pg:legendLookupLabel(name(),.)
-            txt -x=4.5 -y={$y}
+            txt -x=4.5 -y={$y} -dy=.4
               apply-templates .
 
   templateN svgDefs
@@ -119,17 +119,17 @@ stylesheet \
             path -class=c0 -d=<{M 0 5 L 5 0 L 0 -5 L -5 0 z}>
           g radar -id=radar-label
             g label
-              txt -x=0  -y=-9 <<u>>
-              txt -x=9  -y=0  <<f>>
-              txt -x=0  -y=9  <<a>>
-              txt -x=-9 -y=0  <<d>>
+              txt -x=0  -y=-9 -dy=2 <<u>>
+              txt -x=9  -y=0  -dy=2 <<f>>
+              txt -x=0  -y=9  -dy=2 <<a>>
+              txt -x=-9 -y=0  -dy=2 <<d>>
           g bar -id=bar
             g axis
-              txt -x=-1 -class=c-1 <<&#x2212;>>
-              txt -x=0            <<0>>
-              txt -x=1            <<1>>
-              txt -x=2            <<2>>
-              txt -x=3  -class=c3  <<+>>
+              txt -x=-1 -dy=.4 -class=c-1 <<&#x2212;>>
+              txt -x=0  -dy=.4           <<0>>
+              txt -x=1  -dy=.4           <<1>>
+              txt -x=2  -dy=.4           <<2>>
+              txt -x=3  -dy=.4 -class=c3  <<+>>
 
   ,att f s =
     ,n =

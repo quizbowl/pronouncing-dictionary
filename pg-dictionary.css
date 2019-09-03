@@ -312,14 +312,15 @@ svg {
 .c1       { fill: #666; }
 .axis line {
 	stroke: #e4e4e4;
-	vector-effect: non-scaling-stroke;
+	stroke-width: 0.1px;
+	/*vector-effect: non-scaling-stroke;*/
 }
 .axis, .label {
 	fill: #ccc;
 }
 text, tspan {
 	text-anchor: middle;
-	dominant-baseline: middle;
+	/*dominant-baseline: middle;*/
 }
 .bar .label text {
 	text-anchor: start;
