@@ -41,7 +41,8 @@ stylesheet \
           call-template fullTitle
 
       body
-        a -name=top
+        # TODO: use &sect; instead of ^
+        a -name=^top
         header -class=masthead
           h1
             a ./ <<Quizbowl Pronouncing Dictionary>>
@@ -52,7 +53,7 @@ stylesheet \
             dt <<Status>>
             dd
               <<Draft. Almost all entries not by >>
-              a author.html#OL author -data-author=OL <<OL>>
+              a author.html#^OL author -data-author=OL <<OL>>
               << are unverified and are probably inaccurate.>>
 
             dt <<Last updated>>
@@ -116,8 +117,8 @@ stylesheet \
 
       for-each $groups/group
         section
-          h2 -id={@key}
-            a #{@key}
+          h2 -id=^{@key}
+            a #^{@key}
               call-template header
             call-template heading-right
           call-template columns
@@ -138,7 +139,7 @@ stylesheet \
             ul inline
               for-each current-group()
                 li
-                  a #{@key} -title={@displayKey}
+                  a #^{@key} -title={@displayKey}
                     value-of @key
 
   templateN header
@@ -153,7 +154,7 @@ stylesheet \
         when $count=1 << entry>>
         otherwise << entries>>
       text << >>
-      a #top <<Top &#x2191;>>
+      a #^top <<Top &#x2191;>>
 
   templateN columns
     div columns
@@ -252,11 +253,11 @@ stylesheet \
 
   templateN lang
     param class
-    a lang.html#{.} <(<<lang {$class}>>)> -title={.}
+    a lang.html#^{.} <(<<lang {$class}>>)> -title={.}
       value-of pg:langLookupCanonicalName(.)
 
   template usage/category|usage/context
-    a category.html#{.} {name()}
+    a category.html#^{.} {name()}
       apply-templates
     call-template or
 
@@ -296,7 +297,7 @@ stylesheet \
       button -onclick=toggleAudio(this) <<&#x25BA;>>
 
   template author
-    a author.html#{.} author -data-author={.}
+    a author.html#^{.} author -data-author={.}
       value-of .
 
   template related-entries

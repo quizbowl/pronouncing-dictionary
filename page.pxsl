@@ -23,19 +23,22 @@ stylesheet \
     copy
       apply-templates @*|node()
 
-  ,viewLink tag viewName =
+  ,viewLink tag viewName prefix =
     template <(,tag)>
       call-template viewLink
         with view
           ,viewName
+        with prefix
+          ,prefix
 
-  ,viewLink l    index
-  ,viewLink cat  category
-  ,viewLink lang lang
+  ,viewLink l    index    <()>
+  ,viewLink cat  category ^
+  ,viewLink lang lang     ^
 
   templateN viewLink
     param view
-    a {$view}.html#{.} link
+    param prefix
+    a {$view}.html#{$prefix}{.} link
       apply-templates
 
   template countEntries
