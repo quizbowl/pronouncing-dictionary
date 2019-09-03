@@ -260,8 +260,9 @@ stylesheet \
           span
             apply-templates author
             text <<: >>
-        call-template radar
-        call-template bar
+        if @accuracy|@decipherability|@familiarity|@utility
+          call-template radar
+          call-template bar
       if notes
         span
           # TODO fix style
