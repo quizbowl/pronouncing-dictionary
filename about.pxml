@@ -2,7 +2,10 @@ article -xmlns=http://www.w3.org/1999/xhtml
 
   h1 <<About this dictionary>>
   p
-    <<The purpose of this site is to be a reference for question writers and players to browse or look up standard pronunciation guides. Centralization eliminates redundant, time-consuming research. The same data will enable applications to automatically insert pronunciation guides into questions.>>
+    <<The purpose of this site is to be a reference for <a href="http://www.pace-nsc.org/what-is-quizbowl-a-primer-and-faq-for-newcomers/">quizbowl</a> >>
+    <<question writers and players to browse or look up standard pronunciation guides for unfamiliar terms. >>
+    <<Centralization eliminates redundant, time-consuming research. >>
+    <<This site is just a static view of the underlying database that enables applications to automatically insert pronunciation guides into quizbowl questions.>>
 
   h2 <<Data>>
   p
@@ -13,7 +16,9 @@ article -xmlns=http://www.w3.org/1999/xhtml
 
   h2 <<License>>
   p
-    <<The database is released under the <a href="https://opendatacommons.org/licenses/odbl/summary/">Open Database License (ODbL)</a>. This is a &#x201c;share-alike&#x201d; license, meaning that if you distribute a work that builds upon this data, you must make it available under the same license in order to maintain the same freedoms for others.>>
+    <<The database is released under the <a href="https://opendatacommons.org/licenses/odbl/summary/">Open Database License (ODbL)</a>. >>
+    <<This is a &#x201c;share-alike&#x201d; license, meaning that if you distribute a work that builds upon this data, >>
+    <<you must make it available under the same license in order to maintain the same freedoms for others.>>
   p
     <<The website is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License (GPL)</a>.>>
 
