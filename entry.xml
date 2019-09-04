@@ -53,8 +53,9 @@
   </form>
 </example>
 
-<p>Alternate spellings included.<br/>
+<p>Alternate spellings included.<br />
 • <l>afikoman</l>: afikoman | afikomen</p>
+<p>TODO: entries with shaded backgrounds are exemplars.</p>
 </div>
 
 <div class="keep">
@@ -64,7 +65,8 @@
 </example>
 
 <p>Alternatives, duplicates, and prescriptive quizbowl pronunciations are separate entries for now.</p>
-<p>Pronunciations are listed in order of frequency.<br />TODO: equally frequent variants are marked with <code>=</code>.</p>
+<p>Pronunciations are listed in order of frequency.</p>
+<p>TODO: equally frequent variants are marked with <code>=</code>.</p>
 </div>
 
 <div class="keep">
@@ -73,11 +75,11 @@
   TODO
 </div> -->
 
-<p>Whether the word allows stemming/suffixes<br/>
+<p>Whether the word allows stemming/suffixes<br />
 • <l>quipu</l> → quipus, <l>Wien</l> → Wien’s, <l>prophesy</l> → prophesies</p>
-<p>Partial names, dropped articles<br/>
+<p>Partial names, dropped articles<br />
 • <l>Alban Berg</l> → Berg, <l>La Marseillaise</l> → Marseillaise</p>
-<p>Force capitalization at beginning of sentence<br/>
+<p>Force capitalization at beginning of sentence<br />
 • <l>von Laue</l> → Von Laue</p>
 </div>
 </div>
@@ -156,7 +158,8 @@
       <li>have an English derivation (not inflection)</li>
     </ul>
   </dd>
-  <dd><p>• <l>sudoku</l>, <l>origami</l> = English<br />• <l>Mitsuko</l>, <l>handakuten</l> = Japanese</p></dd>
+  <dd><p>• <l>sudoku</l>, <l>origami</l> = English<br />
+  • <l>Mitsuko</l>, <l>handakuten</l> = Japanese</p></dd>
   <dt>Original languages</dt>
   <dd><p>Ultimate languages of origin.</p>
   <p>Special values: <lang>mul</lang> for multiple languages (doubly eponymous need to be separated eventually); <lang>zxx</lang> for gibberish or made-up words; <lang>qfi</lang> for fictional names; <lang>qco</lang> for coined terms; <lang>qab</lang> for abbreviations or acronyms; <lang>qli</lang> for linguistic transcriptions; <lang>qis</lang> for international scientific vocabulary</p></dd>
@@ -175,14 +178,16 @@
   </usage>
 </example>
 
+<p>Usage information is primarily used to disambiguate words.</p>
 <dl class="compact">
   <dt>Category</dt>
-  <dd><p>major or minor quizbowl category where the word is likely to be found; can be used for disambiguation</p>
+  <dd><p>major or minor quizbowl category where the word is likely to be found</p>
   <p><cat>Common</cat> is for words common to several categories (<l>fin de siècle</l>)</p></dd>
-  <dd><p>• major: <cat>Literature</cat>, <cat>History</cat>, <cat>Science</cat><br/>• minor: <cat>Computer Science</cat>, <cat>Physics</cat></p></dd>
+  <dd><p>• major: <cat>Literature</cat>, <cat>History</cat>, <cat>Science</cat><br />
+  • minor: <cat>Computer Science</cat>, <cat>Physics</cat></p></dd>
   <dt>Context</dt>
-  <dd><p>to disambiguate identical words</p></dd>
-  <dd><p>• <cat>Bible</cat>, <cat>Roman</cat>, <cat>Buddhism</cat></p></dd>
+  <dd><p>other contextual tags</p></dd>
+  <dd><p>• <cat>Germany</cat>, <cat>Bible</cat>, <cat>Roman</cat>, <cat>Buddhism</cat></p></dd>
   <dt>Definition</dt>
   <dd><p>concise gloss of the word</p></dd>
 </dl>
@@ -198,7 +203,8 @@
 </example>
 
 <p>Ratings are given by the reviewer. TODO: add review date.</p>
-<p>TODO: Undefined values are currently listed as 0.<br />Radar chart will be redesigned as a sparkline/bar chart.</p>
+<p>TODO: Undefined values are currently listed as 0.<br />
+Radar chart will be redesigned as a sparkline/bar chart.</p>
 <dl class="compact">
   <dt>Utility</dt>
   <dd><p>Priority/helpfulness; how useful is PG to the average moderator</p></dd>
