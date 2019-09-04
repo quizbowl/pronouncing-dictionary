@@ -39,7 +39,9 @@
         </form>
         <name>2017_NASAT/Round_02.pdf</name>
       </quizbowl-source>
-      <related-entry ref="Aix-la-Chapelle">Aix-la-Chapelle</related-entry>
+      <related-entries>
+        <related-entry ref="Aix-la-Chapelle" rel="xref">Aix-la-Chapelle</related-entry>
+      </related-entries>
     </meta>
   </entry>
 </example>
@@ -98,7 +100,9 @@
 <div class="keep">
 <h3>Related entries</h3>
 <example xmlns="http://schema.quizbowl.technology/xml/pg-dictionary">
-  <related-entry ref="Aix-la-Chapelle">Aix-la-Chapelle</related-entry>
+  <related-entries>
+    <related-entry ref="Aix-la-Chapelle" rel="xref">Aix-la-Chapelle</related-entry>
+  </related-entries>
 </example>
 
 <p>Various cross references, including synonyms, hypernyms, hyponyms, cohyponyms (coordinate terms), etc.</p>

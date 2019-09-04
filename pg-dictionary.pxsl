@@ -195,19 +195,8 @@ stylesheet \
       div reviews
         apply-templates meta/review
 
-      if meta/related-entry
-        for-each-group meta/related-entry -group-by=@rel
-          div related-entry
-            span h
-              choose
-                when @rel='canonical'
-                  <<canonical name>>
-                when @rel='confusable'
-                  <<confusable with>>
-                otherwise
-                  <<see also>>
-            text << >>
-            apply-templates current-group()
+      if meta/related-entries
+        apply-templates meta/related-entries
 
       if meta/quizbowl-source
         apply-templates meta/quizbowl-source
@@ -309,6 +298,20 @@ stylesheet \
   template author
     a author.html#{.} author -data-author={.}
       value-of .
+
+  template related-entries
+    for-each-group ./related-entry -group-by=@rel
+      div related-entry
+        span h
+          choose
+            when @rel='canonical'
+              <<canonical name>>
+            when @rel='confusable'
+              <<confusable with>>
+            otherwise
+              <<see also>>
+        text << >>
+        apply-templates current-group()
 
   template related-entry
     variable prefix -select=<{if (contains(@ref, '//')) then '' else '#'}>

@@ -37,10 +37,12 @@ meta =
 			author,
 			form?
 		}* &
-		element related-entry {
-			ref?,
-			attribute rel { rel }?,
-			text
+		element related-entries {
+			element related-entry {
+				ref?,
+				attribute rel { rel }?,
+				text
+			}*
 		}*
 	}
 author = element author { text }*

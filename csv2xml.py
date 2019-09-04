@@ -138,9 +138,10 @@ for row in rows:
 	source_no_filename = re.sub('/.*', '', source_no_prefix).replace('_', ' ')
 	source.set('name', source_no_filename)
 	## <related-entry>
+	related_entries = etree.SubElement(meta, 'related-entries')
 	for text in row['see_also'].split('|'):
 		if text:
-			related_entry = etree.SubElement(meta, 'related-entry')
+			related_entry = etree.SubElement(related_entries, 'related-entry')
 			
 			if text.startswith('http'):
 				ref = text
