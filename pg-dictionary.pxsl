@@ -129,6 +129,43 @@ stylesheet \
         with-param sections $sections
       apply-templates $sections/root/section
 
+
+  template root|section -mode=hierarchy
+    # 1. recurse into children
+    variable children
+      apply-templates -mode=hierarchy
+
+    # 2. don't copy sections that ultimately contain no entries
+    # TODO optimize by recursively returning the count instead of searching?
+    # TODO fix copy/copy-of/sequence usage
+    if count($children//entry)
+      copy -copy-namespaces=no
+        sequence @*
+        if self::section
+          heading -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+            value-of ancestor-or-self::section/@key -separator=<< / >>
+            if join
+              text <<: >>
+              value-of pg:langLookupCanonicalName(@key)
+        sequence $children
+
+  template heading -mode=hierarchy
+    sequence .
+
+  # replaces <join/> in hierarchy with entry groups whose @key matches @key of <join/>'s parent
+  # <section key="foo">                          <section key="foo">
+  #  <section key="bar"><join/></section>   ->    <section key="bar"><entry/><entry/></section>...
+  #  <section key="baz"><join/></section>        </section>
+  template join -mode=hierarchy
+    tempParam groups yes
+    variable key ../@key
+    copy-of $groups[@key=$key]/entry
+
+  template fallback -mode=hierarchy
+    tempParam groups yes
+    variable keysUsed //section/@key
+    sequence $groups[not(@key=$keysUsed)]
+
   templateN addHeadingFlat
     tempParam view yes
 
@@ -149,19 +186,41 @@ stylesheet \
   template root|section -mode=legend
     tempParam view yes
 
-    dl <(<<compact x>>)>
-      for-each-group $groups/group -group-by=<{
-        if ($view='tournament')      then tokenize(@key,' ')[1] else
-        if (count($groups/group)<30) then ''                    else
-        upper-case(substring(@key,1,1))}>
-        dt
-          value-of current-grouping-key()
-        dd
-          ul inline
-            for-each current-group()
-              li
-                a #^{@key} -title={displayKey}
-                  value-of @key
+    variable count count(section)
+    dl
+      choose
+        when <(<<ends-with($view,'family') and (@family or self::root)>>)>
+          attribute class <<compact g>>
+          for-each section[@family]
+            dt
+              a #^{@key} -title={heading}
+                value-of tokenize(@key)[1]
+            dd
+              if section[not(@family)]
+                ul inline
+                  for-each section[not(@family)]
+                    li
+                      a #^{@key} -title={heading}
+                        value-of @key
+              apply-templates .[section[@family]] -mode=legend
+
+        otherwise
+          attribute class <<compact x>>
+          # tournament: first word (year)
+          # <30 groups: no alphabet index
+          # otherwise:  first letter index
+          for-each-group section -group-by=<{
+              if ($view='tournament') then tokenize(@key)[1] else
+              if ($count<30)          then ''                else
+              upper-case(substring(@key,1,1))}>
+            dt
+              value-of current-grouping-key()
+            dd
+              ul inline
+                for-each current-group()
+                  li
+                    a #^{@key} -title={heading}
+                      value-of @key
 
 
   template section
@@ -198,6 +257,7 @@ stylesheet \
       apply-templates entry
 
   template <(<<date | submission | stemmable>>)>
+
 
   template entry
     div -id={@id}
