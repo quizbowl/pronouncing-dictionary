@@ -1,0 +1,48 @@
+https://www.w3.org/TR/pronunciation-lexicon/
+
+add a try/dingus/sandbox app to show how pgs get added to sentence (contenteditable?)
+
+add examples; change qis to isv; Ikea product names, etc
+Ta-Nehisi? SZA? company names? not exactly coined but not fictional
+mathematical - T³, etc. not abbreviations?
+qli or linguistic use–mention metalingual
+
+show incoming xrefs to entry
+check that xrefs actually exist - redlink
+exemplar background color meaning
+need to standardize lang and orig_lang. orig_lang = at some point in etymology.
+tag for frequently mispronounced terms by quizbowlers. Pigou
+add metadata confidence column?
+
+single syllable to lowercase. search for and, or, /, 's, !?, roman nums
+principle: for now last name goes last even in ja, hu, zh, etc.
+principles for liaison: Les Adieux lay zah-DYUH Les Apaches layz ah-POSH
+pg contains numeral
+
+x need generated id prefix for headers (vi lang = Vietnamese vs. vi term = not emacs)
+x svg 1.1 dominant-baseline vector-effect
+x links inside definition - maybe like {Giulio Cesare} aria?
+
+(move) split lang sections into anglicized and original lang
+some langs can just go by their iso abbr; others should be full name in index
+iso to [] not :
+heading levels h1 h2 h3
+LOC classification http://loc.gov/aba/publications/FreeLCC/LCC_BL-BQ2019TEXT.pdf
+subheadings within language for variants de-AT, demonyms
+de-AT needs map(lang, pg:langLookupPrefix) in big if
+africa eurasia america. see ingvaeonic split
+rename Indo-Aryan?
+lang, orig_lang should only be when one can expect to have linguistic or domain knowledge of the word
+i.e. if ask native speaker to review. e.g. intermediate langs "cherub: en,la,grc,hbo". dont need word's full history.
+^ separate informative etym from functional lang field?
+use ~, _ for nbsp, nnbsp etc. in pg db headword coding? but ensure headword won't need much preprocessing
+histograms of most common categories / languages in a section
+histogram frequency of term in quizbowl corpus
+add count to index items
+TODO look up term frequency for all entries in packet database, for help finding commons, exemplar=2 etc.
+General ex=2 -> should confine to Canto General (i.e. no General entry)? need user feedback on false positives
+crowdsourcing ui
+compact legend
+image mnemonic
+wikipedia, wiktionary link
+use "with name select tunnel" shortcut consistently
