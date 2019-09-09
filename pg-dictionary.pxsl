@@ -93,59 +93,88 @@ stylesheet \
   template /pg-dictionary
     tempParam view yes
 
+    # 1. form groups
     variable groups
-      for-each-group entry -group-by=<{
-          if ($view='index')      then @initial                   else
-          if ($view='lang')       then lang                       else
-          if ($view='category')   then usage/(category|context)   else
-          if ($view='author')     then meta/author                else
-          if ($view='tournament') then meta/quizbowl-source/@name else
-          0}>
-        sort current-grouping-key()
-        pg:group -key={current-grouping-key()}
-          pg:displayKey
-            value-of current-grouping-key()
-            choose
-              when $view='lang'
-                text <<: >>
-                value-of pg:langLookupCanonicalName(current-grouping-key())
-          copy-of current-group()
-          # perform-sort current-group()
-          #   sort -lang=fr -stable=yes
+      root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+        for-each-group entry -group-by=<{
+            if ($view='index')                 then @initial                   else
+            if (starts-with($view,'lang'))     then lang                       else
+            if ($view='category')              then usage/(category|context)   else
+            if ($view='author')                then meta/author                else
+            if ($view='tournament')            then meta/quizbowl-source/@name else
+            0}>
 
-    article -class=dictionary
+          sort current-grouping-key()
+          section -key={current-grouping-key()}
+            call-template addHeadingFlat
+            copy-of current-group()
+            # preserve order from database for now
+            # perform-sort current-group()
+            #   sort -lang=en -stable=yes
+
+    # 2. if family page, insert groups into section hierarchy by reverse lookup
+    variable sections
+      choose
+        when ends-with($view,'family')
+          variable hierarchy document('data/'||$view||'-tree.xml')/pg:root -as=node()
+
+          apply-templates $hierarchy -mode=hierarchy
+            with-param groups $groups/root/section -tunnel=yes
+        otherwise
+          sequence $groups
+
+    # 3. output
+    article -class=dictionary -id={$view}
       call-template legend
-        with-param groups $groups
+        with-param sections $sections
+      apply-templates $sections/root/section
 
-      for-each $groups/group
-        section
-          h2 -id=^{@key}
-            a #^{@key}
-              call-template header
-            call-template heading-right
-          call-template columns
+  templateN addHeadingFlat
+    tempParam view yes
+
+    heading -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+      value-of current-grouping-key()
+      choose
+        when starts-with($view,'lang')
+          text <<: >>
+          value-of pg:langLookupCanonicalName(current-grouping-key())        
+          #br -xmlns=http://www.w3.org/1999/xhtml
 
   templateN legend
-    tempParam view yes
-    param groups
-    header
+    param sections
+    header -class=legend
       p <<Jump to>>
-      dl <(<<compact x>>)>
-        for-each-group $groups/group -group-by=<{
-          if ($view='tournament')      then tokenize(@key,' ')[1] else
-          if (count($groups/group)<30) then ''                    else
-          upper-case(substring(@key,1,1))}>
-          dt
-            value-of current-grouping-key()
-          dd
-            ul inline
-              for-each current-group()
-                li
-                  a #^{@key} -title={displayKey}
-                    value-of @key
+      apply-templates $sections -mode=legend
 
-  templateN header
-    copy-of displayKey/node() -copy-namespaces=no
+  template root|section -mode=legend
+    tempParam view yes
+
+    dl <(<<compact x>>)>
+      for-each-group $groups/group -group-by=<{
+        if ($view='tournament')      then tokenize(@key,' ')[1] else
+        if (count($groups/group)<30) then ''                    else
+        upper-case(substring(@key,1,1))}>
+        dt
+          value-of current-grouping-key()
+        dd
+          ul inline
+            for-each current-group()
+              li
+                a #^{@key} -title={displayKey}
+                  value-of @key
+
+
+  template section
+    section
+      apply-templates heading
+      call-template columns
+    apply-templates section
+
+  template heading
+    h2 -id=^{../@key}
+      a #^{../@key}
+        apply-templates
+      call-template heading-right
 
   template html:*
     copy

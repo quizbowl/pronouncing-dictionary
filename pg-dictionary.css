@@ -105,6 +105,9 @@ ul.inline li {
 .dictionary section h2 > :first-child {
 	grid-column-start: 2;
 }
+.dictionary#lang-family section h2 {
+	text-align: left;
+}
 .heading-right {
 	font-weight: 300;
 	font-size: 0.9rem;
