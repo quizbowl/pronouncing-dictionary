@@ -1,0 +1,954 @@
+
+,s name =
+  section -key=<(,name)> -family=yes ,BODY
+,l iso =
+  section -key=<(,iso)>
+    join
+#
+
+root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+  ,s Sumerian
+    ,l sux
+  ,s Elamite
+    ,l elx
+  ,s Hurro-Urartian
+    ,l xhu
+    ,l xur
+  ,s Afroasiatic
+    ,l afa
+    ,l omv
+    ,l nxm
+    ,s Egyptian
+      ,l egx
+      ,l egy
+      ,l cop
+    ,s Semitic
+      ,l sem
+      ,l xeb
+      ,l akk
+      ,s <(<<Northwest Semitic>>)>
+        ,l uga
+        ,l obm
+        ,l xdm
+        ,l phn
+        ,l xpu
+        ,l hbo
+        ,l he heb
+        ,l heb
+        ,l oar
+        ,l arc
+        ,l syc
+        ,l syr
+        ,l myz
+        ,l tru
+      ,s <(<<Central Semitic>>)>
+        ,l ar ara
+        ,l acx
+        ,l arz
+        ,l aeb
+        ,l arq
+        ,l ary
+        ,l mt mlt
+      ,s <(<<South Semitic>>)>
+        ,l xsa
+        ,l inm
+        ,l xha
+        ,l xhd
+        ,l xqt
+        ,l rzh
+        ,l gdq
+        ,l sqt
+      ,s Ethiopian
+        ,l gez
+        ,l am amh
+        ,l ti tir
+        ,l tig
+    ,s Berber
+      ,l ber
+      ,l gnc
+      ,l zen
+      ,l kab
+      ,l tzm
+      ,l shi
+      ,l taq
+      ,l tmh
+    ,s Chadic
+      ,l cdc
+      ,l ckl
+      ,l ha hau
+    ,s Cushitic
+      ,l cus
+      ,l drs
+      ,l aa aar
+      ,l om orm
+      ,l so som
+  ,s Nilo-Saharan
+    ,l ssa
+    ,l kr kau
+    ,l ses
+    ,l son
+    ,l fvr
+    ,l sdv
+    ,l csu
+    ,l onw
+    ,l nub
+    ,s Nilotic
+      ,l mas
+      ,l tuv
+      ,l teo
+      ,l dn din
+      ,l nus
+      ,l luo
+      ,l laj
+      ,l ach
+  ,s Mande
+    ,l dmn
+    ,l bm bam
+    ,l mnk
+    ,l men
+    ,l man
+    ,l goa
+    ,l yre
+  ,s Niger-Congo
+    ,l nic
+    ,l kdo
+    ,s Dogon
+        ,l dba
+        ,l dts
+        ,l dds
+        ,l dto
+        ,l djm
+    ,s Atlantic
+      ,l alv
+      ,l kro
+      ,l srr
+      ,l ff ful
+      ,l cae
+      ,l wo wol
+      ,l tem
+    ,s Savannas
+      ,l gur
+      ,l gux
+      ,l mos
+      ,l ver
+      ,l dag
+      ,l dga
+      ,l sg sag
+    ,s Zande
+      ,l znd
+      ,l zne
+    ,s Kwa
+      ,l ee ewe
+      ,l fon
+      ,l bci
+      ,l gaa
+      ,l ak aka
+      ,l tw twi
+      ,l fat
+    ,s <(<<Benue&#x2013;Congo>>)>
+      ,l ig ibo
+      ,l yo yor
+      ,l nup
+      ,s Bantu
+        ,l bnt
+        ,l mcp
+        ,l bnm
+        ,l ewo
+        ,l bas
+        ,l ksf
+        ,l axk
+        ,l ln lin
+        ,l xog
+        ,l lun
+        ,l tum
+        ,l ny nya
+        ,l ki kik
+        ,l sw swa
+        ,l swb
+        ,l lu lub
+        ,l rw kin
+        ,l rn run
+        ,l lg lug
+        ,l kg kon
+        ,l hz her
+        ,l kj kua
+        ,l kmb
+        ,l umb
+        ,l ngo
+        ,l ng ndo
+        ,l sn sna
+        ,s <(<<Southern Bantu>>)>
+          ,l nso
+          ,l loz
+          ,l st sot
+          ,l tn tsn
+          ,l ts tso
+          ,l ve ven
+          ,l ss ssw
+          ,l nr nbl
+          ,l nd nde
+          ,l xh xho
+          ,l zu zul
+  ,s Khoisan
+    ,l khi
+    ,l vaj
+    ,l naq
+    ,l hgm
+    ,l nhr
+    ,l sad
+    ,l hts
+  ,s Basque
+    ,l euq
+    ,l eu eus
+  ,s Etruscan
+    ,l ett
+  ,s Indo-European
+    ,l ine
+    ,s Anatolian
+      ,l oht
+      ,l hit
+      ,l htx
+      ,l nei
+      ,l hlu
+    ,s Tocharian
+      ,l xto
+      ,l txb
+    ,s Baltic
+      ,l bat
+      ,l prg
+      ,l lv lav
+      ,l lt lit
+    ,s Slavic
+      ,l sla
+      ,s <(<<West Slavic>>)>
+        ,l zlw
+        ,l wen
+        ,l dsb
+        ,l hsb
+        ,l csb
+        ,l szl
+        ,l cs ces
+        ,l sk slk
+        ,l pl pol
+      ,s <(<<East Slavic>>)>
+        ,l zle
+        ,l ru rus
+        ,l uk ukr
+        ,l be bel
+      ,s <(<<South Slavic>>)>
+        ,l zls
+        ,l cu chu
+        ,l bg bul
+        ,l mk mkd
+        ,l sl slv
+        ,l sh hbs
+        ,l sr srp
+        ,l hr hrv
+        ,l bs bos
+    ,s Germanic
+      ,l gem
+      ,l gme
+      ,l xvn
+      ,l got
+      ,s <(<<North Germanic>>)>
+        ,l gmq
+        ,l non
+        ,l is isl
+        ,l fo fao
+        ,l no nor
+        ,l da dan
+        ,l sv swe
+      ,s <(<<West Germanic>>)>
+        ,l gmw
+        ,l gsw
+        ,l swg
+        ,l bar
+        ,l goh
+        ,l gmh
+        ,l de deu
+        ,l yi yid
+        ,l lng
+        ,l sli
+        ,l pdc
+        ,l pdt
+        ,l ksh
+        ,l li lim
+        ,l lb ltz
+        ,l sxu
+        ,l nds
+        ,l wep
+        ,l odt
+        ,l dum
+        ,l nl nld
+        ,l af afr
+        ,l vls
+        ,l zea
+        ,l osx
+        ,l ofs
+        ,l fy fry
+        ,l sco
+        ,l ang
+        ,l enm
+        ,l en eng
+    ,s Celtic
+      ,l cel
+      ,l xcg
+      ,l xtg
+      ,l br bre
+      ,l cy cym
+      ,l kw cor
+      ,l pgl
+      ,l sga
+      ,l mga
+      ,l ghc
+      ,l ga gle
+      ,l gd gla
+      ,l gv glv
+    ,s Italic
+      ,l itc
+      ,l roa
+      ,l osc
+      ,l xum
+      ,l qbb
+      ,l pml
+      ,l la lat
+      ,l ro ron
+      ,l mo mol
+      ,l sc srd
+      ,l co cos
+      ,l sdc
+      ,l scn
+      ,l nap
+      ,l it ita
+      ,s <(<<Western Romance>>)>
+        ,l fur
+        ,l lld
+        ,l lmo
+        ,l lij
+        ,l pms
+        ,l rm roh
+        ,l fro
+        ,l frm
+        ,l fr fra
+        ,l frc
+        ,l pcd
+        ,l xno
+        ,l frp
+        ,l pro
+        ,l wa wln
+        ,l oc oci
+        ,l ca cat
+        ,l mxi
+        ,l an arg
+        ,l es spa
+        ,l lad
+        ,l ast
+        ,l gl glg
+        ,l pt por
+    ,s Albanian
+      ,l sqj
+      ,l sq sqi
+    ,s Hellenic
+      ,l grk
+      ,l gmy
+      ,l xmk
+      ,l grc
+      ,l el ell
+    ,s Armenian
+      ,l hyx
+      ,l xcl
+      ,l axm
+      ,l hy hye
+      ,l hyw
+    ,s Iranian
+      ,l iir
+      ,l ira
+      ,l zza
+      ,l kiu
+      ,l diq
+      ,l ku kur
+      ,l kmr
+      ,l ckb
+      ,l lki
+      ,l bal
+      ,l tly
+      ,l ae ave
+      ,l xme
+      ,l xpr
+      ,l peo
+      ,l pal
+      ,l fa fas
+      ,l tg tgk
+      ,l prs
+      ,l lrc
+      ,l bqi
+      ,l luz
+      ,l lrl
+      ,l kho
+      ,l xtq
+      ,l xsc
+      ,l xln
+      ,l xbc
+      ,l xco
+      ,l sog
+      ,l oos
+      ,l os oss
+      ,l ps pus
+    ,s Indo-Aryan
+      ,l inc
+      ,l sa san
+      ,l pra
+      ,l pi pli
+      ,s <(<<Northwestern Indo-Aryan>>)>
+        ,l ks kas
+        ,l him
+        ,l lah
+        ,l skr
+        ,l pa pan
+        ,l sd snd
+      ,s <(<<Western Indo-Aryan>>)>
+        ,l mwr
+        ,l raj
+        ,l rom
+        ,l gu guj
+      ,s <(<<Central Indo-Aryan>>)>
+        ,l hne
+        ,l awa
+        ,l bra
+        ,l bjj
+        ,l ur urd
+        ,l hi hin
+        ,l hif
+        ,l ne nep
+      ,s <(<<Eastern Indo-Aryan>>)>
+        ,l bh bih
+        ,l bho
+        ,l hns
+        ,l mai
+        ,l mah
+        ,l or ori
+        ,l bn ben
+        ,l as asm
+        ,l bpy
+        ,l rkt
+        ,l syl
+        ,l rhg
+      ,s <(<<Southern Indo-Aryan>>)>
+        ,l kok
+        ,l gom
+        ,l knn
+        ,l mr mar
+        ,l si sin
+        ,l dv div
+  ,s Burushaski
+    ,l bsk
+  ,s Dravidian
+    ,l dra
+    ,l brh
+    ,l kru
+    ,l kmj
+    ,l te tel
+    ,l kn kan
+    ,l ml mal
+    ,l oty
+    ,l ta tam
+    ,l tcx
+    ,l tcy
+  ,s Caucasian
+    ,l cau
+    ,l ccn
+    ,l ccs
+    ,s Kartvelian
+      ,l ka kat
+      ,l xmf
+      ,l lzz
+    ,s <(<<Northeast Caucasian>>)>
+      ,l kjj
+      ,l inh
+      ,l ce che
+      ,l av ava
+      ,l lez
+      ,l tkr
+    ,s <(<<Northwest Caucasian>>)>
+      ,l ab abk
+      ,l abq
+      ,l uby
+      ,l ady
+      ,l kbd
+  ,s Uralic
+    ,l urj
+    ,l syd
+    ,l yrk
+    ,l fiu
+    ,l smi
+    ,l sma
+    ,l se sme
+    ,l krl
+    ,l olo
+    ,l vpe
+    ,l izh
+    ,l udm
+    ,l kv kom
+    ,l fi fin
+    ,l fit
+    ,l fkv
+    ,l et est
+    ,l vro
+    ,l liv
+    ,l vot
+    ,l hu hun
+    ,l mns
+    ,l kca
+  ,s Turkic
+    ,l trk
+    ,l cv chv
+    ,l sty
+    ,l tyv
+    ,l sah
+    ,l kjh
+    ,l nog
+    ,l ug uig
+    ,l uz uzb
+    ,l kk kaz
+    ,l alt
+    ,l ky kir
+    ,l ba bak
+    ,l tt tat
+    ,l kum
+    ,l crh
+    ,l ota
+    ,l tr tur
+    ,l az aze
+    ,l tk tuk
+  ,s Mongolic
+    ,l xgn
+    ,l xng
+    ,l zkt
+    ,l xal
+    ,l bua
+    ,l mn mon
+  ,s Tungusic
+    ,l tuw
+    ,l tut
+    ,l juc
+    ,l mnc
+    ,l sjo
+    ,l evn
+    ,l eve
+  ,s Paleosiberian
+    ,l ckt
+    ,l ykg
+    ,l ket
+    ,l niv
+  ,s Ainu
+    ,l ain
+  ,s Japonic
+    ,l jpx
+    ,l ryu
+    ,l ojp
+    ,l ja jpn
+  ,s Koreanic
+    ,l okm
+    ,l ko kor
+  ,s Sino-Tibetan
+    ,l sit
+    ,l txg
+    ,l kar
+    ,l kjp
+    ,s Sinitic
+      ,l zhx
+      ,l och
+      ,l lzh
+      ,l ltc
+      ,l zh zho
+      ,l cmn
+      ,l dng
+      ,l wuu
+      ,l gan
+      ,l cjy
+      ,l hsn
+      ,l mnp
+      ,l cdo
+      ,l czo
+      ,l nan  
+      ,l hak
+      ,l yue
+    ,s Tibeto-Burman
+      ,l tbq
+      ,l sip
+      ,l otb
+      ,l dz dzo
+      ,l bo bod
+      ,l lep
+      ,l mgp
+      ,l mrd
+      ,l new
+      ,l lif
+      ,l lus
+      ,l mni
+      ,l njo
+      ,l rki
+      ,l my mya
+      ,l pyx
+      ,l ahk
+      ,l hni
+      ,l lhu
+      ,l nxq
+      ,l lis
+      ,l ii iii
+  ,s <(<<Hmong&#x2013;Mien>>)>
+    ,l hmx
+    ,l hmn
+    ,l hea
+    ,l hmq
+    ,l hms
+    ,l neo
+    ,l ium
+    ,l mji
+  ,s <(<<Kra&#x2013;Dai>>)>
+    ,l tai
+    ,l lic
+    ,l cuq
+    ,l doc
+    ,l kmc
+    ,l cov
+    ,l onb
+    ,l shn
+    ,l za zha
+    ,l lo lao
+    ,l th tha
+  ,s Austroasiatic
+    ,l aav
+    ,l sat
+    ,l kha
+    ,l mkh
+    ,l omx
+    ,l mnw
+    ,l km khm
+    ,l vi vie
+  ,s Austronesian
+    ,l map
+    ,l fox
+    ,l ais
+    ,l tsu
+    ,l tay
+    ,l trv
+    ,l poz
+    ,l ch cha
+    ,s Philippine
+      ,l phi
+      ,l ilo
+      ,l pag
+      ,l ifk
+      ,l pam
+      ,l hnn
+      ,l fil
+      ,l tl tgl
+      ,l bik
+      ,l bcl
+      ,l bto
+      ,l ceb
+      ,l war
+      ,l cps
+      ,l hil
+      ,l krj
+    ,s <(<<Western Malayo-Polynesian>>)>
+      ,l pqw
+      ,l jv jav
+      ,l su sun
+      ,l osi
+      ,l mad
+      ,l ban
+      ,l ace
+      ,l cja
+      ,l cjm
+      ,l ljp
+      ,l bew
+      ,l bjn
+      ,l ms msa
+      ,l id ind
+      ,l min
+      ,l dtp
+      ,l bbc
+      ,l mwv
+      ,l sly
+      ,l bug
+    ,s <(<<Central Malayo-Polynesian>>)>
+      ,l plf
+      ,l tet
+      ,l sse
+      ,l bdb
+      ,l lbx
+      ,l mhy
+      ,l mg mlg
+    ,s Oceanic
+      ,l pqe
+      ,l tbf
+      ,l lih
+      ,l hrc
+      ,l rtm
+      ,l fj fij
+      ,l sm smo
+      ,l to ton
+      ,l niu
+      ,l ty tah
+      ,l na nau
+      ,l haw
+      ,l rap
+      ,l mi mri
+      ,l ho hmo
+      ,l meu
+      ,l mh mah
+      ,l chk
+      ,l pon
+      ,l gil
+  ,s Papuan
+    ,l paa
+    ,l ulk
+    ,l hul
+    ,l gbi
+    ,l buo
+    ,l nas
+    ,l ian
+    ,s <(<<Trans&#x2013;New Guinea>>)>
+      ,l ngf
+      ,l dnw
+      ,l ekg
+      ,l enq
+      ,l med
+      ,l mkz
+      ,l gaw
+    ,s Torricelli
+      ,l ape
+      ,l xbi
+  ,s Australian
+    ,l aus
+    ,l tiw
+  ,s Pama-Nyungan
+    ,l yii
+    ,l dwu
+    ,l djr
+    ,l dbl
+    ,l pjt
+    ,l wbp
+    ,l are
+    ,l aer
+    ,l aly
+  ,s Amerind
+    ,l nai
+    ,l cai
+    ,l sai
+  ,s <(<<Eskimo&#x2013;Aleut>>)>
+    ,l esx
+    ,l ale
+    ,l ypk
+    ,l esu
+    ,l ik ipk
+    ,l iu iku
+    ,l kl kal
+  ,s <(<<Na-Den&#xE9;>>)>
+    ,l xnd
+    ,l tli
+    ,s Athabaskan
+      ,l ath
+      ,l gwi
+      ,l clc
+      ,l chp
+      ,l den
+      ,l tht
+      ,l dgr
+      ,l apj
+      ,l apm
+      ,l apw
+      ,l apa
+      ,l nv nav
+  ,s Haida
+    ,l hai
+  ,s Tsimshianic
+    ,l tsi
+    ,l ncg
+    ,l git
+  ,s Wakashan
+    ,l has
+    ,l kwk
+    ,l hei
+    ,l nuk
+  ,s Salishan
+    ,l blc
+    ,l lut
+    ,l hur
+    ,l squ
+    ,l shs
+    ,l lil
+  ,s Algic
+    ,l aql
+    ,l yur
+    ,l wiy
+    ,s Algonquian
+      ,l alg
+      ,l chy
+      ,l mez
+      ,l arp
+      ,l pim
+      ,l mic
+      ,l del
+      ,l abe
+      ,l wam
+      ,l cr cre
+      ,l oj oji
+      ,l pot
+  ,s Siouan
+    ,l sio
+    ,l dak
+    ,l lkt
+    ,l asb
+    ,l osa
+    ,l oma
+    ,l win
+    ,l iow
+    ,l mhq
+    ,l tta
+    ,l bil
+    ,l cro
+    ,l hid
+    ,l chc
+    ,l xwc
+  ,s Iroquoian
+    ,l iro
+    ,l chr
+    ,l cay
+    ,l lre
+    ,l ono
+    ,l see
+    ,l sqn
+    ,l wya
+    ,l moh
+    ,l one
+    ,l ntw
+    ,l tus
+  ,s Muskogean
+    ,l mus
+    ,l mik
+    ,l akz
+    ,l xap
+    ,l cku
+    ,l cic
+    ,l cho
+  ,s Yuman
+    ,l yum
+    ,l yuf
+    ,l dih
+    ,l mov
+  ,s Chumashan
+    ,l inz
+  ,s Zuni
+    ,l zun
+  ,s Tanoan
+    ,l kio
+    ,l tew
+  ,s Uto-Aztecan
+    ,l azc
+    ,l hop
+    ,l xgf
+    ,l lui
+    ,l xaw
+    ,l ute
+    ,l pao
+    ,l mnr
+    ,l com
+    ,l tep
+    ,l ood
+    ,l pia
+    ,l shh
+    ,l nah
+    ,l nci
+  ,s Oto-Manguean
+    ,l omq
+    ,l zap
+    ,l mks
+  ,s Mayan
+    ,l myn
+    ,l emy
+    ,l tzo
+    ,l cak
+    ,l quc
+    ,l yua
+  ,s Chibchan
+    ,l cba
+    ,l chb
+  ,s Arawakan
+    ,l awd
+    ,l crb
+    ,l cab
+    ,l tnq
+    ,l guc
+  ,s Cariban
+    ,l car
+    ,l aoc
+  ,s Yanomaman
+    ,l guu
+  ,s Muran
+    ,l myp
+  ,s <(<<Macro-J&#xEA;>>)>
+    ,l txu
+    ,l kgp
+  ,s Quechuan
+    ,l qwe
+    ,l qu que
+  ,s Aymaran
+    ,l ay aym
+  ,s Tupian
+    ,l tup
+    ,l tpw
+    ,l tpn
+    ,l yrl
+    ,l guq
+    ,l gn grn
+  ,s Araucanian
+    ,l arn
+  ,s <(<<Creoles and pidgins>>)>
+    ,l crp
+    ,s English-based
+      ,l cpe
+      ,l kri
+      ,l srn
+      ,l djk
+      ,l jam
+      ,l tpi
+      ,l pis
+      ,l bi bis
+    ,s French-based
+      ,l cpf
+      ,l lou
+      ,l ht hat
+      ,l gcr
+      ,l gcf
+      ,l acf
+      ,l rcf
+    ,s Portuguese-based
+      ,l cpp
+      ,l pap
+      ,l kea
+    ,s Spanish-based
+      ,l cvk
+  ,s Artificial
+    ,l art
+    ,l eo epo
+    ,l vo vol
+    ,l io ido
+    ,l ie ile
+    ,l ia ina
+    ,l jbo
+  ,s Special
+    ,l mul
+    ,l und
+    ,l zxx
+    ,s <(<<Private&#xA0;use>>)>
+      ,l qab
+      ,l qar
+      ,l qco
+      ,l qfi
+      ,l qli
+      ,l qmi
+  ,s Uncategorized
+    fallback

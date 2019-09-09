@@ -89,6 +89,7 @@ stylesheet \
     tempParam page yes
     value-of $page/ancestor-or-self::*[not(@id=('pages'))]/name -separator=<(<< &#x203a; >>)>
 
+
   template /pg-dictionary
     tempParam view yes
 
@@ -150,13 +151,16 @@ stylesheet \
     copy
 
   templateN heading-right
-    variable count count(entry)
+    variable count count(..//entry)
     span heading-right
       text << >>
       value-of $count
       choose
         when $count=1 << entry>>
         otherwise << entries>>
+      # TODO: get unique only (since a section can have duplicates, e.g. fr+es)
+      if ../@family
+        text << total>>
       text << >>
       a #^top <<Top &#x2191;>>
 

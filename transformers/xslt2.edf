@@ -10,6 +10,8 @@ function = xsl:function name as
 with = xsl:with-param name tunnel
 tempParam = xsl:param name tunnel
 funcParam = xsl:param name as
+sequence = xsl:sequence select
+message = xsl:message
 
 a = a href class
 span = span class

@@ -22,6 +22,7 @@ sitemap -id=root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     name <<View entries by>>
     ,page index       <<alphabetical>>
     ,page lang        <<language>>
+    ,page lang-family <<language family>>
     ,page category    <<category>>
     ,page author      <<author>>
     ,page tournament  <<tournament>>

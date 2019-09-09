@@ -89,6 +89,7 @@ ul.inline li {
 }
 
 .dictionary section h2 {
+	/* TODO change em to rem, change h2 to .heading */
 	margin: 0.5em 0 0;
 	padding: 0.75em;
 	text-align: center;
@@ -99,7 +100,7 @@ ul.inline li {
 	z-index: 1;
 
 	display: grid;
-	grid-template-columns: [a] 6em auto [b] 6em;
+	grid-template-columns: [a] 7em auto [b] 7em;
 }
 .dictionary section h2 > :first-child {
 	grid-column-start: 2;
@@ -279,6 +280,13 @@ a.lang:hover {
 
 dt {
 	font-weight: 500;
+}
+dd dl.compact.g {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+dl.compact.g dd {
+	overflow: hidden;
 }
 dl.compact dt, dl.compact dd {
 	margin: 0;

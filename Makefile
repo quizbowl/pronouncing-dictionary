@@ -1,6 +1,6 @@
 .PRECIOUS: %.xml %.xsl
 
-HTMLS_SORTS:=lang.html category.html author.html tournament.html
+HTMLS_SORTS:=lang.html lang-family.html category.html author.html tournament.html
 HTMLS:=\
 	index.html $(HTMLS_SORTS) \
 	about.html entry.html writing-pgs.html lang-specific.html references.html contributors.html
@@ -9,6 +9,10 @@ HTMLS:=\
 all: html
 
 html: $(HTMLS)
+
+# FIXME may need to change left side to pg-dictionary.xsl, or move above
+pg-dictionary.xsl: data/lang-family-tree.xml
+
 
 $(HTMLS_SORTS): index.html
 index.html: pg-dictionary.xml pg-dictionary.xsl
