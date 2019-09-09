@@ -6,8 +6,9 @@ stylesheet \
   -xmlns:xs=http://www.w3.org/2001/XMLSchema \
   -xmlns:pg=http://schema.quizbowl.technology/xml/pg-dictionary \
   -xmlns=http://www.w3.org/1999/xhtml \
+  -xmlns:html=http://www.w3.org/1999/xhtml \
   -xpath-default-namespace=http://schema.quizbowl.technology/xml/pg-dictionary \
-  -exclude-result-prefixes=<{xs pg}> \
+  -exclude-result-prefixes=<{xs pg html}> \
   -version=2.0
 
   import functions.xsl
@@ -101,7 +102,7 @@ stylesheet \
           0}>
         sort current-grouping-key()
         pg:group -key={current-grouping-key()}
-          attribute displayKey
+          pg:displayKey
             value-of current-grouping-key()
             choose
               when $view='lang'
@@ -139,11 +140,14 @@ stylesheet \
             ul inline
               for-each current-group()
                 li
-                  a #^{@key} -title={@displayKey}
+                  a #^{@key} -title={displayKey}
                     value-of @key
 
   templateN header
-    value-of @displayKey
+    copy-of displayKey/node() -copy-namespaces=no
+
+  template html:*
+    copy
 
   templateN heading-right
     variable count count(entry)
@@ -158,7 +162,7 @@ stylesheet \
 
   templateN columns
     div columns
-      apply-templates
+      apply-templates entry
 
   template <(<<date | submission | stemmable>>)>
 

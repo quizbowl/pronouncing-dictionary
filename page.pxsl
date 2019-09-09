@@ -5,6 +5,7 @@ stylesheet \
   -xmlns:xsl=http://www.w3.org/1999/XSL/Transform \
   -xmlns:pg=http://schema.quizbowl.technology/xml/pg-dictionary \
   -xmlns=http://www.w3.org/1999/xhtml \
+  -xmlns:html=http://www.w3.org/1999/xhtml \
   -xpath-default-namespace=http://www.w3.org/1999/xhtml \
   -version=2.0
 
@@ -19,7 +20,7 @@ stylesheet \
       with-param view $page/@id -tunnel=yes
       with-param page $page -tunnel=yes
 
-  template *[namespace-uri()=$htmlns]|*[namespace-uri()=$htmlns]/@* -priority=-2
+  template html:*|html:*/@* -priority=-2
     copy
       apply-templates @*|node()
 
