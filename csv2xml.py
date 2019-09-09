@@ -128,15 +128,16 @@ for row in rows:
 		split(citation_form, 'orth', row['word_in_reference'])
 		split(citation_form, 'pron', row['pg_in_reference'])
 	## <quizbowl-source>
-	source = etree.SubElement(meta, 'quizbowl-source')
-	source.set('url', row['qb_source_url'])
-	source_form = etree.SubElement(source, 'form')
-	split(source_form, 'orth', row['word_in_qb_source'])
-	split(source_form, 'pron', row['pg_in_qb_source'])
-	source_no_prefix = re.sub('[^|]+:', '', row['qb_source'])
-	split(source, 'name', source_no_prefix)
-	source_no_filename = re.sub('/.*', '', source_no_prefix).replace('_', ' ')
-	source.set('name', source_no_filename)
+	if row['qb_source_url']:
+		source = etree.SubElement(meta, 'quizbowl-source')
+		source.set('url', row['qb_source_url'])
+		source_form = etree.SubElement(source, 'form')
+		split(source_form, 'orth', row['word_in_qb_source'])
+		split(source_form, 'pron', row['pg_in_qb_source'])
+		source_no_prefix = re.sub('[^|]+:', '', row['qb_source'])
+		split(source, 'name', source_no_prefix)
+		source_no_filename = re.sub('/.*', '', source_no_prefix).replace('_', ' ')
+		source.set('name', source_no_filename)
 	## <related-entry>
 	related_entries = etree.SubElement(meta, 'related-entries')
 	for text in row['see_also'].split('|'):

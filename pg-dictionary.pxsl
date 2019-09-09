@@ -428,7 +428,7 @@ stylesheet \
       text << | >>
       a {@url} -title={name} -target=_blank
         text <<Locate>>
-        if @name!='MW'
+        if string-length(@name)<3
           text << in >>
           value-of @name
         text <<&#xA0;&#x00BB;>>
