@@ -33,6 +33,20 @@ stylesheet \
     variable legendLabel $legends/key('legendsKey',$ratingName)/*:dd[@data-v=$ratingValue]
     value-of $legendLabel
 
+  function pg:langLookupLangFamily
+    funcParam langP xs:string
+    variable langPrefix pg:langGetPrefix($langP)
+    variable lang $langFamily/key('langFamilyKey',$langPrefix)[1]
+    variable result -as=xs:string*
+      choose
+        when $lang
+          # set xpath-default-namespace?
+          # use value-of -separator?
+          sequence $lang/ancestor::pg:section/@key
+        otherwise
+          text <<?>>
+    sequence $result
+
   function pg:format-date xs:string
     funcParam s xs:dateTime
     value-of <(<<format-dateTime($s, '[F], [MNn] [D], [Y], [h]:[m] [P]', 'en', (), ())>>)>
@@ -42,6 +56,9 @@ stylesheet \
 
   variable legends document('entry.xml') -as=document-node()
   key legendsKey //*:dl[@id='legends']/*:dd/*:dl @id
+
+  variable langFamily document('data/lang-family-tree.xml') -as=document-node()
+  key langFamilyKey /pg:root//pg:section @key
 
   templateN abbr
     variable abbr
