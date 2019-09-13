@@ -1,0 +1,270 @@
+
+,s name =
+  section -key=<(,name)> -subsection=yes ,BODY
+,l name =
+  section -key=<(,name)>
+    join
+#
+
+root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+  ,s Common
+    ,l Common
+    ,l Demonym
+    ,l Foreign
+  ,s Literature
+    ,l Literature
+    ,l <(<<American Literature>>)>
+    ,l <(<<British Literature>>)>
+    ,l <(<<European Literature>>)>
+    ,l <(<<World Literature>>)>
+    ,l Fiction
+    ,l Haiku
+    ,l Poetry
+    ,l Shakespeare
+  ,s History
+    ,l History
+    ,l <(<<American History>>)>
+    ,l <(<<Ancient History>>)>
+    ,l <(<<British History>>)>
+    ,l <(<<European History>>)>
+    ,s <(<<World History>>)>
+      ,l <(<<World History>>)>
+      ,l Ottoman
+    ,l <(<<Military History>>)>
+    ,l Archeology
+  ,s Science
+    ,l Science
+    ,l Biology
+    ,l Anatomy
+    ,l Physiology
+    ,l Medicine
+    ,l Taxonomy
+    ,l Chemistry
+    ,l Chemical
+    ,l Physics
+    ,l Optics
+    ,l Thermodynamics
+    ,l Astronomy
+    ,l Cosmology
+    ,l <(<<Space Geography>>)>
+    ,l <(<<Computer Science>>)>
+    ,l <(<<Applied CS>>)>
+    ,l <(<<Earth Science>>)>
+    ,l Geology
+    ,l Meteorology
+    ,l Engineering
+    ,l Math
+    ,l Statistics
+    ,l <(<<Science History>>)>
+  ,s Arts
+    ,l Art
+    ,l Painting
+    ,l Sculpture
+    ,l Music
+    ,l Jazz
+    ,l <(<<World Music>>)>
+    ,l Opera
+    ,l Architecture
+    ,l Dance
+    ,l Film
+    ,l Fashion
+    ,l Photography
+    ,l Theater
+  ,s Religion
+    ,l Religion
+    ,l Bahai
+    ,l Bible
+    ,l Buddhism
+    ,l Christianity
+    ,l Druze
+    ,l Hinduism
+    ,l Islam
+    ,l Jainism
+    ,l Judaism
+    ,l Mormonism
+    ,l Rastafarianism
+    ,l Shinto
+    ,l Sikhism
+    ,l Voodoo
+    ,l Zoroastrianism
+  ,s Mythology
+    ,l Mythology
+    ,l Arthurian
+    ,l Aztec
+    ,l Finnish
+    ,l Mayan
+    ,l Slavic
+  ,s Philosophy
+    ,l Philosophy 
+  ,s <(<<Social Science>>)>
+    ,l <(<<Social Science>>)>
+    ,l Psychology
+    ,l Sociology
+    ,l Anthropology
+    ,l Economics
+    ,l Business
+    ,l <(<<Political Science>>)>
+    ,l Linguistics
+    ,l Spanish
+  ,s Trash
+    ,l Trash
+    ,l Sports
+  ,s Other
+    ,l Calendar
+    ,l Chess
+    ,l Food
+    ,l Law
+    ,l Typography
+  ,l Politics
+  ,l Classics
+  ,s Geography
+    ,l Geography
+    ,s Continents
+      ,l Africa
+      ,l Europe
+    ,s Countries
+      ,l Afghanistan
+      ,l Albania
+      ,l Angola
+      ,l Argentina
+      ,l Arizona
+      ,l Australia
+      ,l Austria
+      ,l Azerbaijan
+      ,l Belarus
+      ,l Belgium
+      ,l Bhutan
+      ,l Bolivia
+      ,l Bosnia
+      ,l Botswana
+      ,l Brazil
+      ,l <(<<Burkina Faso>>)>
+      ,l Cambodia
+      ,l Cameroon
+      ,l Canada
+      ,l <(<<Canary Islands>>)>
+      ,l Catalonia
+      ,l Chad
+      ,l Chile
+      ,l China
+      ,l Colombia
+      ,l Congo
+      ,l Croatia
+      ,l Cuba
+      ,l Cyprus
+      ,l Denmark
+      ,l Ecuador
+      ,l Egypt
+      ,l Estonia
+      ,l Ethiopia
+      ,l Fiji
+      ,l Finland
+      ,l France
+      ,l Gabon
+      ,l Germany
+      ,l Ghana
+      ,l Greece
+      ,l Guyana
+      ,l <(<<Hong Kong>>)>
+      ,l Hungary
+      ,l Iceland
+      ,l India
+      ,l Indonesia
+      ,l Iran
+      ,l Ireland
+      ,l Israel
+      ,l Italy
+      ,l <(<<Ivory Coast>>)>
+      ,l Japan
+      ,l Jordan
+      ,l Kazakhstan
+      ,l Kenya
+      ,l Korea
+      ,l Kurdistan
+      ,l Laos
+      ,l Lebanon
+      ,l Libya
+      ,l Luxembourg
+      ,l Macedonia
+      ,l Madagascar
+      ,l Malaysia
+      ,l Mali
+      ,l Malta
+      ,l <(<<Marshall Islands>>)>
+      ,l Mauritania
+      ,l Mexico
+      ,l Mongolia
+      ,l Morocco
+      ,l Mozambique
+      ,l Myanmar
+      ,l Namibia
+      ,l Nepal
+      ,l Netherlands
+      ,l <(<<New Zealand>>)>
+      ,l Niger
+      ,l Nigeria
+      ,l Norway
+      ,l Oman
+      ,l Pakistan
+      ,l Panama
+      ,l <(<<Papua New Guinea>>)>
+      ,l Paraguay
+      ,l Peru
+      ,l Philippines
+      ,l Poland
+      ,l Portugal
+      ,l Romania
+      ,l Russia
+      ,l <(<<Saudi Arabia>>)>
+      ,l Scotland
+      ,l Senegal
+      ,l <(<<Sierra Leone>>)>
+      ,l Singapore
+      ,l Slovakia
+      ,l <(<<South Africa>>)>
+      ,l <(<<South Korea>>)>
+      ,l Spain
+      ,l <(<<Sri Lanka>>)>
+      ,l Sweden
+      ,l Switzerland
+      ,l Taiwan
+      ,l Tanzania
+      ,l Tibet
+      ,l Togo
+      ,l Turkey
+      ,l Turkmenistan
+      ,l UAE
+      ,l UK
+      ,l USA
+      ,l Uganda
+      ,l Ukraine
+      ,l Uruguay
+      ,l Venezuela
+      ,l Vietnam
+      ,l Wales
+      ,l <(<<Western Sahara>>)>
+      ,l Yemen
+      ,l Zimbabwe
+    ,s USA
+      ,l California
+      ,l Connecticut
+      ,l Florida
+      ,l Hawaii
+      ,l Idaho
+      ,l Kentucky
+      ,l Maryland
+      ,l Michigan
+      ,l Minnesota
+      ,l Montana
+      ,l Nevada
+      ,l <(<<New Jersey>>)>
+      ,l <(<<New Mexico>>)>
+      ,l <(<<New York>>)>
+      ,l Ohio
+      ,l Pennsylvania
+      ,l <(<<Puerto Rico>>)>
+      ,l Texas
+      ,l Utah
+      ,l Washington
+  ,s Uncategorized
+    fallback

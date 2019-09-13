@@ -105,7 +105,7 @@ ul.inline li {
 .dictionary section h2 > :first-child {
 	grid-column-start: 2;
 }
-.dictionary#lang-family section h2 {
+.dictionary[id$="tree"] section h2 {
 	text-align: left;
 }
 .heading-right {

@@ -20,11 +20,12 @@ sitemap -id=root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
 
   section -id=views
     name <<View entries by>>
-    ,page index       <<alphabetical>>
-    ,page lang        <<language>>
-    ,page lang-family <<language family>>
-    ,page category    <<category>>
-    ,page author      <<author>>
-    ,page tournament  <<tournament>>
-    # ,page review      <<review score>>
+    ,page index         <<alphabetical>>
+    ,page lang          <<language>>
+    ,page lang-tree     <<language family>>
+    ,page category      <<category>>
+    ,page category-tree <<category tree>>
+    ,page author        <<author>>
+    ,page tournament    <<tournament>>
+    # ,page review        <<review score>>
 

@@ -1,8 +1,8 @@
 
 ,s name =
-  section -key=<(,name)> -family=yes ,BODY
-,l iso =
-  section -key=<(,iso)>
+  section -key=<(,name)> -subsection=yes ,BODY
+,l name =
+  section -key=<(,name)>
     join
 #
 

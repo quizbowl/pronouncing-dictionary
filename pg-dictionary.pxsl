@@ -19,6 +19,8 @@ stylesheet \
   template /
     variable context .
     for-each $sitemap/sitemap/section[@id='views']/page
+      message <<Building page >>
+        value-of @id
       apply-templates $context restore-context
         with-param view @id -tunnel=yes
         with-param page . -tunnel=yes
@@ -99,7 +101,7 @@ stylesheet \
         for-each-group entry -group-by=<{
             if ($view='index')                 then @initial                   else
             if (starts-with($view,'lang'))     then lang                       else
-            if ($view='category')              then usage/(category|context)   else
+            if (starts-with($view,'category')) then usage/(category|context)   else
             if ($view='author')                then meta/author                else
             if ($view='tournament')            then meta/quizbowl-source/@name else
             0}>
@@ -112,11 +114,11 @@ stylesheet \
             # perform-sort current-group()
             #   sort -lang=en -stable=yes
 
-    # 2. if family page, insert groups into section hierarchy by reverse lookup
+    # 2. if tree page, insert groups into section hierarchy by reverse lookup
     variable sections
       choose
-        when ends-with($view,'family')
-          variable hierarchy document('data/'||$view||'-tree.xml')/pg:root -as=node()
+        when ends-with($view,'tree')
+          variable hierarchy document('data/'||$view||'.xml')/pg:root -as=node()
 
           apply-templates $hierarchy -mode=hierarchy
             with-param groups $groups/root/section -tunnel=yes
@@ -131,6 +133,8 @@ stylesheet \
 
 
   template root|section -mode=hierarchy
+    tempParam view yes
+
     # 1. recurse into children
     variable children
       apply-templates -mode=hierarchy
@@ -144,7 +148,7 @@ stylesheet \
         if self::section
           heading -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
             value-of ancestor-or-self::section/@key -separator=<< / >>
-            if join
+            if <(<<join and starts-with($view,'lang')>>)>
               text <<: >>
               value-of pg:langLookupCanonicalName(@key)
         sequence $children
@@ -189,20 +193,20 @@ stylesheet \
     variable count count(section)
     dl
       choose
-        when <(<<ends-with($view,'family') and (@family or self::root)>>)>
+        when <(<<ends-with($view,'tree') and (@subsection or self::root)>>)>
           attribute class <<compact g>>
-          for-each section[@family]
+          for-each section[@subsection]
             dt
               a #^{@key} -title={heading}
                 value-of tokenize(@key)[1]
             dd
-              if section[not(@family)]
+              if section[not(@subsection)]
                 ul inline
-                  for-each section[not(@family)]
+                  for-each section[not(@subsection)]
                     li
                       a #^{@key} -title={heading}
                         value-of @key
-              apply-templates .[section[@family]] -mode=legend
+              apply-templates .[section[@subsection]] -mode=legend
 
         otherwise
           attribute class <<compact x>>
@@ -247,7 +251,7 @@ stylesheet \
         when $count=1 << entry>>
         otherwise << entries>>
       # TODO: get unique only (since a section can have duplicates, e.g. fr+es)
-      if ../@family
+      if ../@subsection
         text << total>>
       text << >>
       a #^top <<Top &#x2191;>>
