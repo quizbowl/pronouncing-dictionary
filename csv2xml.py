@@ -85,7 +85,12 @@ for row in rows:
 	split(form, 'pron', row['pg'])
 	
 	# <lang>
-	split(entry, 'lang', row['lang'] + '|' + row['original_lang'].replace(',', '|'))
+	split(entry, 'lang', row['lang'])
+	for lang in row['original_lang'].split(','):
+		if lang:
+			child = etree.SubElement(entry, 'lang')
+			child.text = lang
+			child.set('type', 'original')
 	
 	# <usage>
 	if row['category'] + row['subcategory'] + row['context'] + row['definition'] + row['stemmable']:

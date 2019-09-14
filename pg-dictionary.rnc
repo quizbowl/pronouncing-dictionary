@@ -5,7 +5,7 @@ entry = element entry { id?, exemplar?, form+, langElement*, usage?, meta? }
 form = element form { orth+, pron+ }
 orth = element orth { lang?, text }
 pron = element pron { lang?, notation?, text }
-langElement = element lang { langType }
+langElement = element lang { attribute type { "original" }?, langType }
 usage =
 	element usage {
 		element category { text }*,
