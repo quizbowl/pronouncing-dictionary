@@ -8,10 +8,10 @@ pron = element pron { lang?, notation?, text }
 langElement = element lang { attribute type { "original" }?, langType }
 usage =
 	element usage {
+		element stemmable { text }?,
 		element category { attribute type { "subcategory" }?, text }*,
 		element context { text }*,
-		element definition { text }*,
-		element stemmable { text }?
+		element definition { mixed { relatedEntry* } }*
 	}
 meta =
 	element meta {
@@ -37,13 +37,7 @@ meta =
 			author,
 			form?
 		}* &
-		element related-entries {
-			element related-entry {
-				ref?,
-				attribute rel { rel }?,
-				text
-			}*
-		}*
+		element related-entries { relatedEntry* }*
 	}
 author = element author { text }*
 date = element date { xsd:date }?
@@ -52,7 +46,8 @@ ref = attribute ref { xsd:IDREF }
 lang = attribute lang { langType }
 notation = attribute notation { 'IPA' | text }
 rating = '3' | '2' | '1' | '0' | '-1'
-rel = 'canonical' | 'confusable' | 'xref' | 'href'
+relatedEntry = element related-entry { ref?, rel?, text }
+rel = attribute rel { 'canonical' | 'confusable' | 'xref' | 'href' }
 langType = xsd:language
 urlType = xsd:anyURI
 exemplar = attribute exemplar { text }

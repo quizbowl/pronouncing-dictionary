@@ -93,11 +93,23 @@ for row in rows:
 	# <usage>
 	if row['category'] + row['subcategory'] + row['context'] + row['definition'] + row['stemmable']:
 		usage = etree.SubElement(entry, 'usage')
+		split(usage, 'stemmable', row['stemmable'])
 		split(usage, 'category', row['category'])
 		split(usage, 'category', row['subcategory'], 'subcategory')
 		split(usage, 'context', row['context'])
-		split(usage, 'definition', row['definition'])
-		split(usage, 'stemmable', row['stemmable'])
+		if row['definition']:
+			definition_split = re.split('\{([^{}]+)\}', row['definition'])
+			definition = etree.SubElement(usage, 'definition')
+			definition.text = definition_split[0]
+			for i in range(1, len(definition_split), 2):
+				text = definition_split[i]
+				tail = definition_split[i+1]
+				ref = super(UniqueSlugify, slugify).__call__(text)
+				chunk_el = etree.SubElement(definition, 'related-entry')
+				chunk_el.text = text
+				chunk_el.tail = tail
+				chunk_el.set('ref', ref)
+				chunk_el.set('rel', 'xref')
 
 	# <meta>
 	meta = etree.SubElement(entry, 'meta')

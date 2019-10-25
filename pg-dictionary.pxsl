@@ -423,7 +423,7 @@ stylesheet \
         attribute id
           value-of .
       apply-templates
-    if following-sibling::related-entry[@rel=$rel]
+    if <(<<parent::related-entries and following-sibling::related-entry[@rel=$rel]>>)>
       call-template orl
 
   template quizbowl-source
