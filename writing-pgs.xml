@@ -1,6 +1,6 @@
 <article xmlns="http://www.w3.org/1999/xhtml">
 
-<h1 foo="bar">How to write syllables for pronunciation guides</h1>
+<h1>How to write syllables for pronunciation guides</h1>
 
 <p>This document contains guidelines for writing syllables for pronunciation guides
 so that they are consistently easy to read (decipherable).<br />
@@ -38,6 +38,10 @@ It is useless to define direct global correspondences (such as Weiner’s
 <p>Read more about <a href="https://en.wikipedia.org/wiki/Pronunciation_respelling_for_English">pronunciation respelling</a> on Wikipedia.</p>
 </li>
 <!-- similar spirit to Wikipedia’s, though less systematic -->
+
+<!-- pronunciation guides can be too frequent or reundant -->
+<!-- quote from me: I also want to push back on the idea of any Aztec deity (or really, any word) being "the canonical example" for needing a PG – in my opinion, some names are just short enough, widely familiar enough, systematic enough, or easy enough to sound out (e.g. Tlaloc, Huitzilopochtli, Quetzalcoatl, Tezcatlipoca) that adding a PG for them isn't really a need or a priority. I think this idea can lead to harmful beliefs about PGs, such as the Weinerian dogma that any PG is categorically better than no PG, even if it's wrong, indecipherable, or increases clutter (notably affecting NAQT), or that a certain word not having a PG is automatically "odd" or a problem, regardless of the hundreds of other carefully curated PGs elsewhere in the set.
+Do you have an idea which bonus this is? Packet 2 has a myth bonus that included two Aztec names, with PGs for Xipe Totec (“SHEEP-uh TOH-tek”) [copied from 2019 ACF Regionals] and Bough (“bao”), but not Chicomecōātl, which seems obvious enough for moderators to sound out, which is a necessary moderating skill in the absence of PGs (i.e. most sets not touched by me or NAQT). -->
 </ol>
 
 <h2>Guidelines</h2>
@@ -185,6 +189,9 @@ to represent a free (long/tense) vowel</p>
 — to represent both the checked vowel and the affricated onset</p>
 </blockquote>
 </li>
+
+<!-- approximate some non-stress-timed languages with stress (French, Japanese, Cantonese, Tamil, Georgian) -->
+<!-- single syllables do not need explicit stress, unless with suffix as in PEEPS’s -->
 
 <li>
 <p>Do not use non-English symbols or diacritics in pronunciation guides.</p>
@@ -396,6 +403,7 @@ confusing, counterintuitive, or unsystematic pronunciations.</p>
 <tr><td>sean</td><td><b class="pron">shawn</b></td><td><b class="pron">seen</b></td></tr>
 <tr><td>scene</td><td><b class="pron">seen</b></td><td></td><td>superfluous</td></tr>
 <tr><td>gore</td><td><b class="pron">gor</b></td><td></td><td>superfluous</td></tr>
+<!-- bore, ore, etc. -->
 <tr><td>cell</td><td><b class="pron">sell</b></td><td></td><td>superfluous</td></tr>
 <tr><td>dont</td><td><b class="pron">daunt</b></td><td><b class="pron">dohnt</b>, <b class="pron">don’t</b></td></tr>
 <tr><td>are</td><td><b class="pron">ar</b>, <b class="pron">arr</b></td><td><b class="pron">air</b></td></tr>
