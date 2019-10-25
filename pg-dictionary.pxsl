@@ -53,9 +53,9 @@ stylesheet \
 
             dt <<Status>>
             dd
-              <<Draft. Almost all entries not by >>
+              text <<Draft. Almost all entries not by >>
               a author.html#^OL author -data-author=OL <<OL>>
-              << are unverified and are probably inaccurate.>>
+              text << are unverified and are probably inaccurate.>>
 
             dt <<Last updated>>
             dd
@@ -107,7 +107,7 @@ stylesheet \
           sort current-grouping-key()
           section -key={current-grouping-key()}
             call-template addHeadingFlat
-            copy-of current-group()
+            sequence current-group()
             # preserve order from database for now
             # perform-sort current-group()
             #   sort -lang=en -stable=yes
@@ -159,7 +159,7 @@ stylesheet \
   template join -mode=hierarchy
     tempParam groups yes
     variable key ../@key
-    copy-of $groups[@key=$key]/entry
+    sequence $groups[@key=$key]/entry
 
   template fallback -mode=hierarchy
     tempParam groups yes
@@ -383,7 +383,7 @@ stylesheet \
     if @url
       a {@url} link
         value-of @type
-        << ref>>
+        text << ref>>
       if <(<<count(*) > 0>>)>
         text <<: >>
     apply-templates
