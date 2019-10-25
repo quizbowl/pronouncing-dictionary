@@ -317,6 +317,9 @@ stylesheet \
     variable prefix -select=<{if (contains(@ref, '//')) then '' else '#'}>
     variable rel @rel
     a {$prefix}{@ref} link
+      if @rel='canonical'
+        attribute id
+          value-of .
       apply-templates
     if following-sibling::related-entry[@rel=$rel]
       call-template orl
