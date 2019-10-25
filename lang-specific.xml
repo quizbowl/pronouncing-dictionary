@@ -2,6 +2,12 @@
 
 <h1>Guidelines for specific languages</h1>
 
+<!-- <p>Who are pronunciation guides for?</p>
+<p>PGs must make compromises between English and original language (e.g. “Einstein” is established English pronunciation)</p> -->
+
+<!-- intent of this page: not a mapping for every sound or letter, but to warn about key sounds or letters that are known to confuse the uninformed -->
+<!-- add "placeholder" somewhere in legend -->
+
 <h2>Legend</h2>
 <table>
   <thead>
@@ -200,8 +206,13 @@
   In US English, approximate by stressing the final syllable of a word.</p>
 
 <p>
-¹ Only for English speakers with Canadian raising.<br />
+¹ Only for English speakers with Canadian raising. Difficult to respell accurately.<br />
 ² Only for English speakers without cot–caught merger.<br />
 ³ CEPD: “This example also shows the simplification of the initial consonant cluster <span class="pron IPA">/krw/</span>, which occurs in French but not in English.”</p>
+
+<!-- Chinese usually no stress -->
+<!-- quote from me: You're probably right, but I think notating stress in a pg for English speakers can still be useful to approximate similar features such as high pitch, long vowels, morpheme boundaries, etc. I imagine English speakers would probably compromise with "ow" and "may" here rather than "ah-oh" and "meh" [Aomame]
+I didn't write this pg for what it's worth, seems like ed. discretion -->
+<!-- Japanese doesn't usually have stress accent I think? also I've usually heard people say A and O separately, rather than as a diphthong -->
 
 </article>
