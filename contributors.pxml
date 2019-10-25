@@ -4,7 +4,7 @@ article -class=dictionary -xmlns=http://www.w3.org/1999/xhtml
 
   div -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     entry
-      form 
+      form
         orth <<Ophir Lifshitz>>
         pron <<oh-FEER LIF-shits>>
       lang <<en>>
@@ -12,9 +12,9 @@ article -class=dictionary -xmlns=http://www.w3.org/1999/xhtml
       meta
         author <<OL>>
     entry
-      form 
+      form
         orth <<Aseem Keyal>>
-        pron <<uh-SEEM kay-YAL>>
+        pron <<uh-SEEM kay-YALL>>
       lang <<en>>
       lang <<hi>>
       usage 
