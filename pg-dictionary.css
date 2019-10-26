@@ -231,6 +231,18 @@ a.lang:hover {
 	font-family: var(--base-font-family);
 }
 
+.orth {
+	unicode-bidi: isolate;
+}
+.orth[lang='he'], .orth[lang='heb'] {
+	font-family: 'SBL Hebrew', 'Adobe Hebrew', var(--base-font-family);
+	font-size-adjust: 0.5;
+}
+.orth[lang='hbo'], .orth[lang='yi'], .orth[lang='arc'] {
+	font-family: 'Adobe Hebrew', 'SBL Hebrew', var(--base-font-family);
+	font-size-adjust: 0.55;
+}
+
 .h {
 	font-style: italic;
 }

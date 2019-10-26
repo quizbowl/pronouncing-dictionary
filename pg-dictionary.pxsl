@@ -207,7 +207,11 @@ stylesheet \
     call-template orsame
 
   template orth
-    apply-templates
+    span orth
+      if @lang
+        attribute lang
+          value-of @lang
+      apply-templates
     call-template orsame
 
   template pron
