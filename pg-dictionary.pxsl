@@ -15,6 +15,19 @@ stylesheet \
   output -method=xhtml -indent=yes -omit-xml-declaration=yes
 
   variable sitemap document('sitemap.xml') -as=document-node()
+  variable dictionary /
+
+  key xrefKey /*/entry (usage/definition|meta/related-entries)/related-entry[@rel!='href']
+  key orthKey /*/entry (form/orth|meta/related-entries/related-entry[@rel='canonical'])
+  #key xrefKey /*/*:entry .//*:related-entry
+  #key orthKey /*/entry form/orth
+
+  function pg:lookupIncoming
+    funcParam headword
+    sequence $dictionary/key('xrefKey',$headword)
+  function pg:countOutgoing
+    funcParam headword
+    sequence $dictionary/key('orthKey',$headword)
 
   template /
     variable context .
@@ -300,6 +313,15 @@ stylesheet \
       if meta/related-entries
         apply-templates meta/related-entries
 
+      variable incomingLinks pg:lookupIncoming(form/orth)[not(form/orth=current()//related-entry)]
+      variable links
+        related-entries -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
+          variable context .
+          for-each $incomingLinks
+            related-entry -rel=incoming -ref={@id}
+              value-of form/orth[1]
+      apply-templates $links/related-entries
+
       if meta/quizbowl-source
         apply-templates meta/quizbowl-source
 
@@ -410,6 +432,8 @@ stylesheet \
               <<canonical name>>
             when @rel='confusable'
               <<confusable with>>
+            when @rel='incoming'
+              <<cited by>>
             otherwise
               <<see also>>
         text << >>
