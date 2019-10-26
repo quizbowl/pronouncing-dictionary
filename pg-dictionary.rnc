@@ -39,7 +39,7 @@ meta =
 		}* &
 		element related-entry {
 			ref?,
-			attribute rel { "canonical" }?,
+			attribute rel { rel }?,
 			text
 		}*
 	}
@@ -50,6 +50,7 @@ ref = attribute ref { xsd:IDREF }
 lang = attribute lang { langType }
 notation = attribute notation { 'IPA' | text }
 rating = '3' | '2' | '1' | '0' | '-1'
+rel = 'canonical' | 'confusable' | 'xref' | 'href'
 langType = xsd:language
 urlType = xsd:anyURI
 exemplar = attribute exemplar { text }

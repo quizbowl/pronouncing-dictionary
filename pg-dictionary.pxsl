@@ -196,7 +196,18 @@ stylesheet \
         apply-templates meta/review
 
       if meta/related-entry
-        apply-templates meta/related-entry
+        for-each-group meta/related-entry -group-by=@rel
+          div related-entry
+            span h
+              choose
+                when @rel='canonical'
+                  <<canonical name>>
+                when @rel='confusable'
+                  <<confusable with>>
+                otherwise
+                  <<see also>>
+            text << >>
+            apply-templates current-group()
 
       if meta/quizbowl-source
         apply-templates meta/quizbowl-source
@@ -300,18 +311,12 @@ stylesheet \
       value-of .
 
   template related-entry
-    div related-entry
-      span h
-        choose
-          when @rel='canonical'
-            <<canonical name>>
-          otherwise
-            <<see also>>
-      text << >>
-      variable prefix -select=<{if (contains(@ref, '//')) then '' else '#'}>
-      a {$prefix}{@ref} link
-        apply-templates
-      call-template or
+    variable prefix -select=<{if (contains(@ref, '//')) then '' else '#'}>
+    variable rel @rel
+    a {$prefix}{@ref} link
+      apply-templates
+    if following-sibling::related-entry[@rel=$rel]
+      call-template orl
 
   template quizbowl-source
     div extlinks

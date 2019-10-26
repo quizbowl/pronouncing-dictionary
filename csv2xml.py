@@ -28,6 +28,10 @@ cols = [
 	'qb_source','word_in_qb_source','pg_in_qb_source',
 	'author','see_also'
 ]
+rel_map = {
+	u'=': 'canonical',
+	u'≠': 'confusable',
+}
 
 lang_prefix_re = '^(?:([a-z][^:]+):)?(.*)$'
 def extract_lang_prefix(str):
@@ -140,14 +144,20 @@ for row in rows:
 			
 			if text.startswith('http'):
 				ref = text
+				rel = 'href'
 				# TODO: temporary generated link text
 				text = urllib.unquote(text.split('/')[-1])
 			else:
-				if text.startswith('='):
-					attr(related_entry, 'rel', 'canonical')
+				if text.startswith(tuple(rel_map.keys())):
+					# TODO: key may not always be 1 character long
+					rel_symbol = text[0]
+					rel = rel_map[rel_symbol]
 					text = text[1:]
+				else:
+					rel = 'xref'
 				ref = super(UniqueSlugify, slugify).__call__(text)
 			related_entry.text = text
 			related_entry.set('ref', ref)
+			attr(related_entry, 'rel', rel)
 
 doc.write(sys.stdout, encoding="utf-8", xml_declaration=True)
