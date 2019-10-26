@@ -43,18 +43,6 @@ stylesheet \
   variable legends document('entry.xml') -as=document-node()
   key legendsKey //*:dl[@id='legends']/*:dd/*:dl @id
 
-  templateN abbr
-    variable abbr
-      value-of name()
-      # choose
-      #   when name()='accuracy' <<acc>>
-      #   when name()='decipherability' <<decipher>>
-      #   when name()='familiarity' <<famil>>
-      #   when name()='utility' <<util>>
-    value-of $abbr
-    text << >>
-    value-of .
-
   templateN orsame
     variable varName name()
     if following-sibling::*[name()=$varName]
