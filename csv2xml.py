@@ -37,7 +37,7 @@ lang_prefix_re = '^(?:([a-z][^:]+):)?(.*)$'
 def extract_lang_prefix(str):
 	return re.match(lang_prefix_re, str).groups()
 
-def split(parent, child_name, joined_text, extract_lang=True):
+def split(parent, child_name, joined_text, type_value=None, extract_lang=True):
 	for val in joined_text.split('|'):
 		if val:
 			if extract_lang:
@@ -50,6 +50,8 @@ def split(parent, child_name, joined_text, extract_lang=True):
 				child.set('lang', lang)
 				if child_name == 'pron':
 					child.set('notation', 'IPA')
+			if type_value:
+				child.set('type', type_value)
 
 def attr(parent, attr_name, text):
 	if text:
@@ -86,16 +88,13 @@ for row in rows:
 	
 	# <lang>
 	split(entry, 'lang', row['lang'])
-	for lang in row['original_lang'].split(','):
-		if lang:
-			child = etree.SubElement(entry, 'lang')
-			child.text = lang
-			child.set('type', 'original')
+	split(entry, 'lang', row['original_lang'].replace(',', '|'), 'original')
 	
 	# <usage>
 	if row['category'] + row['subcategory'] + row['context'] + row['definition'] + row['stemmable']:
 		usage = etree.SubElement(entry, 'usage')
-		split(usage, 'category', row['category'] + '|' + row['subcategory'])
+		split(usage, 'category', row['category'])
+		split(usage, 'category', row['subcategory'], 'subcategory')
 		split(usage, 'context', row['context'])
 		split(usage, 'definition', row['definition'])
 		split(usage, 'stemmable', row['stemmable'])

@@ -8,7 +8,7 @@ pron = element pron { lang?, notation?, text }
 langElement = element lang { attribute type { "original" }?, langType }
 usage =
 	element usage {
-		element category { text }*,
+		element category { attribute type { "subcategory" }?, text }*,
 		element context { text }*,
 		element definition { text }*,
 		element stemmable { text }?
