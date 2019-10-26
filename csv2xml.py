@@ -32,10 +32,13 @@ lang_prefix_re = '^(?:([a-z][^:]+):)?(.*)$'
 def extract_lang_prefix(str):
 	return re.match(lang_prefix_re, str).groups()
 
-def split(parent, child_name, joined_text):
+def split(parent, child_name, joined_text, extract_lang=True):
 	for val in joined_text.split('|'):
 		if val:
-			lang, text = extract_lang_prefix(val)
+			if extract_lang:
+				lang, text = extract_lang_prefix(val)
+			else:
+				lang, text = None, val
 			child = etree.SubElement(parent, child_name)
 			child.text = text
 			if lang:
@@ -102,7 +105,7 @@ for row in rows:
 		attr(review, 'familiarity', row['familiarity'])
 		attr(review, 'accuracy', row['accuracy'])
 		attr(review, 'decipherability', row['decipherability'])
-		split(review, 'notes', row['review_notes'])
+		split(review, 'notes', row['review_notes'], extract_lang=False)
 		split(review, 'author', row['reviewed_by'])
 		split(review, 'date', row['review_date'])
 	## <citation>
