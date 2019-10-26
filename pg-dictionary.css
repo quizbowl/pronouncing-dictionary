@@ -135,6 +135,9 @@ ul.inline li {
 	background: #d2f8fd;
 }
 
+.ml {
+	margin-left: 0.4em;
+}
 .mr {
 	margin-right: 0.4em;
 }

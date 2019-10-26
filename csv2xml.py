@@ -68,6 +68,7 @@ for row in rows:
 	entry = etree.SubElement(root, 'entry')
 	first_orth = re.sub('\\|.*', '', row['word'])
 	entry.set('id', slugify(first_orth))
+	# should there be secondary ids for alternate headwords? #goiter #goitre (lang="en-GB")
 	entry.set('initial', initial(first_orth))
 
 	if row['exemplar']:

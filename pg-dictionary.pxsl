@@ -204,6 +204,7 @@ stylesheet \
   template (entry|example)/form/orth
     b -class=headword
       apply-templates
+      apply-templates @lang
     call-template orsame
 
   template orth
@@ -212,6 +213,7 @@ stylesheet \
         attribute lang
           value-of @lang
       apply-templates
+    apply-templates @lang
     call-template orsame
 
   template pron
@@ -230,6 +232,12 @@ stylesheet \
           apply-templates
     if <(<<not(@lang) or @lang = following-sibling::pron/@lang>>)>
       call-template orsame
+
+  # TODO improve
+  template orth/@lang
+    text <<&#xA0;>>
+    span <(<<lang first last ml>>)>
+      value-of .
 
   template pron/@lang
     call-template lang
