@@ -30,6 +30,7 @@ stylesheet \
     sequence $dictionary/key('orthKey',$headword)
 
   template /
+    # TODO current()?
     variable context .
     for-each $sitemap/sitemap/section[@id='views']/page
       message <<Building page >>
@@ -56,6 +57,7 @@ stylesheet \
         title
           call-template fullTitle
 
+        # analytics
       body
         # TODO: use &sect; instead of ^
         a -name=^top
@@ -159,6 +161,7 @@ stylesheet \
       copy -copy-namespaces=no
         sequence @*
         if self::section
+          # TODO: Religion and Religion/Religion have same key
           heading -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
             value-of ancestor-or-self::section/@key -separator=<< / >>
             if <(<<join and starts-with($view,'lang')>>)>
@@ -303,6 +306,7 @@ stylesheet \
       div citations
         for-each meta/citation
           sort @type
+          # TODO: no apply-templates .
           apply-templates .
           if position()!=last()
             call-template orl
@@ -410,6 +414,7 @@ stylesheet \
       a {@url} link
         value-of @type
         text << ref>>
+      # TODO: no spaces >
       if <(<<count(*) > 0>>)>
         text <<: >>
     apply-templates
