@@ -220,43 +220,50 @@
 <p>Ratings are given by the reviewer. TODO: add review date.</p>
 <p>TODO: Undefined values are currently listed as 0.<br />
 Radar chart will be redesigned as a sparkline/bar chart.</p>
-<dl class="compact">
+<dl id="legends" class="compact">
   <dt>Utility</dt>
   <dd><p>Priority/helpfulness; how useful is PG to the average moderator</p></dd>
+  <!-- 3 - ordinary obscure word with mandatory PG -->
+  <!-- 2 - confusable English word with should-be mandatory PG -->
+  <!-- 1 - not very useful, give or take -->
+  <!-- 0 - not useful - Pegasus, Zeus -->
+  <!-- -1 - negatively useful, harmful to be in DB or wastes time (e.g. 100 as binary digits one-zero-zero) -->
+  <!-- add legend -->
+  <!-- need to separate axis - some entries are so unlikely to be repeated that they are unuseful (# of hits) -->
 
   <dt>(Un)familiarity</dt>
   <dd><p>Ubiquity/obscurity; how likely an average moderator will know the word</p></dd>
   <dd>
-    <dl class="compact x tabular-nums">
-      <dt>3</dt><dd>Ubiquitous</dd>
-      <dt>2</dt><dd>Ubiquitous but confusable (<l>causal</l>, <l>climatic</l>, <l>statute</l>) or counterintuitive (<l>quay</l>, <l>sieve</l>, <l>trough</l>)</dd>
-      <dt>1</dt><dd>Uncommon</dd>
-      <dt>0</dt><dd>Obscure</dd>
-      <dt>−1</dt><dd>Extremely obscure</dd>
+    <dl id="familiarity" class="compact x tabular-nums">
+      <dt>3</dt><dd data-v="3">Ubiquitous</dd>
+      <dt>2</dt><dd data-v="2">Ubiquitous but confusable (<l>causal</l>, <l>climatic</l>, <l>statute</l>) or counterintuitive (<l>quay</l>, <l>sieve</l>, <l>trough</l>)</dd>
+      <dt>1</dt><dd data-v="1">Uncommon</dd>
+      <dt>0</dt><dd data-v="0">Obscure</dd>
+      <dt>−1</dt><dd data-v="-1">Extremely obscure</dd>
     </dl>
   </dd>
 
   <dt>Accuracy</dt>
   <dd><p>Confidence in accuracy/correctness</p></dd>
   <dd>
-    <dl class="compact x tabular-nums">
-      <dt>3</dt><dd>Confident</dd>
-      <dt>2</dt><dd>Mostly confident</dd>
-      <dt>1</dt><dd>Not confident</dd>
-      <dt>0</dt><dd>No idea</dd>
-      <dt>−1</dt><dd>Confident that the PG is probably wrong</dd>
+    <dl id="accuracy" class="compact x tabular-nums">
+      <dt>3</dt><dd data-v="3">Confident</dd>
+      <dt>2</dt><dd data-v="2">Mostly confident</dd>
+      <dt>1</dt><dd data-v="1">Not confident</dd>
+      <dt>0</dt><dd data-v="0">No idea</dd>
+      <dt>−1</dt><dd data-v="-1">Confident that the PG is probably wrong</dd>
     </dl>
   </dd>
 
   <dt>Decipherability</dt>
   <dd><p>Decipherability/clarity/legibility of PG</p></dd>
   <dd>
-    <dl class="compact x tabular-nums">
-      <dt>3</dt><dd>Clear</dd>
-      <dt>2</dt><dd>Serviceable (as good as it can get given the constraints; or has to resort to directives like “rhymes with”)</dd>
-      <dt>1</dt><dd>Has minor issues</dd>
-      <dt>0</dt><dd>Has major issues</dd>
-      <dt>−1</dt><dd>Needs to be rewritten</dd>
+    <dl id="decipherability" class="compact x tabular-nums">
+      <dt>3</dt><dd data-v="3">Clear</dd>
+      <dt>2</dt><dd data-v="2">Serviceable (as good as it can get given the constraints; or has to resort to directives like “rhymes with”)</dd>
+      <dt>1</dt><dd data-v="1">Has minor issues</dd>
+      <dt>0</dt><dd data-v="0">Has major issues</dd>
+      <dt>−1</dt><dd data-v="-1">Needs to be rewritten</dd>
     </dl>
   </dd>
 </dl>

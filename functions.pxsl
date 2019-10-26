@@ -27,12 +27,21 @@ stylesheet \
       otherwise
         value-of <(<<concat('? (', $langP, ')')>>)>
 
+  function pg:legendLookupLabel
+    funcParam ratingName  xs:string
+    funcParam ratingValue xs:string
+    variable legendLabel $legends/key('legendsKey',$ratingName)/*:dd[@data-v=$ratingValue]
+    value-of $legendLabel
+
   function pg:format-date xs:string
     funcParam s xs:dateTime
     value-of <(<<format-dateTime($s, '[F], [MNn] [D], [Y], [h]:[m] [P]', 'en', (), ())>>)>
 
   variable langs document('data/language-subtag-registry.xml') -as=document-node()
   key langKey /registry/language subtag
+
+  variable legends document('entry.xml') -as=document-node()
+  key legendsKey //*:dl[@id='legends']/*:dd/*:dl @id
 
   templateN abbr
     variable abbr
@@ -95,6 +104,8 @@ stylesheet \
           variable y position()-0.5
           circle -cx={.} -cy={$y} -r=0.25 -class=c{.}
           g label
+            title
+              value-of pg:legendLookupLabel(name(),.)
             txt -x=4.5 -y={$y}
               apply-templates .
 
