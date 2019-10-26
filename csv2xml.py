@@ -13,6 +13,8 @@ from unidecode import unidecode
 from slugify import UniqueSlugify
 slugify = UniqueSlugify(translate=None, safe_chars=u"-.'\"‘’“”–", separator="_")
 
+DEBUG = False
+
 doc = etree.parse('base.xml')
 root = doc.getroot()
 
@@ -156,8 +158,12 @@ for row in rows:
 		source.set('name', source_no_filename)
 	## <related-entry>
 	related_entries = etree.SubElement(meta, 'related-entries')
+	if DEBUG and row['word'] in row['definition']:
+		sys.stderr.write('%-30s\t%s\n' % ( row['word'], row['definition'].replace(row['word'], '\033[4;107m' + row['word'] + '\033[0m') ))
 	for text in row['see_also'].split('|'):
 		if text:
+			if DEBUG and text in row['definition']:
+				sys.stderr.write('%-30s\t%s\n' % ( row['word'], row['definition'].replace(text, '\033[4;106m' + text + '\033[0m') ))
 			related_entry = etree.SubElement(related_entries, 'related-entry')
 			
 			if text.startswith('http'):
