@@ -300,19 +300,22 @@ stylesheet \
 
       apply-templates meta/author
 
-      div usage
-        apply-templates usage
+      if usage
+        div usage
+          apply-templates usage
 
-      div citations
-        for-each meta/citation
-          sort @type
-          # TODO: no apply-templates .
-          apply-templates .
-          if position()!=last()
-            call-template orl
+      if meta/citation
+        div citations
+          for-each meta/citation
+            sort @type
+            # TODO: no apply-templates .
+            apply-templates .
+            if position()!=last()
+              call-template orl
 
-      div reviews
-        apply-templates meta/review
+      if meta/review
+        div reviews
+          apply-templates meta/review
 
       if meta/related-entries
         apply-templates meta/related-entries
@@ -395,14 +398,15 @@ stylesheet \
 
   template review
     div review
-      div review-flex
-        if author
-          span
-            apply-templates author
-            text <<: >>
-        if @accuracy|@decipherability|@familiarity|@utility
-          call-template radar
-          call-template bar
+      if author|@accuracy|@decipherability|@familiarity|@utility
+        div review-flex
+          if author
+            span
+              apply-templates author
+              text <<: >>
+          if @accuracy|@decipherability|@familiarity|@utility
+            call-template radar
+            call-template bar
       if notes
         span
           # TODO fix style
