@@ -265,6 +265,8 @@ stylesheet \
     copy
 
   templateN heading-right
+    tempParam view yes
+
     variable count count(..//entry)
     span heading-right
       text << >>
@@ -277,6 +279,11 @@ stylesheet \
         text << total>>
       text << >>
       a #^top <<Top &#x2191;>>
+
+      if <(<<$view='lang-tree' and not(../@subsection)>>)>
+        a https://en.wikipedia.org/wiki/ISO%20639:{../@key}
+          text <<w:>>
+          value-of ../@key
 
   templateN columns
     div columns

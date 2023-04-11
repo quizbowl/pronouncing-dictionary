@@ -85,7 +85,7 @@ ul.inline {
 }
 ul.inline li {
 	display: inline;
-	margin-right: 0.4em;
+	margin-right: 0.45em;
 }
 
 .dictionary section h2 {
@@ -295,12 +295,12 @@ dl.compact dt, dl.compact dd {
 	margin: 0;
 }
 dl.compact dt {
-	width: 7em;
+	width: 7.8em;
 	float: left;
 	clear: both;
 }
 dl.compact dd {
-	margin-left: 7.5em;
+	margin-left: 8.3em;
 }
 dl.compact::after {
 	clear: both;

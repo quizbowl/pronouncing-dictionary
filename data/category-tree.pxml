@@ -9,8 +9,12 @@
 root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
   ,s Common
     ,l Common
+    ,l Confusable
     ,l Demonym
     ,l Foreign
+    ,l Letter
+    ,l Name
+    ,l Vocabulary
   ,s Literature
     ,l Literature
     ,l <(<<American Literature>>)>
@@ -21,6 +25,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l Haiku
     ,l Poetry
     ,l Shakespeare
+    ,l <(<<Graphic Novel>>)>
   ,s History
     ,l History
     ,l <(<<American History>>)>
@@ -57,11 +62,17 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l <(<<Applied CS>>)>
     ,s <(<<Earth Science>>)>
       ,l <(<<Earth Science>>)>
+      ,l Ecology
       ,l Geology
       ,l Meteorology
       ,l Oceanography
-    ,l Engineering
-    ,l Math
+    ,s Engineering
+      ,l Engineering
+      ,l <(<<Materials Science>>)>
+    ,s Math
+      ,l Math
+      ,l Cryptography
+      ,l <(<<Game Theory>>)>
     ,l Statistics
     ,l <(<<Science History>>)>
   ,s Arts
@@ -84,6 +95,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l Bible
     ,l Buddhism
     ,l Christianity
+    ,l Daoism
     ,l Druze
     ,l Hinduism
     ,l Islam
@@ -101,6 +113,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l Aztec
     ,l Finnish
     ,l Mayan
+    ,l Norse
     ,l Slavic
   ,s Philosophy
     ,l Philosophy 
@@ -114,13 +127,18 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l <(<<Political Science>>)>
     ,s Linguistics
       ,l Linguistics
+      ,l Arabic
+      ,l Basque
       ,l Chinese
       ,l English
       ,l French
+      ,l German
       ,l Hebrew
+      ,l Italian
       ,l Japanese
       ,l Korean
       ,l Portuguese
+      ,l Russian
       ,l Spanish
   ,s Trash
     ,l Trash
@@ -138,22 +156,26 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,s Continents
       ,l Africa
       ,l Europe
+      ,l <(<<Latin America>>)>
     ,s Countries
       ,l Afghanistan
       ,l Albania
       ,l Angola
       ,l Argentina
       ,l Arizona
+      ,l Armenia
       ,l Australia
       ,l Austria
       ,l Azerbaijan
       ,l Belarus
       ,l Belgium
+      ,l Benin
       ,l Bhutan
       ,l Bolivia
       ,l Bosnia
       ,l Botswana
       ,l Brazil
+      ,l Bulgaria
       ,l <(<<Burkina Faso>>)>
       ,l Cambodia
       ,l Cameroon
@@ -168,7 +190,9 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Croatia
       ,l Cuba
       ,l Cyprus
+      ,l <(<<Czech Republic>>)>
       ,l Denmark
+      ,l Dominica
       ,l <(<<Dominican Republic>>)>
       ,l Ecuador
       ,l Egypt
@@ -178,30 +202,39 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Finland
       ,l France
       ,l Gabon
+      ,l Georgia
       ,l Germany
       ,l Ghana
       ,l Greece
+      ,l Greenland
+      ,l Guinea
       ,l Guyana
       ,l Haiti
+      ,l Honduras
       ,l <(<<Hong Kong>>)>
       ,l Hungary
       ,l Iceland
       ,l India
       ,l Indonesia
       ,l Iran
+      ,l Iraq
       ,l Ireland
       ,l Israel
       ,l Italy
       ,l <(<<Ivory Coast>>)>
+      ,l Jamaica
       ,l Japan
       ,l Jordan
       ,l Kazakhstan
       ,l Kenya
       ,l Korea
+      ,l Kosovo
       ,l Kurdistan
       ,l Laos
+      ,l Latvia
       ,l Lebanon
       ,l Libya
+      ,l Lithuania
       ,l Luxembourg
       ,l Macedonia
       ,l Madagascar
@@ -220,11 +253,14 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Nepal
       ,l Netherlands
       ,l <(<<New Zealand>>)>
+      ,l Nicaragua
       ,l Niger
       ,l Nigeria
+      ,l <(<<North Korea>>)>
       ,l Norway
       ,l Oman
       ,l Pakistan
+      ,l Palestine
       ,l Panama
       ,l <(<<Papua New Guinea>>)>
       ,l Paraguay
@@ -232,24 +268,36 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Philippines
       ,l Poland
       ,l Portugal
+      ,l Qatar
       ,l Romania
       ,l Russia
+      ,l Rwanda
+      ,l Samoa
       ,l <(<<Saudi Arabia>>)>
       ,l Scotland
       ,l Senegal
+      ,l Serbia
+      ,l Seychelles
       ,l <(<<Sierra Leone>>)>
       ,l Singapore
       ,l Slovakia
+      ,l <(<<Solomon Islands>>)>
+      ,l Somalia
       ,l <(<<South Africa>>)>
       ,l <(<<South Korea>>)>
+      ,l <(<<South Sudan>>)>
       ,l Spain
       ,l <(<<Sri Lanka>>)>
+      ,l Sudan
       ,l Sweden
       ,l Switzerland
+      ,l Syria
       ,l Taiwan
       ,l Tanzania
+      ,l Thailand
       ,l Tibet
       ,l Togo
+      ,l Tunisia
       ,l Turkey
       ,l Turkmenistan
       ,l UAE
@@ -263,15 +311,24 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Wales
       ,l <(<<Western Sahara>>)>
       ,l Yemen
+      ,l Zambia
       ,l Zimbabwe
     ,s USA
+      ,l Alabama
       ,l Alaska
       ,l California
       ,l Connecticut
       ,l Florida
+      ,l <(<<Georgia (USA)>>)>
       ,l Hawaii
       ,l Idaho
+      ,l Indiana
+      ,l Iowa
+      ,l Kansas
       ,l Kentucky
+      ,l Louisiana
+      ,l Maine
+      ,l Massachusetts
       ,l Maryland
       ,l Michigan
       ,l Minnesota
@@ -281,11 +338,15 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l <(<<New Mexico>>)>
       ,l <(<<New York>>)>
       ,l Ohio
+      ,l Oregon
       ,l Pennsylvania
       ,l <(<<Puerto Rico>>)>
+      ,l Tennessee
       ,l Texas
       ,l Utah
       ,l Virginia
       ,l Washington
+      ,l <(<<West Virginia>>)>
+    ,l Moon
   ,s Uncategorized
     fallback

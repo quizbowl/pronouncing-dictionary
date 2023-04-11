@@ -37,12 +37,14 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
         ,l heb
         ,l oar
         ,l arc
+        ,l tmr
         ,l syc
         ,l syr
         ,l myz
         ,l tru
       ,s <(<<Central Semitic>>)>
         ,l ar ara
+        ,l ajp
         ,l acx
         ,l arz
         ,l aeb
@@ -82,6 +84,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l aa aar
       ,l om orm
       ,l so som
+      ,l irk
   ,s Nilo-Saharan
     ,l ssa
     ,l kr kau
@@ -107,6 +110,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l mnk
     ,l men
     ,l man
+    ,l sus
     ,l goa
     ,l yre
   ,s Niger-Congo
@@ -133,6 +137,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l ver
       ,l dag
       ,l dga
+      ,l mnh
       ,l sg sag
     ,s Zande
       ,l znd
@@ -149,6 +154,8 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l ig ibo
       ,l yo yor
       ,l nup
+      ,l efi
+      ,l ogo
       ,s Bantu
         ,l bnt
         ,l mcp
@@ -158,7 +165,9 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
         ,l ksf
         ,l axk
         ,l ln lin
+        ,l buf
         ,l xog
+        ,l zak
         ,l lun
         ,l tum
         ,l ny nya
@@ -192,6 +201,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
   ,s Khoisan
     ,l khi
     ,l vaj
+    ,l ktz
     ,l naq
     ,l hgm
     ,l nhr
@@ -256,6 +266,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
         ,l is isl
         ,l fo fao
         ,l no nor
+        ,l nb nob
         ,l da dan
         ,l sv swe
       ,s <(<<West Germanic>>)>
@@ -277,6 +288,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
         ,l sxu
         ,l nds
         ,l wep
+        ,l frk
         ,l odt
         ,l dum
         ,l nl nld
@@ -576,9 +588,12 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,s Tibeto-Burman
       ,l tbq
       ,l sip
+      ,l xzh
       ,l otb
       ,l dz dzo
       ,l bo bod
+      ,l lbj
+      ,l bft
       ,l lep
       ,l mgp
       ,l mrd
@@ -654,14 +669,17 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l krj
     ,s <(<<Western Malayo-Polynesian>>)>
       ,l pqw
+      ,l kaw
       ,l jv jav
       ,l su sun
       ,l osi
       ,l mad
       ,l ban
+      ,l cmc
       ,l ace
       ,l cja
       ,l cjm
+      ,l jra
       ,l ljp
       ,l bew
       ,l bjn
@@ -683,6 +701,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l mg mlg
     ,s Oceanic
       ,l pqe
+      ,l alu
       ,l tbf
       ,l lih
       ,l hrc
@@ -693,6 +712,9 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l niu
       ,l ty tah
       ,l na nau
+      ,l mrq
+      ,l mqm
+      ,l mrv
       ,l haw
       ,l rap
       ,l mi mri
@@ -710,14 +732,15 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l buo
     ,l nas
     ,l ian
-    ,s <(<<Trans&#x2013;New Guinea>>)>
+    ,s <(<<Trans&#x2013;New&#xA0;Guinea>>)>
       ,l ngf
       ,l dnw
       ,l ekg
-      ,l enq
-      ,l med
       ,l mkz
+      ,l for
+      ,l med
       ,l gaw
+      ,l enq
     ,s Torricelli
       ,l ape
       ,l xbi
@@ -729,10 +752,14 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l dwu
     ,l djr
     ,l dbl
+    ,l unn
+    ,l wrh
+    ,l xdk
     ,l pjt
     ,l wbp
     ,l are
     ,l aer
+    ,l amx
     ,l aly
   ,s Amerind
     ,l nai
@@ -791,6 +818,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l arp
       ,l pim
       ,l mic
+      ,l psy
       ,l del
       ,l abe
       ,l wam
@@ -834,6 +862,8 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l cku
     ,l cic
     ,l cho
+  ,s Shastan
+    ,l sht
   ,s Yuman
     ,l yum
     ,l yuf
@@ -870,8 +900,11 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l myn
     ,l emy
     ,l tzo
+    ,l ixl
+    ,l mam
     ,l cak
     ,l quc
+    ,l kek
     ,l yua
   ,s Chibchan
     ,l cba
@@ -882,6 +915,8 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l cab
     ,l tnq
     ,l guc
+    ,l bvv
+    ,l kpc
   ,s Cariban
     ,l car
     ,l aoc
@@ -906,6 +941,8 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l gn grn
   ,s Araucanian
     ,l arn
+  ,s Chonan
+    ,l teh
   ,s <(<<Creoles and pidgins>>)>
     ,l crp
     ,s English-based
@@ -929,6 +966,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l cpp
       ,l pap
       ,l kea
+      ,l mzs
     ,s Spanish-based
       ,l cvk
   ,s Artificial
@@ -939,8 +977,10 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l ie ile
     ,l ia ina
     ,l jbo
+    ,l tlh
   ,s Special
     ,l mul
+    ,l mis
     ,l und
     ,l zxx
     ,s <(<<Private&#xA0;use>>)>
