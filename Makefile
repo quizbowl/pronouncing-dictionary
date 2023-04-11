@@ -1,5 +1,5 @@
 .PRECIOUS: %.xml %.xsl
-.PHONY: valid
+.PHONY: all html xml valid
 
 HTMLS_SORTS:=lang.html lang-tree.html category.html category-tree.html author.html tournament.html
 HTMLS:=\
