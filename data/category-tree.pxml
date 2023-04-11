@@ -32,26 +32,34 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Ottoman
     ,l <(<<Military History>>)>
     ,l Archeology
+    ,l Historiography
   ,s Science
     ,l Science
-    ,l Biology
-    ,l Anatomy
-    ,l Physiology
-    ,l Medicine
-    ,l Taxonomy
-    ,l Chemistry
-    ,l Chemical
-    ,l Physics
-    ,l Optics
-    ,l Thermodynamics
-    ,l Astronomy
-    ,l Cosmology
-    ,l <(<<Space Geography>>)>
-    ,l <(<<Computer Science>>)>
-    ,l <(<<Applied CS>>)>
-    ,l <(<<Earth Science>>)>
-    ,l Geology
-    ,l Meteorology
+    ,s Biology
+      ,l Biology
+      ,l Anatomy
+      ,l Physiology
+      ,l Medicine
+      ,l Taxonomy
+    ,s Chemistry
+      ,l Chemistry
+      ,l Chemical
+    ,s Physics
+      ,l Physics
+      ,l Optics
+      ,l Thermodynamics
+    ,s Astronomy
+      ,l Astronomy
+      ,l Cosmology
+      ,l <(<<Space Geography>>)>
+    ,s <(<<Computer Science>>)>
+      ,l <(<<Computer Science>>)>
+      ,l <(<<Applied CS>>)>
+    ,s <(<<Earth Science>>)>
+      ,l <(<<Earth Science>>)>
+      ,l Geology
+      ,l Meteorology
+      ,l Oceanography
     ,l Engineering
     ,l Math
     ,l Statistics
@@ -104,8 +112,16 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
     ,l Economics
     ,l Business
     ,l <(<<Political Science>>)>
-    ,l Linguistics
-    ,l Spanish
+    ,s Linguistics
+      ,l Linguistics
+      ,l Chinese
+      ,l English
+      ,l French
+      ,l Hebrew
+      ,l Japanese
+      ,l Korean
+      ,l Portuguese
+      ,l Spanish
   ,s Trash
     ,l Trash
     ,l Sports
@@ -153,6 +169,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Cuba
       ,l Cyprus
       ,l Denmark
+      ,l <(<<Dominican Republic>>)>
       ,l Ecuador
       ,l Egypt
       ,l Estonia
@@ -165,6 +182,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Ghana
       ,l Greece
       ,l Guyana
+      ,l Haiti
       ,l <(<<Hong Kong>>)>
       ,l Hungary
       ,l Iceland
@@ -192,6 +210,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Malta
       ,l <(<<Marshall Islands>>)>
       ,l Mauritania
+      ,l Mauritius
       ,l Mexico
       ,l Mongolia
       ,l Morocco
@@ -246,6 +265,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l Yemen
       ,l Zimbabwe
     ,s USA
+      ,l Alaska
       ,l California
       ,l Connecticut
       ,l Florida
@@ -265,6 +285,7 @@ root -xmlns=http://schema.quizbowl.technology/xml/pg-dictionary
       ,l <(<<Puerto Rico>>)>
       ,l Texas
       ,l Utah
+      ,l Virginia
       ,l Washington
   ,s Uncategorized
     fallback
