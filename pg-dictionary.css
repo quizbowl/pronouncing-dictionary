@@ -415,6 +415,31 @@ tr.example .pron {
 	font-weight: 400;
 }
 
+mark.char {
+	white-space: pre;
+	padding: 0 0.2em;
+}
+mark.word, mark.joined {
+	display: inline-block;
+	white-space: pre;
+	padding: 2px 0.2em;
+	color: inherit;
+}
+mark.word + mark {
+	margin-left: 3px;
+}
+mark.char, mark.word {
+	border: 1px solid #8aecf9;
+	background: #d2f8fd;
+}
+mark.joined {
+	border: 1px solid #444;
+	background: none;
+}
+del.avoid {
+	color: #bbb;
+}
+
 blockquote.example {
 	padding: 0.5em 0.65em;
 	margin: 0;

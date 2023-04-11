@@ -41,7 +41,7 @@ It is useless to define direct global correspondences (such as Weiner’s
 
 <!-- pronunciation guides can be too frequent or reundant -->
 <!-- quote from me: I also want to push back on the idea of any Aztec deity (or really, any word) being "the canonical example" for needing a PG – in my opinion, some names are just short enough, widely familiar enough, systematic enough, or easy enough to sound out (e.g. Tlaloc, Huitzilopochtli, Quetzalcoatl, Tezcatlipoca) that adding a PG for them isn't really a need or a priority. I think this idea can lead to harmful beliefs about PGs, such as the Weinerian dogma that any PG is categorically better than no PG, even if it's wrong, indecipherable, or increases clutter (notably affecting NAQT), or that a certain word not having a PG is automatically "odd" or a problem, regardless of the hundreds of other carefully curated PGs elsewhere in the set.
-Do you have an idea which bonus this is? Packet 2 has a myth bonus that included two Aztec names, with PGs for Xipe Totec (“SHEEP-uh TOH-tek”) [copied from 2019 ACF Regionals] and Bough (“bao”), but not Chicomecōātl, which seems obvious enough for moderators to sound out, which is a necessary moderating skill in the absence of PGs (i.e. most sets not touched by me or NAQT). -->
+Do you have an idea which bonus this is? Packet 2 has a myth bonus that included two Aztec names, with PGs for Xipe Totec (“<b class="pron">SHEEP-uh TOH-tek</b>”) [copied from 2019 ACF Regionals] and Bough (“<b class="pron">bao</b>”), but not Chicomecōātl, which seems obvious enough for moderators to sound out, which is a necessary moderating skill in the absence of PGs (i.e. most sets not touched by me or NAQT). -->
 </ol>
 
 <h2>Guidelines</h2>
@@ -68,6 +68,12 @@ Try to use the same number of spaces as in the original word or phrase.</p>
 John Foo-Bar (“<b class="pron">john foo bar</b>”)</p>
 </blockquote>
 
+<p>In rare cases, the phrase and the pronunciation guide may require different numbers of words.
+Use <a href="#special">special characters</a> as delimiters for that purpose instead of spaces or hyphens.</p>
+<!-- TODO add boxes to demonstrate "word" boundaries in the example above -->
+</li>
+
+<li>
 <p>Do not put quotes around single syllables.</p>
 
 <blockquote>
@@ -83,6 +89,11 @@ John Foo-Bar (“<b class="pron">john foo bar</b>”)</p>
 ✔︎ <b class="pron">nee</b>, not ✘ <b class="pron">knee</b><br />
 ✔︎ <b class="pron">noo</b>, not ✘ <b class="pron">knew</b></p>
 </blockquote>
+
+<!-- exception: scientific words made of small pieces: trimethylsilyloxy (“tri-methyl-silyl-oxy”) -->
+<!-- exception: far easier to communicate: raches (“ratches”), NOESY (“nosy”) and COSY (“cozy”), suffixes like -ization -->
+<!-- avoid stuffing multiple guides into one: NOESY and COSY (“nosy and cosy”) -->
+<!-- try not to conflate multiple syllables: Jericho (“jerry-co”), siciliana (“sicily-ana”), Shaphan (“shafen”) -->
 </li>
 
 <li>
@@ -110,6 +121,9 @@ avoid <b class="pron">though</b> or <b class="pron">cough</b>;
 prefer <b class="pron">g</b> for <b class="pron IPA">/ɡ/</b>
 before high front vowels if unambiguous)</p>
 </blockquote>
+
+<!-- Note that the guideline to reserve ‹g› for /ɡ/ (rather than /ɡ/ or /dʒ/ depending on the environment) is, in some sense,
+opposite from the guideline to use the plural suffix ‹s› for both /s/ and /z/. Suffix ‹z› looks far more unnatural. -->
 </li>
 
 <li>
@@ -128,6 +142,8 @@ for <b class="pron IPA">/jʃ/</b>: ✔︎ Reich (“<b class="pron">RYE’sh</b>
 it may be approximated by inserting an epenthetic schwa (<b class="pron IPA">/kəˈnuːθ/</b>).</p>
 
 <p>Use sparingly, as this convention may be unfamiliar.</p>
+<!-- don't overuse: b'yoo f'yoo n'war sh'tell -->
+<!-- look for ways to shift to previous coda: loo-l'YOO-ma -> lool-YOO -->
 </li>
 
 <li>
@@ -150,6 +166,7 @@ it may be approximated by inserting an epenthetic schwa (<b class="pron IPA">/k�
 ✔︎ <b class="pron IPA">/x/</b><!-- /χ/ --> = <b class="pron">kh</b>
 (but prefer <b class="pron">k</b> or <b class="pron">h</b>)
 — as in Bach, loch, sheikh, Ahmed</p>
+<!-- Spanish, German, Russian, Arabic, Chinese -->
 </blockquote>
 </li>
 
@@ -187,6 +204,8 @@ to represent a free (long/tense) vowel</p>
 <p>✔︎ saltarello (“<b class="pron">sall-tah-RELL-oh</b>”), not ✘ saltarello (“<b class="pron">sahl-tah-REL-lo</b>”)<br />
 ✔︎ Amphitryon (“<b class="pron">am-FIT-tree-on</b>”)
 — to represent both the checked vowel and the affricated onset</p>
+<!-- t-tr, d-dr -->
+<!-- ambisyllabic slows down reading because it turns many open syllables into closed: Basilides (“bass-SIL-lee-deez”) -->
 </blockquote>
 </li>
 
@@ -238,6 +257,10 @@ APIs (“<b class="pron">ay-pee-eyes</b>”)</p>
 <p>✔︎ IC50 (“<b class="pron">eye-C-fifty</b>”)<br />
 ✔︎ FoxP2 (“<b class="pron">fox-P-two</b>”)</p>
 </blockquote>
+
+<!-- just write out w/o pg: CD8+ (“<b class="pron">C-D-eight-positive</b>”) -->
+<!-- what about glyceraldehyde-3-phosphate (“glycer-aldehyde-three-phosphate”) -->
+<!-- Kevin Puts (“puts”), Hal Anger (“anger”) -->
 </li>
 
 <li>
@@ -254,6 +277,11 @@ the guide would be unusably inaccurate or ambiguous otherwise.</p>
 <p>✘ -deul (“<b class="pron">dool</b>”), ✘ -deul (“<b class="pron">dull</b>”), ✘ -deul (“<b class="pron">duel</b>”)<br />
 ✔︎ -deul (“<b class="pron">rhymes with pull</b>”)</p>
 </blockquote>
+<!-- TODO: show IPA rationale: re: mod might read it literally: you have a point, and I'm generally strongly against "rhymes with" guides, but I put this one in because English "dull" doesn't rhyme with English "pull", and "dull" and "dʊl" (rhymes with pull) and "dool" all approximate Korean words with different meanings. all three are plausible words that can be asked about in the area of linguistics. (deul -> plurality, deol -> degree of comparison, dul -> number)
+
+"dʊl" doesn't really exist as a valid syllable in English, though maybe "idle" or "Abdul" come sort of close.
+
+if you have any better options, feel free to suggest. -->
 </li>
 
 <li>
@@ -262,10 +290,179 @@ the guide would be unusably inaccurate or ambiguous otherwise.</p>
 <blockquote>
 <p>✔︎ Huygens (“<b class="pron">HIGH-guns or HOY-guns</b>”)</p>
 </blockquote>
+<!-- check if should be (“<b class="pron">a</b>” or “b”) -->
+</li>
+
+<li>
+<p>TODO (move to QMOS): In addition, the following special directives in square brackets are parsed:</p>
+
+<blockquote>
+<p><b class="pron">[read slowly]</b>, <b class="pron">[pause]</b>, <b class="pron">[emphasize]</b></p>
+</blockquote>
+
+<p>These directives will not be counted as words (i.e., word numbering will skip over them).</p>
 </li>
 </ol>
 
-<h2>List of syllables to avoid</h2>
+<h2 id="special">Special characters for pronunciation guides</h2>
+<!-- TODO: Target audience: advanced -->
+
+<p>Rationale: reduces visual clutter. For example, en dashes should separate each name in a multi-eponymous concept, but in the pronunciation guide, should be visually separated by spaces.</p>
+<!-- TODO: Show motivating example to elucidate what we are trying to achieve. Explain the two distinct motivations: visual (show the reading issue caused by line breaks after medial periods, the same reason "U.S." is avoided), logical. -->
+<!-- use less jargon (multi-eponymous) -->
+
+<p>If this system is too complicated for you, you can always just use hyphens:</p>
+<!-- TODO: (however this fallback is not ideal) -->
+<!-- TODO: The most common exceptional instance [used] in this system/convention is the NBSP. If you only remember one thing, be it this. -->
+<blockquote>
+<p>Edward I (“<b class="pron">the-first</b>”)</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<td></td>
+<th colspan="3">Delimiter</th>
+<th style="width: 10em;">Visual treatment</th>
+<th colspan="2">Logical treatment</th>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<th>Character name</th>
+<th>Abbrev.</th>
+<th>Glyph</th>
+<th colspan="2">Orthographic <!-- <br /> -->(outside PG)</th>
+<th style="width: 10em;">Phonetic <!-- <br /> -->(inside PG)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th rowspan="3">Spaces</th>
+<td>Space</td>
+<td>SPACE</td>
+<td><mark class="char"> </mark></td>
+<td>can break</td>
+<td style="width: 7em;">separate word</td>
+<td>separate word</td>
+</tr>
+<tr>
+<td>No-break space</td>
+<td>NBSP</td>
+<td><mark class="char"> </mark></td>
+<td>joined together</td>
+<td>separate word</td>
+<td>same word</td>
+</tr>
+<tr>
+<td>Narrow no-break space</td>
+<td>NNBSP</td>
+<td><mark class="char"> </mark></td>
+<td>joined together</td>
+<td>same word</td>
+<td><del class="avoid">same word</del> ¹</td>
+</tr>
+<tr>
+<th rowspan="3">Dashes</th>
+<td>Hyphen</td>
+<td>HYPH</td>
+<td><mark class="char">-</mark></td>
+<td>can break</td>
+<td>same word</td>
+<td>same word</td>
+</tr>
+<tr>
+<td>En dash</td>
+<td>NDASH</td>
+<td><mark class="char">–</mark></td>
+<td>can break</td>
+<td>separate word</td>
+<td><del class="avoid">same word</del> ²</td>
+</tr>
+<tr>
+<td>Figure dash</td>
+<td>FDASH</td>
+<td><mark class="char">‒</mark></td>
+<td>can break</td>
+<td>separate word</td>
+<td><del class="avoid">same word</del> ²</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+¹ Avoid; use NBSP instead.<br />
+² Avoid.</p>
+
+<p>This means that if you want to extract pronunciation guides from a set that uses this convention,
+just counting the number of SPACEs in each pronunciation guide and looking back the same number of words is insufficient.
+SPACE, NDASH, and NBSP are used as word separators in running text.</p>
+
+<h3>Examples</h3>
+
+<table>
+<thead>
+<tr>
+<th style="width: 7em;">Orthographic<br />(outside PG)</th>
+<th style="width: 7em;">Phonetic<br />(inside PG)</th>
+<th rowspan="2" style="width: 5em;">Logical words</th>
+</tr>
+<tr>
+<th>Delimiter</th>
+<th>Delimiter</th>
+<th colspan="2">Examples</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>SPACE</td>
+<td>SPACE</td>
+<td>2</td>
+<td><mark class="word">St.</mark> <mark class="word">John</mark> (“<b class="pron"><mark class="word">SIN</mark> <mark class="word">jun</mark></b>”)</td>
+<td><mark class="word">Zheng</mark> <mark class="word">He</mark> (“<b class="pron"><mark class="word">jung</mark> <mark class="word">huh</mark></b>”)</td>
+</tr>
+<tr>
+<td>NBSP</td>
+<td>SPACE</td>
+<td>2</td>
+<td><mark class="joined"><mark class="word">St.</mark> <mark class="word">John</mark></mark> (“<b class="pron"><mark class="word">SIN</mark> <mark class="word">jun</mark></b>”)</td>
+<td><mark class="word">Eamon</mark> <mark class="joined"><mark class="word">de</mark> <mark class="word">Valera</mark></mark> (“<b class="pron"><mark class="word">EH-min</mark> <mark class="word">deh</mark> <mark class="word">vuh-LEH-ruh</mark></b>”)</td>
+</tr>
+<tr>
+<td>NNBSP</td>
+<td>HYPH</td>
+<td>1</td>
+<td><mark class="joined"><mark class="word">St. John</mark></mark> (“<b class="pron"><mark class="word">SIN-jun</mark></b>”)</td><td><mark class="joined"><mark class="word">Beaux Arts</mark></mark> (“<b class="pron"><mark class="word">boh-ZARR</mark></b>”)</td>
+</tr>
+<tr>
+<td>NDASH</td>
+<td>SPACE</td>
+<td>2</td>
+<td><mark class="word">Heine</mark>–<span /><mark class="word">Borel</mark> (“<b class="pron"><mark class="word">HI-nuh</mark> <mark class="word">bo-REL</mark></b>”)</td><td>Adams–<mark class="word">Onís</mark> (“<b class="pron"><mark class="word">oh-NEESE</mark></b>”) *</td>
+</tr>
+<tr>
+<td>FDASH</td>
+<td>SPACE</td>
+<td>2</td>
+<td></td><td>100‒<mark class="word">keV</mark> (“<b class="pron"><mark class="word">K-E-V</mark></b>”)</td>
+</tr>
+<tr>
+<td>none (1 word);<br />HYPH</td>
+<td>NBSP</td>
+<td>1</td>
+<td><mark class="joined">Edward <mark class="word">I</mark></mark> (“<b class="pron"><mark class="word">the first</mark></b>”)</td><td><mark class="word">Renaud-Barrault</mark> (“<b class="pron"><mark class="word">ruh-NO bah-RO</mark></b>”)</td>
+</tr>
+</tbody>
+</table>
+<!-- De Stijl (“duh style”) -->
+<!-- TODO: Space and Hyphen should stand out in the table/explanations above as being commonplace characters, not considered "special" -->
+
+<p>Legend: <mark class="word">extent of logical word</mark>; <mark class="joined">visually joined together</mark></p>
+<!-- TODO: numbering logical words: St.[1] John[2] (“SIN[1] jun[2]”) -->
+
+<h2 id="avoid">List of syllables to avoid</h2>
 
 <p>Most of these syllables are actual English words with
 confusing, counterintuitive, or unsystematic pronunciations.</p>
