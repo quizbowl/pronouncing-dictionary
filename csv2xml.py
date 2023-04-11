@@ -9,11 +9,12 @@ import re
 
 import random
 import urllib
+from collections import Counter
 from unidecode import unidecode
 from slugify import UniqueSlugify
 slugify = UniqueSlugify(translate=None, safe_chars=u"-.'\"‘’“”–", separator="_")
 
-DEBUG = False
+DEBUG = True
 
 doc = etree.parse('base.xml')
 root = doc.getroot()
@@ -21,19 +22,37 @@ root = doc.getroot()
 cols = [
 	'word','pg',
 	'utility','familiarity',
-	'submitted_by','submit_date','reviewed_by','review_date',
+	'submitted_by','submit_date','reviewed_by','review_date', 'review_notes',
 	'accuracy','decipherability',
+	# 'duplicate',
 	'stemmable','category','subcategory','context','definition',
 	'pg_ipa',
 	'lang','original_lang',
 	'reference','audio_reference','word_in_reference','pg_in_reference',
 	'qb_source','word_in_qb_source','pg_in_qb_source',
 	'author','see_also'
+	# 'exemplar', 'ex'
 ]
 rel_map = {
 	u'=': 'canonical',
 	u'≠': 'confusable',
 }
+
+# DSL description:
+#   | delimits alternatives
+#   TODO: \ naively escapes special characters like |, but \ cannot be escaped itself.
+#     (Naive because it's implemented ad hoc by the simplest lookbehind)
+#
+#   , is used instead of | in `original_lang`
+#
+#   : delimits lang prefix (see regex below)
+#     Currently, lang prefix is allowed in all fields except `review_notes`
+#
+#   {} wraps internal links in `definition`
+#
+#   =≠ etc. prefixes in `see_also`
+#
+#   other minor details may affect specific fields; read the code to understand
 
 lang_prefix_re = '^(?:([a-z][^:]+):)?(.*)$'
 def extract_lang_prefix(str):
@@ -72,6 +91,7 @@ def initial(word):
 rows = csv.DictReader(sys.stdin, dialect=csv.excel)
 random.seed(15)
 for row in rows:
+	if row['word'] == 'wd' and row['pg'] == 'pg': continue
 	# if not (row['ex'] or random.random() > 0.95): continue
 
 	entry = etree.SubElement(root, 'entry')
@@ -95,7 +115,7 @@ for row in rows:
 	# <usage>
 	if row['category'] + row['subcategory'] + row['context'] + row['definition'] + row['stemmable']:
 		usage = etree.SubElement(entry, 'usage')
-		split(usage, 'stemmable', row['stemmable'])
+		split(usage, 'stemmable', row['stemmable']) # should probably not be in <usage>
 		split(usage, 'category', row['category'])
 		split(usage, 'category', row['subcategory'], 'subcategory')
 		split(usage, 'context', row['context'])
@@ -165,7 +185,11 @@ for row in rows:
 	for text in row['see_also'].split('|'):
 		if text:
 			if DEBUG and text in row['definition']:
-				sys.stderr.write('%-30s\t%s\n' % ( row['word'], row['definition'].replace(text, '\033[4;106m' + text + '\033[0m') ))
+				sys.stderr.write('%-30s\t%s\t%s\n' % (
+					row['word'],
+					row['definition'].replace(text, '\033[4;106m' + text + '\033[0m'),
+					row['see_also'].replace(text, '\033[4;106m' + text + '\033[0m')
+				))
 			related_entry = etree.SubElement(related_entries, 'related-entry')
 			
 			if text.startswith('http'):
@@ -185,5 +209,26 @@ for row in rows:
 			related_entry.text = text
 			related_entry.set('ref', ref)
 			attr(related_entry, 'rel', rel)
+
+# count how many incoming links. 0 = red, > 1 = disambig
+
+
+# entry_ids = doc.xpath('/*/entry/form/orth|/*/entry/meta/related-entries/related-entry[@rel="canonical"]')
+# xrefs = doc.xpath('(/*/entry/usage/definition|/*/entry/meta/related-entries)/related-entry[@rel!="incoming" and @rel!="href"]')
+# sys.stderr.write( '\t'.join([i.text for i in entry_ids]) )
+# sys.stderr.write( '\n\n' )
+# sys.stderr.write( '\t'.join([i.text for i in xrefs]) )
+# sys.stderr.write( '\n\n' )
+# for xref in xrefs:
+# 	sys.stderr.write( xref.text )
+# 	sys.stderr.write( xref.text )
+
+# 	missing
+# 	exists
+#   ambig
+#   then slugify
+# for entry in entry_ids:
+#   for each xrefs[@ref=entry]
+#     add xref[@rel=incoming]
 
 doc.write(sys.stdout, encoding="utf-8", xml_declaration=True)
