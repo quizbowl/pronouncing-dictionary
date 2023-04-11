@@ -39,3 +39,14 @@ Keep the code clean and the commit graph sane.
 ## Installation
 
 Requires saxon, pxsl-tools.
+
+Requires Python (2?) with packages unicodecsv, unidecode, lxml, awesome-slugify.
+
+## Usage
+
+1. Run `make download`
+   Fetch the database from Google Sheets in CSV format
+2. Run `make xml`
+   Convert the database to XML
+3. Run `make html`
+   Transform the database and articles to HTML

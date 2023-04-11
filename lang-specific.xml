@@ -108,7 +108,9 @@
         <orths><mark>Bloi</mark>s</orths>
         <phons type="target"><mark>bwɑː</mark></phons>
         <prons><mark>bwah</mark></prons>
+        <!-- Do I still believe this? Confusable with Bois -->
       </example>
+      <!-- CLV (V ≠ w) e.g. Grieux: gree, not gwee -->
     </guideline>
   </section>
   <section>
@@ -201,14 +203,15 @@
   <!-- e muet -->
 </guidelines>
 
-<p>Although French is syllable-timed, not stress-timed,
+<p>Although French is syllable-timed, not stress-timed,⁴
   each French word bears a very slight stress on the last syllable.
   In US English, approximate by stressing the final syllable of a word.</p>
 
 <p>
 ¹ Only for English speakers with Canadian raising. Difficult to respell accurately.<br />
 ² Only for English speakers without cot–caught merger.<br />
-³ CEPD: “This example also shows the simplification of the initial consonant cluster <span class="pron IPA">/krw/</span>, which occurs in French but not in English.”</p>
+³ CEPD: “This example also shows the simplification of the initial consonant cluster <span class="pron IPA">/krw/</span>, which occurs in French but not in English.”<br />
+⁴ These are somewhat oversimplified or traditional terms; they are archaic in linguistics nowadays.</p>
 
 <!-- Chinese usually no stress -->
 <!-- quote from me: You're probably right, but I think notating stress in a pg for English speakers can still be useful to approximate similar features such as high pitch, long vowels, morpheme boundaries, etc. I imagine English speakers would probably compromise with "ow" and "may" here rather than "ah-oh" and "meh" [Aomame]

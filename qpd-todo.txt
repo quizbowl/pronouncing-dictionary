@@ -46,3 +46,22 @@ compact legend
 image mnemonic
 wikipedia, wiktionary link
 use "with name select tunnel" shortcut consistently
+
+try sorting by PG
+
+mapping
+neutralization, merger
+Indic?: t   t̪   ø
+         \ /
+English:  t     θ (interdental in English)
+e.g. "Tamil" t̪ɐmɨɻ -> tæmɪl
+empirical evidence for how English speakers approximate the sound - not just what it sounds like to you (see Rama)
+
+writing pgs:
+pooss reess -> avoid ss
+add rh to silent
+no punctuation needed (? !): Ah! vous
+
+lang-specific: link to all IPA pgs (filter page) containing the phone being explained. eg see all aztec pgs containing tɬ to consistentize tull tul tle
+
+eventually need style guide for IPA PGs. somewhat laissez-faire, but need guidelines on e.g. syllable delimiters (use spaces à la Longman, with stress marks), overties, broad/narrow

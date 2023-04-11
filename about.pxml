@@ -5,12 +5,19 @@ article -xmlns=http://www.w3.org/1999/xhtml
     <<The purpose of this site is to be a reference for <a href="http://www.pace-nsc.org/what-is-quizbowl-a-primer-and-faq-for-newcomers/">quizbowl</a> >>
     <<question writers and players to browse or look up standard pronunciation guides for unfamiliar terms. >>
     <<Centralization eliminates redundant, time-consuming research. >>
-    <<This site is just a static view of the underlying database that enables applications to automatically insert pronunciation guides into quizbowl questions.>>
+  p
+    <<This site is just a static view of the underlying QPD database. >>
+    <<It could, for example, enable applications to automatically insert pronunciation guides into quizbowl questions. >>
+    <<However, at least in its current draft state, this dictionary is not intended to be an authority, >>
+    <<and any information from it should be checked with care.>>
+
+  # https://cofactor.co.nz/ora/about
+  # https://web.archive.org/web/20200114095309/https://cofactor.co.nz/ora/about
 
   h2 <<Data>>
   p
     <<This dictionary currently has <countEntries /> entries. >>
-    <<Most entries were extracted from about twenty recent quizbowl sets. >>
+    <<Most entries were extracted from about thirty recent quizbowl sets (as of 2020). >>
     <<Another <countEntries author="MW" /> come from a database compiled by Matt Weiner. >>
     <<Download the data as <a href="pg-dictionary.csv" download="download">CSV</a> or <a href="pg-dictionary.xml" download="download">XML</a>.>>
 

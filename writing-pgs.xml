@@ -59,7 +59,7 @@ Do you have an idea which bonus this is? Packet 2 has a myth bonus that included
 </li>
 
 <li>
-	<p>Use spaces to separate words and hyphens to separate syllables.
+<p>Use spaces to separate words and hyphens to separate syllables.
 Try to use the same number of spaces as in the original word or phrase.</p>
 
 <blockquote>
@@ -232,7 +232,7 @@ Use <b class="pron">’s</b> for the plural suffix of capital letters.</p>
 APIs (“<b class="pron">ay-pee-eyes</b>”)</p>
 </blockquote>
 
-<p>Write out numbers.</p>
+<p>Write out numbers in short pronunciation guides.</p>
 
 <blockquote>
 <p>✔︎ IC50 (“<b class="pron">eye-C-fifty</b>”)<br />
@@ -407,6 +407,7 @@ confusing, counterintuitive, or unsystematic pronunciations.</p>
 <tr><td>cell</td><td><b class="pron">sell</b></td><td></td><td>superfluous</td></tr>
 <tr><td>dont</td><td><b class="pron">daunt</b></td><td><b class="pron">dohnt</b>, <b class="pron">don’t</b></td></tr>
 <tr><td>are</td><td><b class="pron">ar</b>, <b class="pron">arr</b></td><td><b class="pron">air</b></td></tr>
+<tr><td>once</td><td><b class="pron">awnce</b></td><td><b class="pron">wunce</b></td></tr>
 </tbody>
 </table>
 </div>

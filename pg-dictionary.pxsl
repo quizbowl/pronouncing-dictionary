@@ -32,6 +32,7 @@ stylesheet \
   template /
     # TODO current()?
     variable context .
+    # [@id='index'] #[@id='lang-tree'] # rmv last condition
     for-each $sitemap/sitemap/section[@id='views']/page
       message <<Building page >>
         value-of @id
@@ -73,6 +74,7 @@ stylesheet \
               text <<Draft. Almost all entries not by >>
               a author.html#^OL author -data-author=OL <<OL>>
               text << are unverified and are probably inaccurate.>>
+              # grain of salt
 
             dt <<Last updated>>
             dd
@@ -139,6 +141,10 @@ stylesheet \
             with-param groups $groups/root/section -tunnel=yes
         otherwise
           sequence $groups
+
+    #if $view=('lang-tree','lang')
+    #  message
+    #    sequence $sections
 
     # 3. output
     article -class=dictionary -id={$view}
@@ -387,6 +393,7 @@ stylesheet \
       value-of pg:langLookupCanonicalName(.)
 
   template usage/category|usage/context
+    # TODO add another class if subcategory (@type='subcategory')
     a category.html#^{.} {name()}
       apply-templates
     call-template or
